@@ -1,5 +1,5 @@
 import { execFile } from "node:child_process";
-import { cp, mkdtemp, mkdir, readFile, writeFile } from "node:fs/promises";
+import { access, cp, mkdtemp, mkdir, readFile, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { dirname, resolve } from "node:path";
 import { promisify } from "node:util";
@@ -11,11 +11,17 @@ const args = process.argv.slice(2);
 const tarballArgument = args.indexOf("--tarball");
 const tarball = resolve(packageRoot, tarballArgument >= 0 ? args[tarballArgument + 1] : "output/runtime.tgz");
 const npmCli = resolve(dirname(process.execPath), "node_modules", "npm", "bin", "npm-cli.js");
-const npm = async (argumentsList, cwd, cache) => exec(process.execPath, [npmCli, ...argumentsList], {
-  cwd,
-  env: { ...process.env, npm_config_cache: cache, npm_config_userconfig: resolve(cwd, ".npmrc") },
-  maxBuffer: 1024 * 1024,
-});
+const npmCliAvailable = await access(npmCli).then(() => true).catch(() => false);
+const npm = async (argumentsList, cwd, cache) => {
+  const options = {
+    cwd,
+    env: { ...process.env, npm_config_cache: cache, npm_config_userconfig: resolve(cwd, ".npmrc") },
+    maxBuffer: 1024 * 1024,
+  };
+  return npmCliAvailable
+    ? exec(process.execPath, [npmCli, ...argumentsList], options)
+    : exec(process.platform === "win32" ? "npm.cmd" : "npm", argumentsList, { ...options, shell: process.platform === "win32" });
+};
 
 const temp = await mkdtemp(resolve(tmpdir(), "mighty-decks-consumer-"));
 const cache = resolve(temp, "npm-cache");

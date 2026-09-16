@@ -1,5 +1,5 @@
 import { execFile, spawn } from "node:child_process";
-import { cp, mkdtemp, mkdir, readFile, writeFile } from "node:fs/promises";
+import { access, cp, mkdtemp, mkdir, readFile, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { dirname, resolve } from "node:path";
 import { promisify } from "node:util";
@@ -22,15 +22,21 @@ const runtimeAssets = resolve(
     : `output/mighty-decks-components-${packageJson.version}-runtime-assets.tar.gz`,
 );
 const npmCli = resolve(dirname(process.execPath), "node_modules", "npm", "bin", "npm-cli.js");
+const npmCliAvailable = await access(npmCli).then(() => true).catch(() => false);
 const viteCli = (cwd: string) => resolve(cwd, "node_modules", "vite", "bin", "vite.js");
 
 const temp = await mkdtemp(resolve(tmpdir(), "mighty-decks-browser-"));
 const cache = resolve(temp, "npm-cache");
-const npm = async (argumentsList: string[]) => exec(process.execPath, [npmCli, ...argumentsList], {
-  cwd: temp,
-  env: { ...process.env, npm_config_cache: cache, npm_config_userconfig: resolve(temp, ".npmrc") },
-  maxBuffer: 1024 * 1024,
-});
+const npm = async (argumentsList: string[]) => {
+  const options = {
+    cwd: temp,
+    env: { ...process.env, npm_config_cache: cache, npm_config_userconfig: resolve(temp, ".npmrc") },
+    maxBuffer: 1024 * 1024,
+  };
+  return npmCliAvailable
+    ? exec(process.execPath, [npmCli, ...argumentsList], options)
+    : exec(process.platform === "win32" ? "npm.cmd" : "npm", argumentsList, { ...options, shell: process.platform === "win32" });
+};
 const waitForPreview = async (url: string): Promise<void> => {
   for (let attempt = 0; attempt < 60; attempt += 1) {
     try {

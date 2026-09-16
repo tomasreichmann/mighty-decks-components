@@ -9,13 +9,17 @@ const exec = promisify(execFile);
 const packageRoot = resolve(import.meta.dirname, "..");
 const output = resolve(packageRoot, "output");
 const npmCli = resolve(dirname(process.execPath), "node_modules", "npm", "bin", "npm-cli.js");
-await access(npmCli);
+const npmCliAvailable = await access(npmCli).then(() => true).catch(() => false);
+const npm = (argumentsList) => npmCliAvailable
+  ? exec(process.execPath, [npmCli, ...argumentsList], { cwd: packageRoot, maxBuffer: 1024 * 1024 })
+  : exec(process.platform === "win32" ? "npm.cmd" : "npm", argumentsList, {
+    cwd: packageRoot,
+    maxBuffer: 1024 * 1024,
+    shell: process.platform === "win32",
+  });
 
 await mkdir(output, { recursive: true });
-const { stdout } = await exec(process.execPath, [npmCli, "pack", "--json", "--pack-destination", output], {
-  cwd: packageRoot,
-  maxBuffer: 1024 * 1024,
-});
+const { stdout } = await npm(["pack", "--json", "--pack-destination", output]);
 const [packed] = JSON.parse(stdout);
 if (!packed?.filename || !packed?.integrity) {
   throw new Error("npm pack did not return tarball metadata.");
