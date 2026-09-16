@@ -57,7 +57,7 @@
     "lint": "eslint . --max-warnings 0",
     "check:fast": "pnpm lint && pnpm typecheck",
     "check": "pnpm assets:prepare && pnpm generate:data && pnpm check:fast && pnpm test && pnpm build",
-    "test": "tsx --test tests/artifacts.test.ts tests/catalog.test.ts tests/generation.test.ts tests/guardrails.test.ts tests/hooks.test.ts tests/package-surface.test.ts tests/runtime-assets.test.ts tests/standalone.test.ts tests/static-copy.test.ts",
+    "test": "tsx --test tests/artifacts.test.ts tests/catalog.test.ts tests/generation.test.ts tests/guardrails.test.ts tests/hooks.test.ts tests/package-surface.test.ts tests/release-workflow.test.ts tests/runtime-assets.test.ts tests/standalone.test.ts tests/static-copy.test.ts",
     "test:package": "pnpm assets:prepare && pnpm generate:data && pnpm build && pnpm pack:runtime && tsx --test tests/package.test.ts && pnpm verify:consumer -- --tarball output/runtime.tgz",
     "assets:prepare": "tsx scripts/prepare-assets.ts",
     "generate:data": "tsx scripts/generate.ts",
