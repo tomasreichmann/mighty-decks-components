@@ -23,7 +23,7 @@ jobs:
         run: |
           corepack enable
           corepack prepare pnpm@10.0.0 --activate
-          npm install --global npm@11.5.1
+          npm install --global npm@11.19.1
       - run: pnpm install --frozen-lockfile --prod=false
       - run: pnpm check
       - run: pnpm exec playwright install --with-deps chromium
