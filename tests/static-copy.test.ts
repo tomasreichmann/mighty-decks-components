@@ -8,6 +8,12 @@ import test from "node:test";
 
 const packageRoot = resolve(import.meta.dirname, "..");
 const tsx = resolve(packageRoot, "node_modules/tsx/dist/cli.mjs");
+const removeFixture = (path: string): Promise<void> => rm(path, {
+  recursive: true,
+  force: true,
+  maxRetries: 3,
+  retryDelay: 100,
+});
 
 const runCli = async (args: string[], cwd = packageRoot): Promise<{ code: number; stdout: string; stderr: string }> =>
   new Promise((resolveRun, reject) => {
@@ -63,7 +69,7 @@ test("copies npm-contained static resources without card images", async () => {
     assert.equal((await runCli(["copy-static", "--out", destination])).code, 0);
     assert.deepEqual(await hashes(copiedRoot), first);
   } finally {
-    await rm(destination, { recursive: true, force: true });
+    await removeFixture(destination);
   }
 });
 
@@ -87,8 +93,8 @@ test("rejects invalid arguments but accepts a package without image assets", asy
     assert.equal(copied.code, 0, copied.stderr);
     await access(join(destination, "mighty-decks", "assets", "fonts"));
     await assert.rejects(() => access(join(destination, "mighty-decks", "assets", "actors")));
-    await rm(destination, { recursive: true, force: true });
+    await removeFixture(destination);
   } finally {
-    await rm(fixture, { recursive: true, force: true });
+    await removeFixture(fixture);
   }
 });
