@@ -8,6 +8,7 @@ import { sha256 } from "./artifact-lib.mjs";
 const exec = promisify(execFile);
 const packageRoot = resolve(import.meta.dirname, "..");
 const output = resolve(packageRoot, "output");
+const packageSpec = process.argv.slice(2).find((argument) => argument !== "--") ?? ".";
 const npmCli = resolve(dirname(process.execPath), "node_modules", "npm", "bin", "npm-cli.js");
 const npmCliAvailable = await access(npmCli).then(() => true).catch(() => false);
 const npm = (argumentsList) => npmCliAvailable
@@ -19,7 +20,7 @@ const npm = (argumentsList) => npmCliAvailable
   });
 
 await mkdir(output, { recursive: true });
-const { stdout } = await npm(["pack", "--json", "--pack-destination", output]);
+const { stdout } = await npm(["pack", packageSpec, "--json", "--pack-destination", output]);
 const [packed] = JSON.parse(stdout);
 if (!packed?.filename || !packed?.integrity) {
   throw new Error("npm pack did not return tarball metadata.");
@@ -29,6 +30,7 @@ const runtimeTarball = resolve(output, "runtime.tgz");
 await cp(archive, runtimeTarball, { force: true });
 const metadata = {
   ...packed,
+  sourcePackage: packageSpec,
   sourceArchive: packed.filename,
   runtimeTarball: "runtime.tgz",
   sha256: await sha256(runtimeTarball),
