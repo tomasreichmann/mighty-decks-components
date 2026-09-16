@@ -52,7 +52,10 @@ gh workflow run Release --ref main --field tag=$tag
 
 Use the workflow URL printed by `gh run list --workflow Release --limit 1` to
 watch publication. The workflow refuses a non-draft release and retains the
-draft if npm publication fails.
+draft if npm publication fails. The one-time bootstrap version that was
+published directly before trusted publishing is configured is released without a
+provenance attestation; all subsequent workflow-published versions run strict
+provenance verification.
 
 ## Post-publication verification
 

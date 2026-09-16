@@ -55,6 +55,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: gh release edit "${{ inputs.tag }}" --draft=false
       - name: Verify the published release
+        if: steps.npm-package.outputs.published != 'true'
         env:
           TAG: ${{ inputs.tag }}
         run: pnpm verify:release -- --version "${TAG#v}" --repository tomasreichmann/mighty-decks-components

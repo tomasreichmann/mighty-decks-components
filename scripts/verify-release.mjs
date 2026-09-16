@@ -3,8 +3,9 @@ import { resolve } from "node:path";
 
 const packageRoot = resolve(import.meta.dirname, "..");
 const argumentsByName = new Map();
-for (let index = 2; index < process.argv.length; index += 2) {
-  argumentsByName.set(process.argv[index], process.argv[index + 1]);
+const argumentsList = process.argv.slice(2).filter((argument) => argument !== "--");
+for (let index = 0; index < argumentsList.length; index += 2) {
+  argumentsByName.set(argumentsList[index], argumentsList[index + 1]);
 }
 const version = argumentsByName.get("--version");
 const repository = argumentsByName.get("--repository");
