@@ -18,6 +18,7 @@ const pngManifest = JSON.parse(await readFile(resolve(generated, "png-manifest.j
 const groups = JSON.parse(await readFile(resolve(packageRoot, "resources", "png-groups.json"), "utf8"));
 const policy = JSON.parse(await readFile(resolve(packageRoot, "release-policy.json"), "utf8"));
 const runtime = JSON.parse(await readFile(resolve(output, "runtime-pack.json"), "utf8"));
+const runtimeAssets = JSON.parse(await readFile(resolve(output, "runtime-assets-pack.json"), "utf8"));
 
 const groupById = new Map();
 for (const group of ["core", "medieval"]) {
@@ -106,6 +107,7 @@ const releaseManifest = {
     sha256: runtime.sha256,
     integrity: runtime.integrity,
   },
+  runtimeAssets,
   archives,
   pngs,
 };

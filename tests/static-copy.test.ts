@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { createHash } from "node:crypto";
-import { cp, mkdtemp, readdir, readFile, rm, symlink } from "node:fs/promises";
+import { access, cp, mkdtemp, readdir, readFile, rm, symlink } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join, relative, resolve } from "node:path";
 import { spawn } from "node:child_process";
@@ -41,7 +41,7 @@ const hashes = async (root: string): Promise<Record<string, string>> => {
   return result;
 };
 
-test("copies the offline runtime resources idempotently without PNGs", async () => {
+test("copies npm-contained static resources without card images", async () => {
   const destination = await mkdtemp(join(tmpdir(), "mighty-decks-copy-"));
   try {
     assert.equal((await runCli(["copy-static", "--out", destination])).code, 0);
@@ -50,6 +50,9 @@ test("copies the offline runtime resources idempotently without PNGs", async () 
 
     assert.ok(first["generated/manifest.json"]);
     assert.ok(Object.keys(first).some((path) => path.startsWith("generated/csv/")));
+    assert.ok(Object.keys(first).some((path) => path.startsWith("assets/fonts/") && path.endsWith(".ttf")));
+    assert.equal(Object.keys(first).some((path) => path.startsWith("assets/actors/")), false);
+    assert.equal(first["assets/inventory.json"], undefined);
     await assert.rejects(() => readdir(join(copiedRoot, "generated", "png")));
 
     assert.equal((await runCli(["copy-static", "--out", destination])).code, 0);
@@ -59,7 +62,7 @@ test("copies the offline runtime resources idempotently without PNGs", async () 
   }
 });
 
-test("rejects invalid arguments and reports missing required runtime resources", async () => {
+test("rejects invalid arguments but accepts a package without image assets", async () => {
   const invalid = await runCli(["copy-static", "--bad", "out"]);
   assert.equal(invalid.code, 1);
   assert.match(invalid.stderr, /Usage:/);
@@ -71,11 +74,14 @@ test("rejects invalid arguments and reports missing required runtime resources",
       cp(resolve(packageRoot, "docs"), join(fixture, "docs"), { recursive: true }),
       cp(resolve(packageRoot, "skills"), join(fixture, "skills"), { recursive: true }),
       cp(resolve(packageRoot, "generated"), join(fixture, "generated"), { recursive: true }),
+      cp(resolve(packageRoot, "assets", "fonts"), join(fixture, "assets", "fonts"), { recursive: true }),
       symlink(resolve(packageRoot, "node_modules"), join(fixture, "node_modules"), "junction"),
     ]);
     const destination = await mkdtemp(join(tmpdir(), "mighty-decks-missing-"));
-    const missing = await runCli(["copy-static", "--out", destination], fixture);
-    assert.notEqual(missing.code, 0);
+    const copied = await runCli(["copy-static", "--out", destination], fixture);
+    assert.equal(copied.code, 0, copied.stderr);
+    await access(join(destination, "mighty-decks", "assets", "fonts"));
+    await assert.rejects(() => access(join(destination, "mighty-decks", "assets", "actors")));
     await rm(destination, { recursive: true, force: true });
   } finally {
     await rm(fixture, { recursive: true, force: true });

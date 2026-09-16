@@ -26,6 +26,15 @@ export const assertRuntimeEntries = (paths) => {
   }
 };
 
+export const assertRuntimeAssetEntries = (paths, expectedPaths) => {
+  assertSafeArchivePaths(paths, "mighty-decks/assets/");
+  const found = new Set(paths);
+  const missing = expectedPaths.filter((path) => !found.has(path));
+  if (missing.length > 0) {
+    throw new Error(`Runtime-assets archive is missing entries: ${missing.join(", ")}`);
+  }
+};
+
 export const assertWithinHostLimits = ({ compressedBytes }, { maxCompressedBytes }) => {
   if (maxCompressedBytes !== undefined && compressedBytes >= maxCompressedBytes) {
     throw new Error(`Archive exceeds configured host limit (${compressedBytes} bytes).`);
@@ -44,6 +53,7 @@ export const assertReleaseManifest = (manifest, {
   packageVersion,
   contentVersion,
   expectedPaths,
+  runtimeAssetsFilename,
 }) => {
   if (manifest.packageVersion !== packageVersion || manifest.contentVersion !== contentVersion) {
     throw new Error("Release manifest version mismatch.");
@@ -52,6 +62,9 @@ export const assertReleaseManifest = (manifest, {
   const missing = expectedPaths.filter((path) => !found.has(path));
   if (missing.length > 0) {
     throw new Error(`Release manifest is missing PNG entries: ${missing.join(", ")}`);
+  }
+  if (runtimeAssetsFilename && manifest.runtimeAssets?.filename !== runtimeAssetsFilename) {
+    throw new Error("Release manifest is missing the matching runtime-assets attachment.");
   }
 };
 

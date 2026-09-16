@@ -6,7 +6,7 @@ Local artifact validation is ready. The public repository is
 `tomasreichmann/mighty-decks-components`; code is MIT licensed and original
 content, artwork, and documentation are CC BY 4.0. npm scope access and the
 first-publication procedure for `@mighty-decks/components@0.1.0` still require
-maintainer action before a release workflow or trusted publisher is enabled.
+maintainer action before trusted publishing is enabled.
 
 Do not put npm write tokens in repository secrets. Do not publish a placeholder
 or create a release before those decisions are recorded.
@@ -22,17 +22,19 @@ pnpm build
 pnpm exec playwright install chromium
 pnpm generate:png
 pnpm pack:runtime
+pnpm package:runtime-assets
 pnpm archive:png
 pnpm verify:artifacts
 pnpm verify:consumer -- --tarball output/runtime.tgz
-pnpm verify:browser -- --tarball output/runtime.tgz
+pnpm verify:browser -- --tarball output/runtime.tgz --runtime-assets output/mighty-decks-components-VERSION-runtime-assets.tar.gz
 ```
 
-The resulting `output/runtime.tgz`, two PNG archives, and
+The resulting `output/runtime.tgz`, runtime-assets archive, two PNG archives, and
 `output/release-manifest.json` are a matched candidate set. Do not regenerate a
 tarball after it has been validated. A future authorized release workflow must
 upload those exact files, verify their hashes, finalize an immutable GitHub
-release, and publish that same runtime tarball through npm OIDC.
+release, and publish that same slim runtime tarball through npm OIDC. The
+runtime-assets attachment must have the same package version as the npm package.
 
 ## Post-publication verification
 

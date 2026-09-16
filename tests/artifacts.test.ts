@@ -38,3 +38,32 @@ test("rejects checksum mismatches and archive paths outside the documented root"
     /unsafe/i,
   );
 });
+
+test("requires a complete runtime-assets archive beneath its extraction root", () => {
+  assert.throws(
+    () => artifacts.assertRuntimeAssetEntries(
+      ["mighty-decks/assets/actors/guide.png"],
+      ["mighty-decks/assets/actors/guide.png", "mighty-decks/assets/stunts/charge.png"],
+    ),
+    /missing/i,
+  );
+  assert.throws(
+    () => artifacts.assertRuntimeAssetEntries(["outside.png"], []),
+    /unsafe/i,
+  );
+});
+
+test("requires a runtime-assets attachment in the release manifest", () => {
+  assert.throws(
+    () => artifacts.assertReleaseManifest(
+      { packageVersion: "0.1.0", contentVersion: "one", pngs: [] },
+      {
+        packageVersion: "0.1.0",
+        contentVersion: "one",
+        expectedPaths: [],
+        runtimeAssetsFilename: "mighty-decks-components-0.1.0-runtime-assets.tar.gz",
+      },
+    ),
+    /runtime-assets/i,
+  );
+});

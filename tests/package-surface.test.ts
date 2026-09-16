@@ -16,7 +16,7 @@ test("publishes only runtime resources and no PNG export contract", async () => 
 
   assert.deepEqual(packageJson.files, [
     "dist",
-    "assets",
+    "assets/fonts",
     "generated/csv",
     "generated/manifest.json",
     "docs/en",

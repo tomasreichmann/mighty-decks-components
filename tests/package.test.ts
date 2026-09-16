@@ -31,7 +31,8 @@ test("runtime tarball contains consumer resources but excludes maintainer materi
     "package/skills/mighty-decks-components/SKILL.md",
   ]) assert.ok(paths.includes(path), `missing ${path}`);
 
-  assert.ok(paths.some((path) => path.startsWith("package/assets/") && path.endsWith(".ttf")));
+  assert.ok(paths.some((path) => path.startsWith("package/assets/fonts/") && path.endsWith(".ttf")));
+  assert.ok(!paths.some((path) => path.startsWith("package/assets/") && !path.startsWith("package/assets/fonts/")), "npm tarball must not contain card images");
   for (const path of paths) {
     assert.ok(!path.startsWith("package/docs/plans/"), `must not package ${path}`);
     assert.notEqual(path, "package/docs/maintenance.md");

@@ -8,9 +8,10 @@ const main = async (): Promise<void> => {
     const packageRoot = resolve(import.meta.dirname, "..");
     const outputRoot = resolve(destination, "mighty-decks");
     await mkdir(outputRoot, { recursive: true });
-    for (const folder of ["assets", "docs", "skills"]) {
+    for (const folder of ["docs", "skills"]) {
       await cp(resolve(packageRoot, folder), resolve(outputRoot, folder), { recursive: true, force: true });
     }
+    await cp(resolve(packageRoot, "assets", "fonts"), resolve(outputRoot, "assets", "fonts"), { recursive: true, force: true });
     await cp(
       resolve(packageRoot, "generated", "csv"),
       resolve(outputRoot, "generated", "csv"),

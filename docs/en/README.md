@@ -1,9 +1,14 @@
 # Mighty Decks package guides
 
 The runtime npm package contains React components, styles, CSVs, the catalogue
-manifest, and runtime art. It does not contain static PNG card exports. For
-Markdown images, download the matching release archive and extract it beside the
-files produced by `mighty-decks-components copy-static --out <public-dir>`.
+manifest, and fonts. Card images and static PNG card exports are versioned GitHub
+Release attachments. For React or Markdown images, run
+`mighty-decks-components copy-static --out <public-dir>`, then download the
+matching `mighty-decks-components-<version>-runtime-assets.tar.gz` attachment
+and extract it into `<public-dir>` (for example,
+`tar -xzf mighty-decks-components-<version>-runtime-assets.tar.gz -C <public-dir>`).
+This creates the expected
+`mighty-decks/assets` directory for offline use.
 
 The public export helper (`@mighty-decks/components/export`) supplies the
 catalogue, its content version, static-entry enumeration, and custom-card input

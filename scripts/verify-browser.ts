@@ -1,9 +1,10 @@
 import { execFile, spawn } from "node:child_process";
-import { cp, mkdtemp, mkdir, writeFile } from "node:fs/promises";
+import { cp, mkdtemp, mkdir, readFile, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { dirname, resolve } from "node:path";
 import { promisify } from "node:util";
 import { chromium } from "playwright";
+import { x } from "tar";
 
 const exec = promisify(execFile);
 const packageRoot = resolve(import.meta.dirname, "..");
@@ -12,6 +13,14 @@ const output = resolve(packageRoot, "output", "verification");
 const args = process.argv.slice(2);
 const tarballIndex = args.indexOf("--tarball");
 const tarball = resolve(packageRoot, tarballIndex >= 0 ? args[tarballIndex + 1] : "output/runtime.tgz");
+const runtimeAssetsIndex = args.indexOf("--runtime-assets");
+const packageJson = JSON.parse(await readFile(resolve(packageRoot, "package.json"), "utf8")) as { version: string };
+const runtimeAssets = resolve(
+  packageRoot,
+  runtimeAssetsIndex >= 0 && args[runtimeAssetsIndex + 1]
+    ? args[runtimeAssetsIndex + 1]
+    : `output/mighty-decks-components-${packageJson.version}-runtime-assets.tar.gz`,
+);
 const npmCli = resolve(dirname(process.execPath), "node_modules", "npm", "bin", "npm-cli.js");
 const viteCli = (cwd: string) => resolve(cwd, "node_modules", "vite", "bin", "vite.js");
 
@@ -39,6 +48,7 @@ await mkdir(cache, { recursive: true });
 await writeFile(resolve(temp, ".npmrc"), "registry=https://registry.npmjs.org/\n");
 await npm(["install", "--save-dev", "--registry=https://registry.npmjs.org/", tarball, "react@18.3.1", "react-dom@18.3.1"]);
 await npm(["exec", "mighty-decks-components", "--", "copy-static", "--out", "public"]);
+await x({ file: runtimeAssets, cwd: resolve(temp, "public"), gzip: true });
 await cp(resolve(temp, "public", "mighty-decks", "assets"), resolve(temp, "public", "cards", "assets"), { recursive: true });
 await npm(["run", "build"]);
 

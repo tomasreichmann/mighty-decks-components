@@ -21,7 +21,7 @@
   },
   "files": [
     "dist",
-    "assets",
+    "assets/fonts",
     "generated/csv",
     "generated/manifest.json",
     "docs/en",
@@ -65,12 +65,13 @@
     "generate:png": "tsx scripts/export.ts",
     "generate": "pnpm assets:prepare && pnpm generate:data && pnpm generate:png",
     "pack:runtime": "node scripts/pack-runtime.mjs",
+    "package:runtime-assets": "node scripts/package-runtime-assets.mjs",
     "archive:png": "node scripts/package-pngs.mjs",
     "verify:artifacts": "node scripts/verify-artifacts.mjs",
     "verify:consumer": "node scripts/verify-consumer.mjs",
     "verify:browser": "tsx scripts/verify-browser.ts",
     "verify:release": "node scripts/verify-release.mjs",
-    "check:release": "pnpm check && pnpm test:package && pnpm generate:png && pnpm pack:runtime && pnpm archive:png && pnpm verify:artifacts && pnpm verify:consumer -- --tarball output/runtime.tgz",
+    "check:release": "pnpm check && pnpm test:package && pnpm generate:png && pnpm pack:runtime && pnpm package:runtime-assets && pnpm archive:png && pnpm verify:artifacts && pnpm verify:consumer -- --tarball output/runtime.tgz && pnpm verify:browser -- --tarball output/runtime.tgz",
     "hooks:install": "node scripts/install-hooks.mjs",
     "pack:local": "pnpm build && pnpm generate && pnpm pack --pack-destination output"
   },

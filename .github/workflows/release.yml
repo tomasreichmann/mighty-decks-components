@@ -29,13 +29,28 @@ jobs:
       - run: pnpm exec playwright install --with-deps chromium
       - run: pnpm generate:png
       - run: pnpm pack:runtime
+      - run: pnpm package:runtime-assets
       - run: pnpm archive:png
       - run: pnpm verify:artifacts
-      - name: Publish the validated runtime package
-        run: npm publish output/runtime.tgz --access public
-      - name: Create the immutable source release
+      - run: pnpm verify:browser -- --tarball output/runtime.tgz
+      - name: Upload a draft release candidate
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release create "$GITHUB_REF_NAME" output/runtime.tgz output/mighty-decks-components-*-png-*.tar.gz output/release-manifest.json --verify-tag --title "$GITHUB_REF_NAME"
+          gh release create "$GITHUB_REF_NAME" output/runtime.tgz output/mighty-decks-components-*-runtime-assets.tar.gz output/mighty-decks-components-*-png-*.tar.gz output/release-manifest.json --verify-tag --title "$GITHUB_REF_NAME" --draft
+      - name: Detect an already-published bootstrap version
+        id: npm-package
+        run: |
+          if npm view "@mighty-decks/components@${GITHUB_REF_NAME#v}" version --json >/dev/null 2>&1; then
+            echo "published=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "published=false" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Publish the validated runtime package
+        if: steps.npm-package.outputs.published != 'true'
+        run: npm publish output/runtime.tgz --access public
+      - name: Publish the immutable source release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release edit "$GITHUB_REF_NAME" --draft=false
       - run: pnpm verify:release -- --version "${GITHUB_REF_NAME#v}" --repository tomasreichmann/mighty-decks-components
