@@ -1,6 +1,8 @@
 node_modules/
 dist/
 assets/
+!resources/originals/assets/
+!resources/originals/assets/**
 generated/
 output/
 .export-staging/
