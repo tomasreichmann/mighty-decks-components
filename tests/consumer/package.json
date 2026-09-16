@@ -1,0 +1,22 @@
+{
+  "name": "mighty-decks-components-consumer-fixture",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check:imports": "tsx check-imports.ts",
+    "check:mdx": "node check-mdx.mjs",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "typecheck:nodenext": "tsc -p tsconfig.nodenext.json --noEmit",
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "@mdx-js/mdx": "3.1.1",
+    "@types/react": "18.3.31",
+    "@types/react-dom": "18.3.7",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "tsx": "4.23.13",
+    "typescript": "5.9.3",
+    "vite": "6.4.3"
+  }
+}

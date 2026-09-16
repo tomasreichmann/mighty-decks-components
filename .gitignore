@@ -1,0 +1,8 @@
+node_modules/
+dist/
+assets/
+generated/
+output/
+.export-staging/
+.pnpm-store/
+.agent-logs/

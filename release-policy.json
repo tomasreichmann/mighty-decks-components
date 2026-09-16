@@ -1,0 +1,11 @@
+{
+  "hostLimits": [
+    {
+      "host": "GitHub Releases",
+      "maximumFileBytes": 2147483648,
+      "source": "https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases",
+      "note": "GitHub documents each release asset as under 2 GiB; recheck before publication."
+    }
+  ],
+  "projectSizeBudget": null
+}

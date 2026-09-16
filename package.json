@@ -1,0 +1,100 @@
+{
+  "name": "@mighty-decks/components",
+  "version": "0.1.0",
+  "description": "Reusable React components, assets, and export tools for Mighty Decks.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomasreichmann/mighty-decks-components.git"
+  },
+  "homepage": "https://github.com/tomasreichmann/mighty-decks-components#readme",
+  "bugs": {
+    "url": "https://github.com/tomasreichmann/mighty-decks-components/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "module",
+  "packageManager": "pnpm@10.0.0",
+  "engines": {
+    "node": "22.14.0"
+  },
+  "files": [
+    "dist",
+    "assets",
+    "generated/csv",
+    "generated/manifest.json",
+    "docs/en",
+    "skills/mighty-decks-components",
+    "NOTICE",
+    "LICENSE",
+    "LICENSES"
+  ],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./react": {
+      "types": "./dist/react/index.d.ts",
+      "import": "./dist/react/index.js"
+    },
+    "./styles.css": "./dist/styles.css",
+    "./export": {
+      "types": "./dist/export.d.ts",
+      "import": "./dist/export.js"
+    },
+    "./csv/*": "./generated/csv/*"
+  },
+  "bin": {
+    "mighty-decks-components": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "vite build && tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "eslint . --max-warnings 0",
+    "check:fast": "pnpm lint && pnpm typecheck",
+    "check": "pnpm assets:prepare && pnpm check:fast && pnpm test && pnpm build && pnpm generate:data",
+    "test": "tsx --test tests/artifacts.test.ts tests/catalog.test.ts tests/generation.test.ts tests/guardrails.test.ts tests/hooks.test.ts tests/package-surface.test.ts tests/runtime-assets.test.ts tests/standalone.test.ts tests/static-copy.test.ts",
+    "test:package": "pnpm assets:prepare && pnpm generate:data && pnpm build && pnpm pack:runtime && tsx --test tests/package.test.ts && pnpm verify:consumer -- --tarball output/runtime.tgz",
+    "assets:prepare": "tsx scripts/prepare-assets.ts",
+    "generate:data": "tsx scripts/generate.ts",
+    "generate:runtime": "pnpm assets:prepare && pnpm generate:data",
+    "generate:png": "tsx scripts/export.ts",
+    "generate": "pnpm assets:prepare && pnpm generate:data && pnpm generate:png",
+    "pack:runtime": "node scripts/pack-runtime.mjs",
+    "archive:png": "node scripts/package-pngs.mjs",
+    "verify:artifacts": "node scripts/verify-artifacts.mjs",
+    "verify:consumer": "node scripts/verify-consumer.mjs",
+    "verify:browser": "tsx scripts/verify-browser.ts",
+    "verify:release": "node scripts/verify-release.mjs",
+    "check:release": "pnpm check && pnpm test:package && pnpm generate:png && pnpm pack:runtime && pnpm archive:png && pnpm verify:artifacts && pnpm verify:consumer -- --tarball output/runtime.tgz",
+    "hooks:install": "node scripts/install-hooks.mjs",
+    "pack:local": "pnpm build && pnpm generate && pnpm pack --pack-destination output"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "dependencies": {
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.39.0",
+    "@types/node": "^22.10.2",
+    "@types/react": "^18.3.14",
+    "@types/react-dom": "^18.3.3",
+    "@vitejs/plugin-react": "^4.3.4",
+    "eslint": "9.39.0",
+    "playwright": "1.60.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tar": "7.5.22",
+    "tsx": "^4.21.0",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "8.59.4",
+    "vite": "^6.0.5"
+  }
+}
