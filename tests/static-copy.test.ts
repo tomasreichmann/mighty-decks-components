@@ -9,18 +9,22 @@ import test from "node:test";
 const packageRoot = resolve(import.meta.dirname, "..");
 const tsx = resolve(packageRoot, "node_modules/tsx/dist/cli.mjs");
 
-const runCli = async (args: string[], cwd = packageRoot): Promise<{ code: number; stderr: string }> =>
+const runCli = async (args: string[], cwd = packageRoot): Promise<{ code: number; stdout: string; stderr: string }> =>
   new Promise((resolveRun, reject) => {
     const child = spawn(process.execPath, [tsx, resolve(cwd, "src", "cli.ts"), ...args], {
       cwd,
-      stdio: ["ignore", "ignore", "pipe"],
+      stdio: ["ignore", "pipe", "pipe"],
     });
+    let stdout = "";
     let stderr = "";
+    child.stdout.on("data", (chunk: Buffer) => {
+      stdout += chunk.toString();
+    });
     child.stderr.on("data", (chunk: Buffer) => {
       stderr += chunk.toString();
     });
     child.once("error", reject);
-    child.once("close", (code) => resolveRun({ code: code ?? 1, stderr }));
+    child.once("close", (code) => resolveRun({ code: code ?? 1, stdout, stderr }));
   });
 
 const hashes = async (root: string): Promise<Record<string, string>> => {
@@ -44,7 +48,8 @@ const hashes = async (root: string): Promise<Record<string, string>> => {
 test("copies npm-contained static resources without card images", async () => {
   const destination = await mkdtemp(join(tmpdir(), "mighty-decks-copy-"));
   try {
-    assert.equal((await runCli(["copy-static", "--out", destination])).code, 0);
+    const initial = await runCli(["copy-static", "--out", destination]);
+    assert.equal(initial.code, 0, `${initial.stdout}\n${initial.stderr}`);
     const copiedRoot = join(destination, "mighty-decks");
     const first = await hashes(copiedRoot);
 
