@@ -32,7 +32,7 @@ const assertActorOverlayDescription = (entry: StaticCardEntry): void => {
   if (!getCard(entry.family, entry.slug)?.description?.trim()) throw new Error(`Missing description for ${entry.id} (${entry.layout}/${entry.height}).`);
 };
 const sharedFingerprint = async (): Promise<string> => hash(JSON.stringify(await Promise.all([
-  "src/react/cards.module.css", "src/react/index.tsx", "export-app/main.tsx", "assets/inventory.json",
+  "src/react/cards.module.css", "src/react/illustratedCards.tsx", "src/react/index.tsx", "export-app/main.tsx", "assets/inventory.json",
 ].map(async (path) => [path, hash(await readFile(resolve(packageRoot, path)).catch(() => ""))]))));
 
 const filter = parseArgs();
@@ -65,7 +65,7 @@ if (renderPaths.length === 0 && plan.remove.length === 0) {
 const staging = resolve(packageRoot, ".export-staging");
 assertPathWithin(staging, packageRoot, "Export staging path");
 assertPathWithin(resolve(generated, "png"), generated, "PNG output path");
-await rm(staging, { recursive: true, force: true });
+await rm(staging, { recursive: true, force: true, maxRetries: 5, retryDelay: 100 });
 await mkdir(staging, { recursive: true });
 if (!partial && previous.entries.length > 0) await cp(resolve(generated, "png"), resolve(staging, "png"), { recursive: true, force: true });
 const renderSet = new Set(renderPaths);
@@ -84,18 +84,30 @@ if (renderPaths.length > 0) {
       browserErrors = [];
       const query = new URLSearchParams({ family: entry.family, slug: entry.slug, layout: entry.layout, width: String(entry.width) });
       await page.goto(`${address}?${query}`, { waitUntil: "networkidle" });
+      await page.locator("[data-card-export] article").waitFor();
+      if (isFullActorOverlay(entry)) await page.waitForFunction(() => {
+        const region = document.querySelector("[data-card-text-region]");
+        const inner = region?.firstElementChild?.firstElementChild as HTMLElement | null;
+        const bounds = region?.getBoundingClientRect();
+        const innerBounds = inner?.getBoundingClientRect();
+        return Boolean(bounds && innerBounds && innerBounds.width <= bounds.width + 0.5 && innerBounds.height <= bounds.height + 0.5);
+      });
       const validation = await page.evaluate(async ({ actorOverlay, special, description }) => {
         await document.fonts.ready;
         await Promise.all([...document.images].map((image) => image.decode().catch(() => undefined)));
         const missingImages = [...document.images].filter((image) => image.naturalWidth === 0).map((image) => image.currentSrc || image.src);
         const svgImageHrefs = [...document.querySelectorAll("svg image")].map((image) => image.getAttribute("href")).filter((href): href is string => Boolean(href));
-        const missingSvgImages = (await Promise.all(svgImageHrefs.map(async (href) => (await fetch(href)).ok ? undefined : href))).filter((href): href is string => Boolean(href));
+        const missingSvgImages = (await Promise.all(svgImageHrefs.map(async (href) => {
+          const response = await fetch(href);
+          return response.ok && response.headers.get("content-type")?.startsWith("image/") ? undefined : href;
+        }))).filter((href): href is string => Boolean(href));
         if (!actorOverlay) return { missingImages, missingSvgImages };
         const region = document.querySelector(`[data-card-text-region="${special ? "footer" : "main"}"]`);
         const inner = region?.firstElementChild?.firstElementChild as HTMLElement | null;
+        const accessibleDescription = document.querySelector("[data-card-description]");
         const bounds = region?.getBoundingClientRect();
         const innerBounds = inner?.getBoundingClientRect();
-        return { missingImages, missingSvgImages, hasDescription: inner?.textContent?.trim() === description, descriptionFits: Boolean(bounds && innerBounds && innerBounds.width <= bounds.width + 0.5 && innerBounds.height <= bounds.height + 0.5) };
+        return { missingImages, missingSvgImages, hasDescription: accessibleDescription?.textContent?.trim() === description || inner?.textContent?.trim() === description, descriptionFits: Boolean(bounds && innerBounds && innerBounds.width <= bounds.width + 0.5 && innerBounds.height <= bounds.height + 0.5) };
       }, { actorOverlay: isFullActorOverlay(entry), special: entry.family === "actor-special", description: getCard(entry.family, entry.slug)?.description });
       const card = page.locator("[data-card-export] article");
       const box = await card.boundingBox();
@@ -130,6 +142,6 @@ try {
   await cp(resolve(staging, "png"), resolve(generated, "png"), { recursive: true, force: true });
   await writeFile(manifestPath, JSON.stringify({ locale: "en", contentVersion, sharedFingerprint: shared, entries: manifestEntries }, null, 2) + "\n");
 } finally {
-  await rm(staging, { recursive: true, force: true });
+  await rm(staging, { recursive: true, force: true, maxRetries: 5, retryDelay: 100 });
 }
 console.log(`Exported ${renderPaths.length} PNG cards (${basename(staging)} staging).`);

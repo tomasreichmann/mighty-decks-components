@@ -10,11 +10,18 @@ import { GameCard, ActorCard } from "@mighty-decks/components/react";
 <GameCard type="outcome" slug="success" layout="full" />
 <GameCard type="outcome" slug="success" layout="compact" />
 <ActorCard baseLayerSlug="guard_blue" tacticalRoleSlug="thug" />
+<GameCard type="actor-base" slug="medieval_villager" assetBaseUrl="/mighty-decks/assets" />
+<GameCard type="actor-base" slug="medieval_female_villager" />
+<GameCard type="location" slug="medieval_dungeon" />
 ```
 
 Full Actor layers render their structured mechanics as icons while retaining
 plaintext rules for consumers and assistive technology. See the
 [Actor parity guide](./docs/actor-card-parity.md) for composition and review.
+Medieval Actor bases use their portrait front when no tactical layer is supplied;
+adding a role or special deliberately switches to the shared tactical composition.
+Catalogue Locations use a rotated scene front. `LocationCard` remains available for
+generic scene cards and is not replaced by the catalogue renderer.
 
 `en` is currently the only accepted locale. IDs are language-neutral; callers
 must handle an unsupported locale rather than assuming translation. Compact and

@@ -20,8 +20,8 @@
 .compact .deck, .compact .adjective, .compact .body, .compact .footer { display: none; }
 .actorRules { display: grid; gap: 3px; justify-items: center; }
 .actorRuleRow { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); align-items: center; width: 100%; }
-.actorIconText { display: inline-flex; align-items: center; flex-wrap: wrap; justify-content: center; gap: 1px; }
-.actorIcons { display: inline-flex; align-items: center; }
+.actorIconText { display: inline; }
+.actorIcons { display: inline-flex; align-items: center; vertical-align: middle; }
 .actorIcons img { width: 13px; height: 13px; object-fit: contain; }
 .srOnly { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .button { display: inline-block; padding: 0; border: 0; background: transparent; cursor: pointer; }

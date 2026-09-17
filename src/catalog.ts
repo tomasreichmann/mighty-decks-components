@@ -17,7 +17,7 @@ export interface CatalogCard { id: string; family: CardFamily; slug: string; tit
 // The checked-in JSON is captured from the source catalogue and guarded by
 // tests/standalone.test.ts so consumers never depend on Storyteller at build
 // time.
-export const cardCatalog = catalogue.cards as CatalogCard[];
+export const cardCatalog = [...catalogue.cards, ...catalogue.medievalCards] as CatalogCard[];
 export const getCard = (family: CardFamily, slug: string): CatalogCard | undefined => cardCatalog.find((card) => card.family === family && card.slug === slug);
 export interface StaticCardEntry extends CatalogCard {
   layout: "full" | "compact";

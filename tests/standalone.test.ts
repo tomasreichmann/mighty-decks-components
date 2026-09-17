@@ -11,6 +11,7 @@ import {
 
 const packageRoot = resolve(import.meta.dirname, "..");
 const baselinePath = resolve(import.meta.dirname, "fixtures/catalog-baseline.json");
+const medievalInventoryPath = resolve(import.meta.dirname, "fixtures/medieval-card-inventory.json");
 
 const sourceFiles = async (directory: string): Promise<string[]> => {
   const entries = await readdir(directory, { withFileTypes: true });
@@ -29,12 +30,14 @@ test("preserves the normalized presentation catalogue baseline", async () => {
     cards: unknown[];
     staticEntryIds: string[];
   };
+  const medievalInventory = JSON.parse(await readFile(medievalInventoryPath, "utf8")) as { actors: Array<{ id: string }>; locations: Array<{ id: string }> };
+  const additions = [...medievalInventory.actors, ...medievalInventory.locations];
 
   assert.equal(contentVersion, baseline.contentVersion);
-  assert.deepEqual(cardCatalog, baseline.cards);
+  assert.deepEqual(cardCatalog, [...baseline.cards, ...additions]);
   assert.deepEqual(
     enumerateStaticCards().map((entry) => entry.id),
-    baseline.staticEntryIds,
+    [...baseline.staticEntryIds, ...additions.flatMap((card: { id: string }) => [card.id, card.id, card.id])],
   );
 });
 

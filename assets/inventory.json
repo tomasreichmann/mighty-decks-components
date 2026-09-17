@@ -415,6 +415,246 @@
       "outputChecksum": "b1341bbce36bd18291d9a8246c769d4a70d6557bdfb885f9de03a8a73156755c"
     },
     {
+      "path": "/actors/medieval/alchemist.png",
+      "sourcePath": "/actors/medieval/alchemist.png",
+      "sourceChecksum": "63eadac266f6a3fc3765a9a4112a7f5699fef243ef002386eba688d59eddcac2",
+      "outputChecksum": "63eadac266f6a3fc3765a9a4112a7f5699fef243ef002386eba688d59eddcac2"
+    },
+    {
+      "path": "/actors/medieval/aristocrat.png",
+      "sourcePath": "/actors/medieval/aristocrat.png",
+      "sourceChecksum": "f83065de385a5bb20df95a345b1094812fb268c5d4ee6f5f721513496819ec17",
+      "outputChecksum": "f83065de385a5bb20df95a345b1094812fb268c5d4ee6f5f721513496819ec17"
+    },
+    {
+      "path": "/actors/medieval/bandit.png",
+      "sourcePath": "/actors/medieval/bandit.png",
+      "sourceChecksum": "b99b89816d7633a778191689e198c18d89b175cba7a0843919fa518f94d9a15f",
+      "outputChecksum": "b99b89816d7633a778191689e198c18d89b175cba7a0843919fa518f94d9a15f"
+    },
+    {
+      "path": "/actors/medieval/beggar.png",
+      "sourcePath": "/actors/medieval/beggar.png",
+      "sourceChecksum": "c723e1ba7139593ed0917560a0f1b961317ddef1def05657a07e17904dde53e0",
+      "outputChecksum": "c723e1ba7139593ed0917560a0f1b961317ddef1def05657a07e17904dde53e0"
+    },
+    {
+      "path": "/actors/medieval/child.png",
+      "sourcePath": "/actors/medieval/child.png",
+      "sourceChecksum": "027fbf199c8143fe19913b93d46ca6a8e6b757f5423a72e023d975fd1f15d387",
+      "outputChecksum": "027fbf199c8143fe19913b93d46ca6a8e6b757f5423a72e023d975fd1f15d387"
+    },
+    {
+      "path": "/actors/medieval/craftsman.png",
+      "sourcePath": "/actors/medieval/craftsman.png",
+      "sourceChecksum": "28387797872640bd85413ba0a74c578aaefc440c06cd8e1f9dee9ba8a76eb94d",
+      "outputChecksum": "28387797872640bd85413ba0a74c578aaefc440c06cd8e1f9dee9ba8a76eb94d"
+    },
+    {
+      "path": "/actors/medieval/elder.png",
+      "sourcePath": "/actors/medieval/elder.png",
+      "sourceChecksum": "461ec5e12aaae7e48e0cf03f147191612ba9dc2b97d4b71b0170216e32f3ebce",
+      "outputChecksum": "461ec5e12aaae7e48e0cf03f147191612ba9dc2b97d4b71b0170216e32f3ebce"
+    },
+    {
+      "path": "/actors/medieval/farmer.png",
+      "sourcePath": "/actors/medieval/farmer.png",
+      "sourceChecksum": "5fd962c424dc681454f3688484ceb98a15db182b4f313f1c7af83e58ff343fbf",
+      "outputChecksum": "5fd962c424dc681454f3688484ceb98a15db182b4f313f1c7af83e58ff343fbf"
+    },
+    {
+      "path": "/actors/medieval/female/alchemist.png",
+      "sourcePath": "/actors/medieval/female/alchemist.png",
+      "sourceChecksum": "072929b741a67c03c0b3c21ad4bf3efda86da4bded7f0585787ead416237d90c",
+      "outputChecksum": "072929b741a67c03c0b3c21ad4bf3efda86da4bded7f0585787ead416237d90c"
+    },
+    {
+      "path": "/actors/medieval/female/aristocrat.png",
+      "sourcePath": "/actors/medieval/female/aristocrat.png",
+      "sourceChecksum": "7f62560db0a5a62218c6a0cdf354a23eb0db1b263f72957b90f517c86dc88ecb",
+      "outputChecksum": "7f62560db0a5a62218c6a0cdf354a23eb0db1b263f72957b90f517c86dc88ecb"
+    },
+    {
+      "path": "/actors/medieval/female/bandit.png",
+      "sourcePath": "/actors/medieval/female/bandit.png",
+      "sourceChecksum": "df581d3619bd194c27e730ae92ce8c89115e2ece9766be3c178aaf7b377b4c22",
+      "outputChecksum": "df581d3619bd194c27e730ae92ce8c89115e2ece9766be3c178aaf7b377b4c22"
+    },
+    {
+      "path": "/actors/medieval/female/beggar.png",
+      "sourcePath": "/actors/medieval/female/beggar.png",
+      "sourceChecksum": "650e1bcefe6a304c47ec3e9d7e1729dcc1760a3b6be334baac9aead726c7f9a3",
+      "outputChecksum": "650e1bcefe6a304c47ec3e9d7e1729dcc1760a3b6be334baac9aead726c7f9a3"
+    },
+    {
+      "path": "/actors/medieval/female/child.png",
+      "sourcePath": "/actors/medieval/female/child.png",
+      "sourceChecksum": "b1a85dc5307255406889cfe0b18422f2666d5f9773d6b4bb9c13e4a903e556cc",
+      "outputChecksum": "b1a85dc5307255406889cfe0b18422f2666d5f9773d6b4bb9c13e4a903e556cc"
+    },
+    {
+      "path": "/actors/medieval/female/craftsman.png",
+      "sourcePath": "/actors/medieval/female/craftsman.png",
+      "sourceChecksum": "63f0438de8bc90f3047433a28b8bc2e94b2dfc6fb196deb73373cf0111ed21db",
+      "outputChecksum": "63f0438de8bc90f3047433a28b8bc2e94b2dfc6fb196deb73373cf0111ed21db"
+    },
+    {
+      "path": "/actors/medieval/female/crazy-cat-lady.png",
+      "sourcePath": "/actors/medieval/female/crazy-cat-lady.png",
+      "sourceChecksum": "6a46bae3bde75e8b6b61ec7c0bb96d096792cc634178b3577b552ea84bf6f116",
+      "outputChecksum": "6a46bae3bde75e8b6b61ec7c0bb96d096792cc634178b3577b552ea84bf6f116"
+    },
+    {
+      "path": "/actors/medieval/female/elder.png",
+      "sourcePath": "/actors/medieval/female/elder.png",
+      "sourceChecksum": "aa4a26e2987afc0a94eba18236b1f39444414c39b34525253c5999c254a17eec",
+      "outputChecksum": "aa4a26e2987afc0a94eba18236b1f39444414c39b34525253c5999c254a17eec"
+    },
+    {
+      "path": "/actors/medieval/female/farmer.png",
+      "sourcePath": "/actors/medieval/female/farmer.png",
+      "sourceChecksum": "8282171182dd36c97c58c8bea3a3cd4fb25a9f16b959d854bf948a583dc098b4",
+      "outputChecksum": "8282171182dd36c97c58c8bea3a3cd4fb25a9f16b959d854bf948a583dc098b4"
+    },
+    {
+      "path": "/actors/medieval/female/hunter.png",
+      "sourcePath": "/actors/medieval/female/hunter.png",
+      "sourceChecksum": "b027a27709a1a841a0d4e1ab07b1f60aaa5b1f03237018f2f245cd4dac65344a",
+      "outputChecksum": "b027a27709a1a841a0d4e1ab07b1f60aaa5b1f03237018f2f245cd4dac65344a"
+    },
+    {
+      "path": "/actors/medieval/female/knight.png",
+      "sourcePath": "/actors/medieval/female/knight.png",
+      "sourceChecksum": "5891b49f115295f16e350854dd5fc1ca06501addef172ddf4e28696f583ddc54",
+      "outputChecksum": "5891b49f115295f16e350854dd5fc1ca06501addef172ddf4e28696f583ddc54"
+    },
+    {
+      "path": "/actors/medieval/female/marksman.png",
+      "sourcePath": "/actors/medieval/female/marksman.png",
+      "sourceChecksum": "6f1f59b5b01f3ad383e519e5a963ee5df5be112a4d95d7d120142c992ae8b858",
+      "outputChecksum": "6f1f59b5b01f3ad383e519e5a963ee5df5be112a4d95d7d120142c992ae8b858"
+    },
+    {
+      "path": "/actors/medieval/female/merchant.png",
+      "sourcePath": "/actors/medieval/female/merchant.png",
+      "sourceChecksum": "fea73afd7a7bd7eeacb736efba12ded212930632ca55c85a8056a382c7bd3a86",
+      "outputChecksum": "fea73afd7a7bd7eeacb736efba12ded212930632ca55c85a8056a382c7bd3a86"
+    },
+    {
+      "path": "/actors/medieval/female/militia.png",
+      "sourcePath": "/actors/medieval/female/militia.png",
+      "sourceChecksum": "327a7a38622136fc2f5673b80a901e295358ababe7814dd3d409128d50a25ef4",
+      "outputChecksum": "327a7a38622136fc2f5673b80a901e295358ababe7814dd3d409128d50a25ef4"
+    },
+    {
+      "path": "/actors/medieval/female/nun.png",
+      "sourcePath": "/actors/medieval/female/nun.png",
+      "sourceChecksum": "f932f6c61e72df428eb5231f08996bf2c5c53a3a2aeba1edb51558d3daf1356b",
+      "outputChecksum": "f932f6c61e72df428eb5231f08996bf2c5c53a3a2aeba1edb51558d3daf1356b"
+    },
+    {
+      "path": "/actors/medieval/female/pikeman.png",
+      "sourcePath": "/actors/medieval/female/pikeman.png",
+      "sourceChecksum": "2aadc44a8d6faca5830f081c580f2f83b87292d31dcd1690c828058a58fc3b39",
+      "outputChecksum": "2aadc44a8d6faca5830f081c580f2f83b87292d31dcd1690c828058a58fc3b39"
+    },
+    {
+      "path": "/actors/medieval/female/rogue.png",
+      "sourcePath": "/actors/medieval/female/rogue.png",
+      "sourceChecksum": "f3ff73a4a654968d8f1d76d67865cb5a7ba0f51f15beb56ac998eec6eee8572d",
+      "outputChecksum": "f3ff73a4a654968d8f1d76d67865cb5a7ba0f51f15beb56ac998eec6eee8572d"
+    },
+    {
+      "path": "/actors/medieval/female/scribe.png",
+      "sourcePath": "/actors/medieval/female/scribe.png",
+      "sourceChecksum": "131ae788e432f64a1a66309d4b44b837c4a754a392328fd2f56c374ce04d78d6",
+      "outputChecksum": "131ae788e432f64a1a66309d4b44b837c4a754a392328fd2f56c374ce04d78d6"
+    },
+    {
+      "path": "/actors/medieval/female/shopkeeper.png",
+      "sourcePath": "/actors/medieval/female/shopkeeper.png",
+      "sourceChecksum": "3c06523603b39b71fad41e86877816ac9fa81dcc6b936174413ed354a1cca3e1",
+      "outputChecksum": "3c06523603b39b71fad41e86877816ac9fa81dcc6b936174413ed354a1cca3e1"
+    },
+    {
+      "path": "/actors/medieval/female/villager.png",
+      "sourcePath": "/actors/medieval/female/villager.png",
+      "sourceChecksum": "a1538c22927f9ee65adbb90c4440a5c5dc29d0b58454936081a6c104b13eb6fb",
+      "outputChecksum": "a1538c22927f9ee65adbb90c4440a5c5dc29d0b58454936081a6c104b13eb6fb"
+    },
+    {
+      "path": "/actors/medieval/hunter.png",
+      "sourcePath": "/actors/medieval/hunter.png",
+      "sourceChecksum": "a4aa5a77acd4e62ec57b074082c1fb1b31299bae62b569b24bfb5414f92f6a6f",
+      "outputChecksum": "a4aa5a77acd4e62ec57b074082c1fb1b31299bae62b569b24bfb5414f92f6a6f"
+    },
+    {
+      "path": "/actors/medieval/idiot.png",
+      "sourcePath": "/actors/medieval/idiot.png",
+      "sourceChecksum": "eef1716bd7ad026307b600d1b896720c8b00eb9237c06abd2628b9781f346d58",
+      "outputChecksum": "eef1716bd7ad026307b600d1b896720c8b00eb9237c06abd2628b9781f346d58"
+    },
+    {
+      "path": "/actors/medieval/knight.png",
+      "sourcePath": "/actors/medieval/knight.png",
+      "sourceChecksum": "b6229b213d75fc4b662de5f3aa26b075021364906cae163eaf17025c43601764",
+      "outputChecksum": "b6229b213d75fc4b662de5f3aa26b075021364906cae163eaf17025c43601764"
+    },
+    {
+      "path": "/actors/medieval/marksman.png",
+      "sourcePath": "/actors/medieval/marksman.png",
+      "sourceChecksum": "307bee20f75570303d6458010bd2b4c7ea558fbc429d5976ec5b747ce99ca212",
+      "outputChecksum": "307bee20f75570303d6458010bd2b4c7ea558fbc429d5976ec5b747ce99ca212"
+    },
+    {
+      "path": "/actors/medieval/merchant.png",
+      "sourcePath": "/actors/medieval/merchant.png",
+      "sourceChecksum": "1c59809e4de7db416617010c35e0634d8a84a467b15ba7cfd56008307c113dcb",
+      "outputChecksum": "1c59809e4de7db416617010c35e0634d8a84a467b15ba7cfd56008307c113dcb"
+    },
+    {
+      "path": "/actors/medieval/militia.png",
+      "sourcePath": "/actors/medieval/militia.png",
+      "sourceChecksum": "92c2528c0802dea3d6d09960493edda696de5ec2935b9508abd006740deb9ffd",
+      "outputChecksum": "92c2528c0802dea3d6d09960493edda696de5ec2935b9508abd006740deb9ffd"
+    },
+    {
+      "path": "/actors/medieval/pikeman.png",
+      "sourcePath": "/actors/medieval/pikeman.png",
+      "sourceChecksum": "91b671aa1448dafa8cfe24a688e2bf328796e28c0fff68db35e3241188e7fa17",
+      "outputChecksum": "91b671aa1448dafa8cfe24a688e2bf328796e28c0fff68db35e3241188e7fa17"
+    },
+    {
+      "path": "/actors/medieval/priest.png",
+      "sourcePath": "/actors/medieval/priest.png",
+      "sourceChecksum": "e3857e8b7c7e83ca371132b443449f5a4bf2a1b7921160813c83bb11540d07f0",
+      "outputChecksum": "e3857e8b7c7e83ca371132b443449f5a4bf2a1b7921160813c83bb11540d07f0"
+    },
+    {
+      "path": "/actors/medieval/rogue.png",
+      "sourcePath": "/actors/medieval/rogue.png",
+      "sourceChecksum": "0259e39a8f2de6440f57eaab348f709ea5bc758d9ad51b020b4baa9dc02d21e8",
+      "outputChecksum": "0259e39a8f2de6440f57eaab348f709ea5bc758d9ad51b020b4baa9dc02d21e8"
+    },
+    {
+      "path": "/actors/medieval/scholar.png",
+      "sourcePath": "/actors/medieval/scholar.png",
+      "sourceChecksum": "68126b7bf2db00c587cbc8a7a2300d846346c5e25e779ba1991b8477267d90e3",
+      "outputChecksum": "68126b7bf2db00c587cbc8a7a2300d846346c5e25e779ba1991b8477267d90e3"
+    },
+    {
+      "path": "/actors/medieval/shopkeeper.png",
+      "sourcePath": "/actors/medieval/shopkeeper.png",
+      "sourceChecksum": "f9ded058512e378f1f063f3831a7f902056327ce48fbd64d36a0101039635d80",
+      "outputChecksum": "f9ded058512e378f1f063f3831a7f902056327ce48fbd64d36a0101039635d80"
+    },
+    {
+      "path": "/actors/medieval/villager.png",
+      "sourcePath": "/actors/medieval/villager.png",
+      "sourceChecksum": "416133f90e6b65a8f379b312f6aadb759e98b36e8f0726dff886e74cf38b2426",
+      "outputChecksum": "416133f90e6b65a8f379b312f6aadb759e98b36e8f0726dff886e74cf38b2426"
+    },
+    {
       "path": "/art/effects/taken-out.png",
       "sourcePath": "/effects/dying.png",
       "sourceChecksum": "5e92728e28fe0b0f5f87373913b92ddb9aa3703d52fe7afa2fd10ed09dbd1b2f",
@@ -1177,6 +1417,294 @@
       "outputChecksum": "8582d69250e8a78463d49e5388fc28f20e0496abb65bc7cae848599128c74d57"
     },
     {
+      "path": "/locations/medieval/apothecary.jpg",
+      "sourcePath": "/locations/medieval/apothecary.jpg",
+      "sourceChecksum": "6e81444bbded3eb9c24b0531652772683bf0ab72c61fbed8ccf8a3a2a94da76d",
+      "outputChecksum": "6e81444bbded3eb9c24b0531652772683bf0ab72c61fbed8ccf8a3a2a94da76d"
+    },
+    {
+      "path": "/locations/medieval/armory.jpg",
+      "sourcePath": "/locations/medieval/armory.jpg",
+      "sourceChecksum": "3422cf0c457f3cb1e40d5aa1b5ae4c0162d8577293f955a1e7a010bdc23ca471",
+      "outputChecksum": "3422cf0c457f3cb1e40d5aa1b5ae4c0162d8577293f955a1e7a010bdc23ca471"
+    },
+    {
+      "path": "/locations/medieval/bakery.jpg",
+      "sourcePath": "/locations/medieval/bakery.jpg",
+      "sourceChecksum": "93bef019feb2270b57ee7865bcb3780d5823bc70f5f537568dc6ceaaf79b2aa3",
+      "outputChecksum": "93bef019feb2270b57ee7865bcb3780d5823bc70f5f537568dc6ceaaf79b2aa3"
+    },
+    {
+      "path": "/locations/medieval/barracks.jpg",
+      "sourcePath": "/locations/medieval/barracks.jpg",
+      "sourceChecksum": "8b754b6d75108ac76e633c73d043685bcec1be1521df0e7a236630b8c3a830c3",
+      "outputChecksum": "8b754b6d75108ac76e633c73d043685bcec1be1521df0e7a236630b8c3a830c3"
+    },
+    {
+      "path": "/locations/medieval/bathhouse.jpg",
+      "sourcePath": "/locations/medieval/bathhouse.jpg",
+      "sourceChecksum": "537b71e9397891b171e266a69710de4e3b3d9467e2068f1c38a81ed49cff0608",
+      "outputChecksum": "537b71e9397891b171e266a69710de4e3b3d9467e2068f1c38a81ed49cff0608"
+    },
+    {
+      "path": "/locations/medieval/butchery.jpg",
+      "sourcePath": "/locations/medieval/butchery.jpg",
+      "sourceChecksum": "dba6511523f003b55eeef74b73f074d8f767664b804d2b25011976d1f24d2030",
+      "outputChecksum": "dba6511523f003b55eeef74b73f074d8f767664b804d2b25011976d1f24d2030"
+    },
+    {
+      "path": "/locations/medieval/camp.jpg",
+      "sourcePath": "/locations/medieval/camp.jpg",
+      "sourceChecksum": "cdf1efbd54b4a7b488bfc97296b34aa82f15b8fa85945d9c3fed698990db4d06",
+      "outputChecksum": "cdf1efbd54b4a7b488bfc97296b34aa82f15b8fa85945d9c3fed698990db4d06"
+    },
+    {
+      "path": "/locations/medieval/castle_bailey.jpg",
+      "sourcePath": "/locations/medieval/castle_bailey.jpg",
+      "sourceChecksum": "2ef2cfecdc4a729a0c6202deeab9159cdce5485a3d833bbbb9db57a23247437b",
+      "outputChecksum": "2ef2cfecdc4a729a0c6202deeab9159cdce5485a3d833bbbb9db57a23247437b"
+    },
+    {
+      "path": "/locations/medieval/castle_bastion.jpg",
+      "sourcePath": "/locations/medieval/castle_bastion.jpg",
+      "sourceChecksum": "8817c962c5231d6fd71b229e5c5c77e897e86d2fba80b044cd9c0e7a01cc4a2f",
+      "outputChecksum": "8817c962c5231d6fd71b229e5c5c77e897e86d2fba80b044cd9c0e7a01cc4a2f"
+    },
+    {
+      "path": "/locations/medieval/castle_corridor.jpg",
+      "sourcePath": "/locations/medieval/castle_corridor.jpg",
+      "sourceChecksum": "8a09102388aee1fb3e61902e7e547663e417fe4d0228595b67b3c8a6bc2813a8",
+      "outputChecksum": "8a09102388aee1fb3e61902e7e547663e417fe4d0228595b67b3c8a6bc2813a8"
+    },
+    {
+      "path": "/locations/medieval/castle_dining_room.jpg",
+      "sourcePath": "/locations/medieval/castle_dining_room.jpg",
+      "sourceChecksum": "4642092a21cbd09548311250a1dadb05e6a29bc287cc0de1445ee89c34fda245",
+      "outputChecksum": "4642092a21cbd09548311250a1dadb05e6a29bc287cc0de1445ee89c34fda245"
+    },
+    {
+      "path": "/locations/medieval/castle_gate.jpg",
+      "sourcePath": "/locations/medieval/castle_gate.jpg",
+      "sourceChecksum": "47c0428ea837de42b251f866a64e848a31624f2860808c7c414893182bb3d0d6",
+      "outputChecksum": "47c0428ea837de42b251f866a64e848a31624f2860808c7c414893182bb3d0d6"
+    },
+    {
+      "path": "/locations/medieval/cave.jpg",
+      "sourcePath": "/locations/medieval/cave.jpg",
+      "sourceChecksum": "a8e147ff0122e6dcabf5741ecdb196cad86025806a40bd1139630b41f52b13bd",
+      "outputChecksum": "a8e147ff0122e6dcabf5741ecdb196cad86025806a40bd1139630b41f52b13bd"
+    },
+    {
+      "path": "/locations/medieval/church.jpg",
+      "sourcePath": "/locations/medieval/church.jpg",
+      "sourceChecksum": "01d613a5a2c03f75bc98ce130f1c42a879e27b593f35273c8b41cb25494c6f51",
+      "outputChecksum": "01d613a5a2c03f75bc98ce130f1c42a879e27b593f35273c8b41cb25494c6f51"
+    },
+    {
+      "path": "/locations/medieval/clearing.jpg",
+      "sourcePath": "/locations/medieval/clearing.jpg",
+      "sourceChecksum": "1cf18c11f00cb390803114b1e31b6a1d2a3a9604067cb26e61e939339e18c4f5",
+      "outputChecksum": "1cf18c11f00cb390803114b1e31b6a1d2a3a9604067cb26e61e939339e18c4f5"
+    },
+    {
+      "path": "/locations/medieval/dark_alley.jpg",
+      "sourcePath": "/locations/medieval/dark_alley.jpg",
+      "sourceChecksum": "0106b37398f26575d94b17f7481220112a9326ca9a9c9f08e143d4bf980f11d7",
+      "outputChecksum": "0106b37398f26575d94b17f7481220112a9326ca9a9c9f08e143d4bf980f11d7"
+    },
+    {
+      "path": "/locations/medieval/dungeon.jpg",
+      "sourcePath": "/locations/medieval/dungeon.jpg",
+      "sourceChecksum": "9c8fd9302b49f18814e42aa097bb12549c67bb875db954dfdae38617801ff9ee",
+      "outputChecksum": "9c8fd9302b49f18814e42aa097bb12549c67bb875db954dfdae38617801ff9ee"
+    },
+    {
+      "path": "/locations/medieval/forrest.jpg",
+      "sourcePath": "/locations/medieval/forrest.jpg",
+      "sourceChecksum": "71725a595aee91c67f912f5870ee61645b6f89ad7e3270dba8980a00d2f667bb",
+      "outputChecksum": "71725a595aee91c67f912f5870ee61645b6f89ad7e3270dba8980a00d2f667bb"
+    },
+    {
+      "path": "/locations/medieval/garden.jpg",
+      "sourcePath": "/locations/medieval/garden.jpg",
+      "sourceChecksum": "23904da84299604ddb059d967124751d8a43a4e4363a853db6785261cf4b8614",
+      "outputChecksum": "23904da84299604ddb059d967124751d8a43a4e4363a853db6785261cf4b8614"
+    },
+    {
+      "path": "/locations/medieval/graveyard.jpg",
+      "sourcePath": "/locations/medieval/graveyard.jpg",
+      "sourceChecksum": "03e41e1efc50accdef4de0b369e2b183b77b5c117f0649ed0a922cee45a2c225",
+      "outputChecksum": "03e41e1efc50accdef4de0b369e2b183b77b5c117f0649ed0a922cee45a2c225"
+    },
+    {
+      "path": "/locations/medieval/harbor.jpg",
+      "sourcePath": "/locations/medieval/harbor.jpg",
+      "sourceChecksum": "12a664594a36177545fab9342f81919f05c083aba2a72e74d761d7e1b2584edf",
+      "outputChecksum": "12a664594a36177545fab9342f81919f05c083aba2a72e74d761d7e1b2584edf"
+    },
+    {
+      "path": "/locations/medieval/lake.jpg",
+      "sourcePath": "/locations/medieval/lake.jpg",
+      "sourceChecksum": "380b3800af8919d9902c785d7dfaf5233c9ade6b571b4f6c5ecd4ac79b16e88f",
+      "outputChecksum": "380b3800af8919d9902c785d7dfaf5233c9ade6b571b4f6c5ecd4ac79b16e88f"
+    },
+    {
+      "path": "/locations/medieval/library.jpg",
+      "sourcePath": "/locations/medieval/library.jpg",
+      "sourceChecksum": "c8c7f180f5cab86e18a47936ed8985629ec2ea63079ecc7b46cc5d479125067f",
+      "outputChecksum": "c8c7f180f5cab86e18a47936ed8985629ec2ea63079ecc7b46cc5d479125067f"
+    },
+    {
+      "path": "/locations/medieval/market.jpg",
+      "sourcePath": "/locations/medieval/market.jpg",
+      "sourceChecksum": "34d64abbcd74eec292b88268b41ffdebf89d53ffbb51f5f6b5fcfa374a191b7c",
+      "outputChecksum": "34d64abbcd74eec292b88268b41ffdebf89d53ffbb51f5f6b5fcfa374a191b7c"
+    },
+    {
+      "path": "/locations/medieval/mine_shaft.jpg",
+      "sourcePath": "/locations/medieval/mine_shaft.jpg",
+      "sourceChecksum": "3003b6878db9ec6de2edd6e0e636c54243d3ed20d2e4e9aaa31984be04949784",
+      "outputChecksum": "3003b6878db9ec6de2edd6e0e636c54243d3ed20d2e4e9aaa31984be04949784"
+    },
+    {
+      "path": "/locations/medieval/mountain_trail.jpg",
+      "sourcePath": "/locations/medieval/mountain_trail.jpg",
+      "sourceChecksum": "4589e73cc0ad2b5ddc0e733262d245c0847d9991981cd03d3c05312e28de94a4",
+      "outputChecksum": "4589e73cc0ad2b5ddc0e733262d245c0847d9991981cd03d3c05312e28de94a4"
+    },
+    {
+      "path": "/locations/medieval/pantry.jpg",
+      "sourcePath": "/locations/medieval/pantry.jpg",
+      "sourceChecksum": "d1eb90584c47a819ac3470061d9dbd0b0073333a17cd99b6164a7b30ad3e99aa",
+      "outputChecksum": "d1eb90584c47a819ac3470061d9dbd0b0073333a17cd99b6164a7b30ad3e99aa"
+    },
+    {
+      "path": "/locations/medieval/pasture.jpg",
+      "sourcePath": "/locations/medieval/pasture.jpg",
+      "sourceChecksum": "9c884271cc532f89dd3b747513bd11378ab1a65f314ee74354b0bb10b3782677",
+      "outputChecksum": "9c884271cc532f89dd3b747513bd11378ab1a65f314ee74354b0bb10b3782677"
+    },
+    {
+      "path": "/locations/medieval/prison_cell.jpg",
+      "sourcePath": "/locations/medieval/prison_cell.jpg",
+      "sourceChecksum": "49859f7857f1e4f234eea7f471cba7808a32d65b7d3ca154bd9d95a299be47b9",
+      "outputChecksum": "49859f7857f1e4f234eea7f471cba7808a32d65b7d3ca154bd9d95a299be47b9"
+    },
+    {
+      "path": "/locations/medieval/quarry.jpg",
+      "sourcePath": "/locations/medieval/quarry.jpg",
+      "sourceChecksum": "8c4d17c37461fc71e9c64894e821f3c9f29a2063f92d96029e0f865977adb224",
+      "outputChecksum": "8c4d17c37461fc71e9c64894e821f3c9f29a2063f92d96029e0f865977adb224"
+    },
+    {
+      "path": "/locations/medieval/road.jpg",
+      "sourcePath": "/locations/medieval/road.jpg",
+      "sourceChecksum": "0c98fd745bde4f665485bc0749ae60c6b5f5fb9b21220c115b802cd0fa5f5cf7",
+      "outputChecksum": "0c98fd745bde4f665485bc0749ae60c6b5f5fb9b21220c115b802cd0fa5f5cf7"
+    },
+    {
+      "path": "/locations/medieval/servants_quarters.jpg",
+      "sourcePath": "/locations/medieval/servants_quarters.jpg",
+      "sourceChecksum": "3b3abfa307ae7a0f5fa46e00d5ba013ac6d7dbb7c78477eb2d0716fc08c021b5",
+      "outputChecksum": "3b3abfa307ae7a0f5fa46e00d5ba013ac6d7dbb7c78477eb2d0716fc08c021b5"
+    },
+    {
+      "path": "/locations/medieval/sewer.jpg",
+      "sourcePath": "/locations/medieval/sewer.jpg",
+      "sourceChecksum": "3514ffaaded7c29549773b0768af80c66b716057da5fd531492442aa47de16e8",
+      "outputChecksum": "3514ffaaded7c29549773b0768af80c66b716057da5fd531492442aa47de16e8"
+    },
+    {
+      "path": "/locations/medieval/swamp.jpg",
+      "sourcePath": "/locations/medieval/swamp.jpg",
+      "sourceChecksum": "1c0eb267c5d41a4b32100e8aef20b7da773aa566dd2f2cad8e6d247ed0644cb0",
+      "outputChecksum": "1c0eb267c5d41a4b32100e8aef20b7da773aa566dd2f2cad8e6d247ed0644cb0"
+    },
+    {
+      "path": "/locations/medieval/tavern.jpg",
+      "sourcePath": "/locations/medieval/tavern.jpg",
+      "sourceChecksum": "535855eb9ca7ccecf03df0d1611fc81bfe4a428b153a847250868d692f3b21fb",
+      "outputChecksum": "535855eb9ca7ccecf03df0d1611fc81bfe4a428b153a847250868d692f3b21fb"
+    },
+    {
+      "path": "/locations/medieval/town_square.jpg",
+      "sourcePath": "/locations/medieval/town_square.jpg",
+      "sourceChecksum": "7a45ae6a9b10af96f6f98f7489e58c841dff662d5393b91b55ca28a6ce47b1b6",
+      "outputChecksum": "7a45ae6a9b10af96f6f98f7489e58c841dff662d5393b91b55ca28a6ce47b1b6"
+    },
+    {
+      "path": "/locations/medieval/townhouse_bath_room.jpg",
+      "sourcePath": "/locations/medieval/townhouse_bath_room.jpg",
+      "sourceChecksum": "523e3e8ad24183acea5605ac1a6175db86e89b2656ca75a9153fdf7b7943f5c7",
+      "outputChecksum": "523e3e8ad24183acea5605ac1a6175db86e89b2656ca75a9153fdf7b7943f5c7"
+    },
+    {
+      "path": "/locations/medieval/townhouse_bedchamber.jpg",
+      "sourcePath": "/locations/medieval/townhouse_bedchamber.jpg",
+      "sourceChecksum": "1fb1a97bb8a01eee22d85213d433b523c1ab7309009a164bce0dcccfb77d0342",
+      "outputChecksum": "1fb1a97bb8a01eee22d85213d433b523c1ab7309009a164bce0dcccfb77d0342"
+    },
+    {
+      "path": "/locations/medieval/townhouse_corridor.jpg",
+      "sourcePath": "/locations/medieval/townhouse_corridor.jpg",
+      "sourceChecksum": "7b75800f1bca0c66512180f1d3015803491713271d42e39ac9720aeea15a16d6",
+      "outputChecksum": "7b75800f1bca0c66512180f1d3015803491713271d42e39ac9720aeea15a16d6"
+    },
+    {
+      "path": "/locations/medieval/townhouse_dining_room.jpg",
+      "sourcePath": "/locations/medieval/townhouse_dining_room.jpg",
+      "sourceChecksum": "56f413a50525a4c19b431c5ee762c61611e1b4b47ce57d578563b0951290769f",
+      "outputChecksum": "56f413a50525a4c19b431c5ee762c61611e1b4b47ce57d578563b0951290769f"
+    },
+    {
+      "path": "/locations/medieval/townhouse_nursery.jpg",
+      "sourcePath": "/locations/medieval/townhouse_nursery.jpg",
+      "sourceChecksum": "4226367c95ad875b71a625e39eebb02c54e959871d80ee6c6363cf23d611d4a1",
+      "outputChecksum": "4226367c95ad875b71a625e39eebb02c54e959871d80ee6c6363cf23d611d4a1"
+    },
+    {
+      "path": "/locations/medieval/townhouse_study.jpg",
+      "sourcePath": "/locations/medieval/townhouse_study.jpg",
+      "sourceChecksum": "5c0b4deef7b7918e9c42f52675c8a0e0365ca501b6938097ac9886e4224d132f",
+      "outputChecksum": "5c0b4deef7b7918e9c42f52675c8a0e0365ca501b6938097ac9886e4224d132f"
+    },
+    {
+      "path": "/locations/medieval/village.jpg",
+      "sourcePath": "/locations/medieval/village.jpg",
+      "sourceChecksum": "7e17d8f67849481b1cf2bf1d2883874f0c44d52e9de875b8b080c3adb2d1bd9e",
+      "outputChecksum": "7e17d8f67849481b1cf2bf1d2883874f0c44d52e9de875b8b080c3adb2d1bd9e"
+    },
+    {
+      "path": "/locations/medieval/vine_cellar.jpg",
+      "sourcePath": "/locations/medieval/vine_cellar.jpg",
+      "sourceChecksum": "3cc7ffceb47e2d3a377121f9728b302605bed5f021e5d83dcb680520d76f818d",
+      "outputChecksum": "3cc7ffceb47e2d3a377121f9728b302605bed5f021e5d83dcb680520d76f818d"
+    },
+    {
+      "path": "/locations/medieval/warehouse.jpg",
+      "sourcePath": "/locations/medieval/warehouse.jpg",
+      "sourceChecksum": "c6d1c852321aaf9db954e3f0691857c75fa00e1cd86f43d166a0a6a9253f7cfd",
+      "outputChecksum": "c6d1c852321aaf9db954e3f0691857c75fa00e1cd86f43d166a0a6a9253f7cfd"
+    },
+    {
+      "path": "/locations/medieval/weapons_shop.jpg",
+      "sourcePath": "/locations/medieval/weapons_shop.jpg",
+      "sourceChecksum": "5df0d804c0f48c80500f5c176a4f9dd111837bebc9a1e048842d9591a0a52993",
+      "outputChecksum": "5df0d804c0f48c80500f5c176a4f9dd111837bebc9a1e048842d9591a0a52993"
+    },
+    {
+      "path": "/locations/medieval/winery.jpg",
+      "sourcePath": "/locations/medieval/winery.jpg",
+      "sourceChecksum": "4aca4cd70c164669ff40ee20ed795f43dd8cd7fa3175e2fddd8b3a161c2e4364",
+      "outputChecksum": "4aca4cd70c164669ff40ee20ed795f43dd8cd7fa3175e2fddd8b3a161c2e4364"
+    },
+    {
+      "path": "/locations/medieval/workshop.jpg",
+      "sourcePath": "/locations/medieval/workshop.jpg",
+      "sourceChecksum": "ea7b3ce816d85ee59012653736d97908ec283d3e540b6ad5b243108c23c47faa",
+      "outputChecksum": "ea7b3ce816d85ee59012653736d97908ec283d3e540b6ad5b243108c23c47faa"
+    },
+    {
       "path": "/outcomes/chaos.png",
       "sourcePath": "/outcomes/chaos.png",
       "sourceChecksum": "5486fb182c11f461d6e790cead31ff96a0b271f2fbd8e1350537de9d81293690",
@@ -1543,6 +2071,78 @@
       "outputChecksum": "1bee8084bb22bbbc9e5ed6d87c64e7d7818de5db94ad0b91eb32357c99b6b8f2"
     },
     {
+      "path": "/textIcons/direct.png",
+      "sourcePath": "/textIcons/direct.png",
+      "sourceChecksum": "bfdca5926fda3ba30f6c182f19acdf69504f4806fba659c8a456e1ff8152eb2f",
+      "outputChecksum": "bfdca5926fda3ba30f6c182f19acdf69504f4806fba659c8a456e1ff8152eb2f"
+    },
+    {
+      "path": "/textIcons/heal.png",
+      "sourcePath": "/textIcons/heal.png",
+      "sourceChecksum": "79bc57f2bdb69c793ee85fa5b35d4a44e3ceaee044d198dc422fab8fd296b1d3",
+      "outputChecksum": "79bc57f2bdb69c793ee85fa5b35d4a44e3ceaee044d198dc422fab8fd296b1d3"
+    },
+    {
+      "path": "/textIcons/melee.png",
+      "sourcePath": "/textIcons/melee.png",
+      "sourceChecksum": "3a009709c95f99ab178aae96e1eaca5554cc87111c1a8b9f16d54109b7b58a5c",
+      "outputChecksum": "3a009709c95f99ab178aae96e1eaca5554cc87111c1a8b9f16d54109b7b58a5c"
+    },
+    {
+      "path": "/textIcons/push.png",
+      "sourcePath": "/textIcons/push.png",
+      "sourceChecksum": "843ab371fe17da30c5eada640c36f9fe03698ac71bf5dd0cc48f0adaf3415bb3",
+      "outputChecksum": "843ab371fe17da30c5eada640c36f9fe03698ac71bf5dd0cc48f0adaf3415bb3"
+    },
+    {
+      "path": "/textIcons/range.png",
+      "sourcePath": "/textIcons/range.png",
+      "sourceChecksum": "7f6f3c01f3967657ec805ffb35419724453626cd3397c1b412f9fa7ec78e7641",
+      "outputChecksum": "7f6f3c01f3967657ec805ffb35419724453626cd3397c1b412f9fa7ec78e7641"
+    },
+    {
+      "path": "/textIcons/ranged.png",
+      "sourcePath": "/textIcons/ranged.png",
+      "sourceChecksum": "3aacf0df4efc5bfed814814fe93f82b230f5bc2748a6a187dab7fa65cc9ae1bf",
+      "outputChecksum": "3aacf0df4efc5bfed814814fe93f82b230f5bc2748a6a187dab7fa65cc9ae1bf"
+    },
+    {
+      "path": "/textIcons/replace.png",
+      "sourcePath": "/textIcons/replace.png",
+      "sourceChecksum": "5d1e5b57b4022df4ceb53ff9ad1ebfbd3099be76e35a83b2827ae13d6cd08be3",
+      "outputChecksum": "5d1e5b57b4022df4ceb53ff9ad1ebfbd3099be76e35a83b2827ae13d6cd08be3"
+    },
+    {
+      "path": "/textIcons/shield.png",
+      "sourcePath": "/textIcons/shield.png",
+      "sourceChecksum": "1ca65bd8a7a0c7d6f9b5bcb25d7b61fc562e62da44b99c974c189f31d804c524",
+      "outputChecksum": "1ca65bd8a7a0c7d6f9b5bcb25d7b61fc562e62da44b99c974c189f31d804c524"
+    },
+    {
+      "path": "/textIcons/speed.png",
+      "sourcePath": "/textIcons/speed.png",
+      "sourceChecksum": "e9c63e893969a543dbe8cec5da3a5279d0f664794552e1e8dc98c04d99cc2069",
+      "outputChecksum": "e9c63e893969a543dbe8cec5da3a5279d0f664794552e1e8dc98c04d99cc2069"
+    },
+    {
+      "path": "/textIcons/splash.png",
+      "sourcePath": "/textIcons/splash.png",
+      "sourceChecksum": "766e1ef4e7c6f842e4ee061a30dca18b870b3d55336f1cc3efacb29cbe75a68a",
+      "outputChecksum": "766e1ef4e7c6f842e4ee061a30dca18b870b3d55336f1cc3efacb29cbe75a68a"
+    },
+    {
+      "path": "/textIcons/tactics.png",
+      "sourcePath": "/textIcons/tactics.png",
+      "sourceChecksum": "07245aecb34d4b300cb65dbbbe093df5b24b23403144424d0af28708acfa60d4",
+      "outputChecksum": "07245aecb34d4b300cb65dbbbe093df5b24b23403144424d0af28708acfa60d4"
+    },
+    {
+      "path": "/textIcons/toughness.png",
+      "sourcePath": "/textIcons/toughness.png",
+      "sourceChecksum": "a8d3398376819e86e27217738c4d2aabe50443c85cd6e131060aafe3df6e8ad2",
+      "outputChecksum": "a8d3398376819e86e27217738c4d2aabe50443c85cd6e131060aafe3df6e8ad2"
+    },
+    {
       "path": "/types/actor.png",
       "sourcePath": "/types/actor.png",
       "sourceChecksum": "7e8e910125efb7bb7bf76cf85bfde4e71383bc49836a91283ccacc202a5561e0",
@@ -1565,6 +2165,12 @@
       "sourcePath": "/types/effect.png",
       "sourceChecksum": "0180652d78db1c67757f53e429bcc13fea50725f2ec3ef684016c9820b208250",
       "outputChecksum": "0180652d78db1c67757f53e429bcc13fea50725f2ec3ef684016c9820b208250"
+    },
+    {
+      "path": "/types/map.png",
+      "sourcePath": "/types/map.png",
+      "sourceChecksum": "b961d4d055ed3ce971f65d6790243887ef3ee90b927053ccc5e2c9b5c951a6ee",
+      "outputChecksum": "b961d4d055ed3ce971f65d6790243887ef3ee90b927053ccc5e2c9b5c951a6ee"
     },
     {
       "path": "/types/outcome.png",

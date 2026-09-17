@@ -1,4 +1,6 @@
 import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
+import { resolve } from "node:path";
 import test from "node:test";
 
 import {
@@ -68,6 +70,40 @@ test("renders Actor descriptions on overlays and combined cards", async () => {
       }));
       assert.ok(combined.includes(expected), `combined ${card.id}`);
     }
+  } finally {
+    await server.close();
+  }
+});
+
+test("catalogue contains the complete pinned medieval inventory", async () => {
+  const inventory = JSON.parse(await readFile(resolve(import.meta.dirname, "fixtures/medieval-card-inventory.json"), "utf8")) as { actors: Array<{ id: string; artworkPath: string }>; locations: Array<{ id: string; artworkPath: string }> };
+  assert.equal(inventory.actors.length, 40);
+  assert.equal(inventory.locations.length, 48);
+  assert.equal(new Set([...inventory.actors, ...inventory.locations].map((card) => card.id)).size, 88);
+  for (const card of [...inventory.actors, ...inventory.locations]) assert.deepEqual(cardCatalog.find(({ id }) => id === card.id), card);
+  assert.equal(cardCatalog.length, 353);
+  assert.equal(enumerateStaticCards().length, 1059);
+});
+
+test("renders medieval portrait and location cards through their dedicated layouts", async () => {
+  const { createServer } = await import("vite");
+  const { createElement } = await import("react");
+  const { renderToStaticMarkup } = await import("react-dom/server");
+  const server = await createServer({ server: { middlewareMode: true } });
+  try {
+    const { ActorCard, GameCard, LocationCard } = await server.ssrLoadModule("/src/react/index.tsx");
+    const portrait = renderToStaticMarkup(createElement(GameCard, { type: "actor-base", slug: "medieval_female_villager", assetBaseUrl: "/custom-assets" }));
+    assert.match(portrait, /actors\/medieval\/female\/villager\.png/);
+    assert.match(portrait, /data-card-kind="actor"/);
+    const composed = renderToStaticMarkup(createElement(ActorCard, { baseLayerSlug: "medieval_villager", tacticalRoleSlug: "minion", tacticalSpecialSlug: "fast" }));
+    assert.match(composed, /actors\/medieval\/villager\.png/);
+    assert.match(composed, /Toughness 2/);
+    const location = renderToStaticMarkup(createElement(GameCard, { type: "location", slug: "medieval_townhouse_bedchamber", layout: "compact", assetBaseUrl: "/custom-assets" }));
+    assert.match(location, /locations\/medieval\/townhouse_bedchamber\.jpg/);
+    assert.match(location, /data-card-kind="location"/);
+    const generic = renderToStaticMarkup(createElement(LocationCard, { title: "Generic scene", imageUrl: "/scene.jpg", description: "Unchanged" }));
+    assert.match(generic, /Generic scene/);
+    assert.match(generic, /Unchanged/);
   } finally {
     await server.close();
   }

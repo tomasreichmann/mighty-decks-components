@@ -5,6 +5,7 @@ import test from "node:test";
 import { cardCatalog, contentVersion, enumerateStaticCards, } from "../src/catalog";
 const packageRoot = resolve(import.meta.dirname, "..");
 const baselinePath = resolve(import.meta.dirname, "fixtures/catalog-baseline.json");
+const medievalInventoryPath = resolve(import.meta.dirname, "fixtures/medieval-card-inventory.json");
 const sourceFiles = async (directory) => {
     const entries = await readdir(directory, { withFileTypes: true });
     const nested = await Promise.all(entries.map(async (entry) => {
@@ -15,9 +16,11 @@ const sourceFiles = async (directory) => {
 };
 test("preserves the normalized presentation catalogue baseline", async () => {
     const baseline = JSON.parse(await readFile(baselinePath, "utf8"));
+    const medievalInventory = JSON.parse(await readFile(medievalInventoryPath, "utf8"));
+    const additions = [...medievalInventory.actors, ...medievalInventory.locations];
     assert.equal(contentVersion, baseline.contentVersion);
-    assert.deepEqual(cardCatalog, baseline.cards);
-    assert.deepEqual(enumerateStaticCards().map((entry) => entry.id), baseline.staticEntryIds);
+    assert.deepEqual(cardCatalog, [...baseline.cards, ...additions]);
+    assert.deepEqual(enumerateStaticCards().map((entry) => entry.id), [...baseline.staticEntryIds, ...additions.flatMap((card) => [card.id, card.id, card.id])]);
 });
 test("does not reference Storyteller-private source or compiler aliases", async () => {
     const files = [

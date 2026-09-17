@@ -25,6 +25,13 @@ Run `pnpm verify:actor-parity` after changing Actor geometry, mechanics, or artw
 it checks the representative full-size browser rendering described in
 [`actor-card-parity.md`](./actor-card-parity.md).
 
+Medieval portrait and Location art is owned under `resources/originals/` and listed
+in `resources/artwork-manifest.json`; never add an upstream URL to runtime code.
+Location exports use the catalogue `location` family and retain a rotated scene with
+an upright, darkened header. Portrait-only medieval Actors are intentionally not
+tactical cards. After changing either renderer, run focused PNG exports and then the
+complete `pnpm generate:png` inventory before release preparation.
+
 ## Checked-in prebuilt package
 
 Run `pnpm generate:png` for the first complete baseline, then

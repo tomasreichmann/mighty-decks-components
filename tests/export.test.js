@@ -21,6 +21,7 @@ const withExportFixture = async (mutate, run) => {
             cp(resolve(packageRoot, "scripts"), join(fixture, "scripts"), { recursive: true }),
             cp(resolve(packageRoot, "src"), join(fixture, "src"), { recursive: true }),
             cp(resolve(packageRoot, "resources"), join(fixture, "resources"), { recursive: true }),
+            cp(resolve(packageRoot, "assets"), join(fixture, "assets"), { recursive: true }),
             cp(resolve(packageRoot, "export-app"), join(fixture, "export-app"), { recursive: true }),
             cp(resolve(packageRoot, "package.json"), join(fixture, "package.json")),
             cp(resolve(packageRoot, "index.html"), join(fixture, "index.html")),
@@ -67,5 +68,34 @@ test("export accepts a normal full Actor overlay", async () => {
     await withExportFixture(() => { }, async (fixture) => {
         const result = await runExport(fixture, ["--type", "actor-special", "--id", "armoured", "--layout", "full", "--height", "512"]);
         assert.equal(result.code, 0, result.output);
+    });
+});
+test("exports the long Charging Actor special at full size", async () => {
+    await withExportFixture(() => { }, async (fixture) => {
+        const result = await runExport(fixture, ["--type", "actor-special", "--id", "charging", "--layout", "full", "--height", "1024"]);
+        assert.equal(result.code, 0, result.output);
+    });
+});
+test("exports a medieval portrait and Location front", async () => {
+    await withExportFixture(() => { }, async (fixture) => {
+        for (const args of [
+            ["--type", "actor-base", "--id", "medieval_female_villager", "--layout", "full", "--height", "512"],
+            ["--type", "location", "--id", "medieval_dungeon", "--layout", "compact", "--height", "256"],
+        ]) {
+            const result = await runExport(fixture, args);
+            assert.equal(result.code, 0, result.output);
+        }
+    });
+});
+test("rejects a medieval Location whose referenced artwork is unavailable", async () => {
+    await withExportFixture((catalog) => {
+        const dungeon = catalog.medievalCards?.find((card) => card.family === "location" && card.slug === "medieval_dungeon");
+        if (!dungeon)
+            throw new Error("Missing medieval Dungeon fixture card.");
+        dungeon.artworkPath = "/locations/medieval/not-present.jpg";
+    }, async (fixture) => {
+        const result = await runExport(fixture, ["--type", "location", "--id", "medieval_dungeon", "--layout", "full", "--height", "1024"]);
+        assert.notEqual(result.code, 0);
+        assert.match(result.output, /Missing artwork for location:medieval_dungeon/i);
     });
 });
