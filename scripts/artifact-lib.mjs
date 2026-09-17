@@ -49,6 +49,14 @@ export const assertInventoryChecksums = (entries, actualChecksums) => {
   }
 };
 
+export const assertGitDistribution = (distribution, version) => {
+  if (!distribution || typeof distribution.repository !== "string" || !/^https:\/\/github\.com\/[^/]+\/[^/]+\.git$/.test(distribution.repository)) {
+    throw new Error("Git distribution repository is invalid.");
+  }
+  if (!/^[a-f0-9]{40}$/i.test(distribution.commit ?? "")) throw new Error("Git distribution commit must be a full SHA.");
+  if (distribution.tag !== `dist-v${version}`) throw new Error("Git distribution tag does not match package version.");
+};
+
 export const assertReleaseManifest = (manifest, {
   packageVersion,
   contentVersion,

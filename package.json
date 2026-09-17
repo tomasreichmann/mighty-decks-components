@@ -11,9 +11,7 @@
   "bugs": {
     "url": "https://github.com/tomasreichmann/mighty-decks-components/issues"
   },
-  "publishConfig": {
-    "access": "public"
-  },
+  "private": true,
   "type": "module",
   "packageManager": "pnpm@10.0.0",
   "engines": {
@@ -57,7 +55,7 @@
     "lint": "eslint . --max-warnings 0",
     "check:fast": "pnpm lint && pnpm typecheck",
     "check": "pnpm assets:prepare && pnpm generate:data && pnpm check:fast && pnpm test && pnpm build",
-    "test": "tsx --test tests/artifacts.test.ts tests/catalog.test.ts tests/export.test.ts tests/generation.test.ts tests/guardrails.test.ts tests/hooks.test.ts tests/package-surface.test.ts tests/release-workflow.test.ts tests/runtime-assets.test.ts tests/standalone.test.ts tests/static-copy.test.ts",
+    "test": "tsx --test tests/artifacts.test.ts tests/catalog.test.ts tests/export.test.ts tests/generation.test.ts tests/guardrails.test.ts tests/hooks.test.ts tests/package-surface.test.ts tests/release-workflow.test.ts tests/runtime-assets.test.ts tests/standalone.test.ts tests/static-copy.test.ts tests/git-package.test.ts tests/git-consumer.test.ts",
     "test:package": "pnpm assets:prepare && pnpm generate:data && pnpm build && pnpm pack:runtime && tsx --test tests/package.test.ts && pnpm verify:consumer -- --tarball output/runtime.tgz",
     "assets:prepare": "tsx scripts/prepare-assets.ts",
     "generate:data": "tsx scripts/generate.ts",
@@ -65,6 +63,7 @@
     "generate:png": "tsx scripts/export.ts",
     "generate": "pnpm assets:prepare && pnpm generate:data && pnpm generate:png",
     "pack:runtime": "node scripts/pack-runtime.mjs",
+    "stage:git": "node scripts/stage-git-package.mjs",
     "package:runtime-assets": "node scripts/package-runtime-assets.mjs",
     "archive:png": "node scripts/package-pngs.mjs",
     "verify:artifacts": "node scripts/verify-artifacts.mjs",

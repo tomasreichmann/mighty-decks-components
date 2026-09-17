@@ -1,4 +1,5 @@
 import { cp, mkdir, mkdtemp, readFile, rm, stat, writeFile } from "node:fs/promises";
+import { execFileSync } from "node:child_process";
 import { tmpdir } from "node:os";
 import { join, resolve } from "node:path";
 import { c } from "tar";
@@ -19,6 +20,16 @@ const groups = JSON.parse(await readFile(resolve(packageRoot, "resources", "png-
 const policy = JSON.parse(await readFile(resolve(packageRoot, "release-policy.json"), "utf8"));
 const runtime = JSON.parse(await readFile(resolve(output, "runtime-pack.json"), "utf8"));
 const runtimeAssets = JSON.parse(await readFile(resolve(output, "runtime-assets-pack.json"), "utf8"));
+const sourceCommit = process.env.SOURCE_COMMIT ?? (() => {
+  try {
+    return execFileSync(process.platform === "win32" ? "git.exe" : "git", ["rev-parse", "HEAD"], { cwd: packageRoot, encoding: "utf8" }).trim();
+  } catch {
+    return "uncommitted-local";
+  }
+})();
+if (process.env.GIT_DISTRIBUTION_COMMIT && !/^[a-f0-9]{40}$/i.test(sourceCommit)) {
+  throw new Error("A finalized release requires a full checked-out source commit SHA.");
+}
 
 const groupById = new Map();
 for (const group of ["core", "medieval"]) {
@@ -98,7 +109,14 @@ const releaseManifest = {
   packageName: packageJson.name,
   packageVersion: packageJson.version,
   contentVersion: pngManifest.contentVersion,
-  sourceCommit: process.env.GITHUB_SHA ?? "uncommitted-local",
+  sourceCommit,
+  ...(process.env.GIT_DISTRIBUTION_COMMIT ? {
+    gitDistribution: {
+      repository: "https://github.com/tomasreichmann/mighty-decks-components.git",
+      commit: process.env.GIT_DISTRIBUTION_COMMIT,
+      tag: `dist-v${packageJson.version}`,
+    },
+  } : {}),
   toolchain: pngManifest.toolchain,
   runtime: {
     filename: runtime.runtimeTarball,

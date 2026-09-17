@@ -10,6 +10,10 @@ export const assertInventoryChecksums: (
   entries: Array<{ path: string; checksum: string }>,
   actualChecksums: Map<string, string>,
 ) => void;
+export const assertGitDistribution: (
+  distribution: { repository?: string; commit?: string; tag?: string },
+  version: string,
+) => void;
 export const assertReleaseManifest: (
   manifest: { packageVersion: string; contentVersion: string; pngs?: Array<{ path: string; checksum?: string }>; runtimeAssets?: { filename?: string } },
   expected: { packageVersion: string; contentVersion: string; expectedPaths: string[]; runtimeAssetsFilename?: string },

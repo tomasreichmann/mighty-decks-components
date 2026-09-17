@@ -13,6 +13,11 @@ and regenerate.
 
 For a consumer, import `@mighty-decks/components/styles.css` once and cards from `@mighty-decks/components/react`. Choose `layout="full"` or `layout="compact"` explicitly. Use `ActorCard` and `AssetCard` layer slugs for compositions; use the catalog and CSV files for lookup rather than guessing display text.
 
+Install the package from the full SHA behind its matching `dist-v<VERSION>` Git
+tag, not from a source branch/tag. React consumers must additionally extract the
+matching runtime-assets release archive after `copy-static`; PNG users select the
+matching core and/or medieval PNG archive.
+
 `copy-static` copies runtime assets, CSV/manifest data, guides, and this skill,
 but never a PNG catalogue. MDX can import React cards. Ordinary Markdown should
 link PNGs from the matching versioned release archive after it is separately

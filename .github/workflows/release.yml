@@ -4,13 +4,16 @@ on:
   workflow_dispatch:
     inputs:
       tag:
-        description: Existing draft release tag to validate and publish
+        description: Existing source tag (vVERSION) to release
         required: true
         type: string
 
 permissions:
   contents: write
-  id-token: write
+
+concurrency:
+  group: mighty-decks-release
+  cancel-in-progress: false
 
 jobs:
   release:
@@ -23,40 +26,60 @@ jobs:
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
         with:
           node-version: 22.14.0
-          registry-url: https://registry.npmjs.org
-      - name: Pin package managers
+      - name: Validate immutable source tag
+        env:
+          TAG: ${{ inputs.tag }}
+        run: |
+          test "$(git tag --points-at HEAD "$TAG")" = "$TAG"
+          test "${TAG#v}" != "$TAG"
+          node -e 'const p=require("./package.json"); if(process.env.TAG !== `v${p.version}`) process.exit(1)'
+      - name: Pin pnpm
         run: |
           corepack enable
           corepack prepare pnpm@10.0.0 --activate
-          npm install --global npm@11.19.1
       - run: pnpm install --frozen-lockfile --prod=false
       - run: pnpm exec playwright install --with-deps chromium
-      - run: pnpm check
-      - name: Download the locally verified release candidate
-        env:
-          GH_TOKEN: ${{ github.token }}
+      - name: Run the complete local release gate
         run: |
-          gh release view "${{ inputs.tag }}" --json isDraft --jq '.isDraft == true' | grep -x true
-          gh release download "${{ inputs.tag }}" --pattern runtime.tgz --pattern release-manifest.json --dir output --clobber
-      - name: Detect an already-published bootstrap version
-        id: npm-package
+          pnpm check:release
+      - name: Stage and verify the installable Git package
+        run: |
+          pnpm stage:git -- --source-commit "$(git rev-parse HEAD)"
+          pnpm verify:consumer -- --git-stage output/git-package
+      - name: Create or verify immutable distribution ref
+        id: distribution
         env:
           TAG: ${{ inputs.tag }}
         run: |
-          if npm view "@mighty-decks/components@${TAG#v}" version --json >/dev/null 2>&1; then
-            echo "published=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "published=false" >> "$GITHUB_OUTPUT"
-          fi
-      - name: Publish the validated runtime package
-        if: steps.npm-package.outputs.published != 'true'
-        run: npm publish ./output/runtime.tgz --access public
-      - name: Publish the immutable source release
+          node scripts/publish-git-distribution.mjs --remote "$(git remote get-url origin)" --staged output/git-package --version "${TAG#v}"
+      - name: Verify the pushed Git package
+        env:
+          SHA: ${{ steps.distribution.outputs.sha }}
+        run: pnpm verify:consumer -- --git "git+https://github.com/${{ github.repository }}.git#${SHA}"
+      - name: Finalize artifacts with distribution provenance
+        env:
+          GIT_DISTRIBUTION_COMMIT: ${{ steps.distribution.outputs.sha }}
+        run: |
+          pnpm archive:png
+          REQUIRE_GIT_DISTRIBUTION: true pnpm verify:artifacts
+      - name: Create a draft source release
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh release edit "${{ inputs.tag }}" --draft=false
-      - name: Verify the published release
-        if: steps.npm-package.outputs.published != 'true'
+          TAG: ${{ inputs.tag }}
+        run: |
+          gh release create "$TAG" output/runtime.tgz output/mighty-decks-components-*-runtime-assets.tar.gz output/mighty-decks-components-*-png-*.tar.gz output/release-manifest.json --title "$TAG" --verify-tag --draft
+      - name: Verify draft Git release
         env:
           TAG: ${{ inputs.tag }}
-        run: pnpm verify:release -- --version "${TAG#v}" --repository tomasreichmann/mighty-decks-components
+          GH_TOKEN: ${{ github.token }}
+        run: pnpm verify:release -- --version "${TAG#v}" --repository "${{ github.repository }}"
+      - name: Publish verified source release
+        env:
+          TAG: ${{ inputs.tag }}
+          GH_TOKEN: ${{ github.token }}
+        run: gh release edit "$TAG" --draft=false
+      - name: Verify published Git release
+        env:
+          TAG: ${{ inputs.tag }}
+          GH_TOKEN: ${{ github.token }}
+        run: pnpm verify:release -- --version "${TAG#v}" --repository "${{ github.repository }}"

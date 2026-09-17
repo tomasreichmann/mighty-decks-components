@@ -23,3 +23,13 @@ Actor bases are opaque artwork layers. Full-size Actor role and special PNGs are
 transparent, composable rule layers: roles contain the main mechanical rules and
 specials contain the footer rule. Compact Actor images are reduced-detail thumbnails;
 they retain a meaningful title but intentionally omit rule descriptions.
+
+## Git distribution releases
+
+Runtime packages are delivered through the immutable `dist` branch. Run
+`pnpm pack:runtime`, then `pnpm stage:git -- --source-commit <full-source-sha>`
+to produce `output/git-package/`; never commit that generated tree to the source
+branch. The release workflow builds this package, commits it to `dist`, tags it as
+`dist-v<VERSION>`, and binds that commit to `release-manifest.json`. It does not
+publish to npm. A failed draft/release validation is repaired with a new version;
+never force-push `dist` or retarget published tags.

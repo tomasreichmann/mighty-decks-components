@@ -67,3 +67,14 @@ test("requires a runtime-assets attachment in the release manifest", () => {
     /runtime-assets/i,
   );
 });
+
+test("requires Git distribution provenance with immutable version tag", () => {
+  assert.throws(
+    () => artifacts.assertGitDistribution({ repository: "https://github.com/example/repo.git", commit: "short", tag: "dist-v0.1.0" }, "0.1.0"),
+    /commit/i,
+  );
+  assert.throws(
+    () => artifacts.assertGitDistribution({ repository: "https://github.com/example/repo.git", commit: "a".repeat(40), tag: "v0.1.0" }, "0.1.0"),
+    /tag/i,
+  );
+});

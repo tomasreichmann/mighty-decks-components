@@ -4,6 +4,7 @@ import { t } from "tar";
 
 import {
   assertReleaseManifest,
+  assertGitDistribution,
   assertRuntimeAssetEntries,
   assertRuntimeEntries,
   assertSafeArchivePaths,
@@ -44,6 +45,8 @@ assertReleaseManifest(manifest, {
   expectedPaths,
   runtimeAssetsFilename: runtimeAssets.filename,
 });
+if (process.env.REQUIRE_GIT_DISTRIBUTION === "true" && !manifest.gitDistribution) throw new Error("Final release verification requires Git distribution provenance.");
+if (manifest.gitDistribution) assertGitDistribution(manifest.gitDistribution, packageJson.version);
 for (const archive of manifest.archives) {
   const archivePath = resolve(output, archive.filename);
   if (await sha256(archivePath) !== archive.sha256) {

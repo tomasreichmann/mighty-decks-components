@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { spawn } from "node:child_process";
-import { cp, mkdtemp, readFile, rm, symlink, writeFile } from "node:fs/promises";
+import { cp, mkdtemp, readFile, realpath, rm, symlink, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join, resolve } from "node:path";
 import test from "node:test";
@@ -18,7 +18,7 @@ const runExport = (cwd: string, args: string[]): Promise<{ code: number; output:
 });
 
 const withExportFixture = async (mutate: (catalog: { cards: Array<{ family: string; slug: string; description?: string }> }) => void, run: (fixture: string) => Promise<void>): Promise<void> => {
-  const fixture = await mkdtemp(join(tmpdir(), "mighty-decks-export-"));
+  const fixture = await mkdtemp(join(await realpath(tmpdir()), "mighty-decks-export-"));
   try {
     await Promise.all([
       cp(resolve(packageRoot, "scripts"), join(fixture, "scripts"), { recursive: true }),

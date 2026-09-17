@@ -24,6 +24,9 @@ jobs:
         run: pnpm install --frozen-lockfile --prod=false
       - run: pnpm check
       - run: pnpm test:package
+      - run: pnpm stage:git -- --source-commit ${{ github.sha }}
+      - run: pnpm verify:consumer -- --git-stage output/git-package
+      - run: pnpm verify:consumer -- --git-stage output/git-package --pnpm-version 10.29.3
 
   windows-export-smoke:
     runs-on: windows-2025
@@ -41,3 +44,6 @@ jobs:
       - run: pnpm generate:png -- --type outcome --id success --layout full
       - run: pnpm pack:runtime
       - run: pnpm test:package
+      - run: pnpm stage:git -- --source-commit ${{ github.sha }}
+      - run: pnpm verify:consumer -- --git-stage output/git-package
+      - run: pnpm verify:consumer -- --git-stage output/git-package --pnpm-version 10.29.3
