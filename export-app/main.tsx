@@ -11,9 +11,9 @@ const width = Number.parseInt(params.get("width") ?? "204", 10);
 const scale = Number.isFinite(width) && width > 0 ? width / 204 : 1;
 const SingleCard = (): JSX.Element => {
   if (family && slug) {
-    return <GameCard type={family} slug={slug} layout={layout} assetBaseUrl="/assets" />;
+    return <GameCard type={family} slug={slug} layout={layout} assetBaseUrl="" />;
   }
-  return <GameCard type="outcome" slug="success" assetBaseUrl="/assets" />;
+  return <GameCard type="outcome" slug="success" assetBaseUrl="" />;
 };
 
 createRoot(document.getElementById("root")!).render(family ? (
