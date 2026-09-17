@@ -1,6 +1,6 @@
 import { createRoot } from "react-dom/client";
 import "../src/react/cards.module.css";
-import { ActorCard, AssetCard, GameCard } from "../src/react/index.tsx";
+import { ActorCard, AssetCard, GameCard } from "../src/react";
 import type { CardFamily } from "../src/catalog";
 
 const params = new URLSearchParams(window.location.search);
