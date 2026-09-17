@@ -1,6 +1,6 @@
 {
   "name": "@mighty-decks/components",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Reusable React components, assets, and export tools for Mighty Decks.",
   "license": "MIT",
   "repository": {
