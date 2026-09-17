@@ -10,7 +10,7 @@ export const contentVersion = catalogue.contentVersion;
 export const supportedLocale = "en" as const;
 export type CardFamily = Exclude<
   ContractCardFamily,
-  "location" | "encounter" | "quest"
+  "encounter" | "quest"
 >;
 export interface CatalogCard { id: string; family: CardFamily; slug: string; title: string; locale: "en"; description?: string; body?: string; footer?: string; deck?: string; artworkPath?: string; actorPresentation?: ActorPresentation; }
 
