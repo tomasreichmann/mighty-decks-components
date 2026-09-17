@@ -4,6 +4,7 @@ import {
   type CardExportInput,
   type CardFamily as ContractCardFamily,
 } from "./contracts/cardExport.js";
+import type { ActorPresentation } from "./contracts/actorPresentation.js";
 
 export const contentVersion = catalogue.contentVersion;
 export const supportedLocale = "en" as const;
@@ -11,7 +12,7 @@ export type CardFamily = Exclude<
   ContractCardFamily,
   "location" | "encounter" | "quest"
 >;
-export interface CatalogCard { id: string; family: CardFamily; slug: string; title: string; locale: "en"; description?: string; body?: string; footer?: string; deck?: string; artworkPath?: string; }
+export interface CatalogCard { id: string; family: CardFamily; slug: string; title: string; locale: "en"; description?: string; body?: string; footer?: string; deck?: string; artworkPath?: string; actorPresentation?: ActorPresentation; }
 
 // The checked-in JSON is captured from the source catalogue and guarded by
 // tests/standalone.test.ts so consumers never depend on Storyteller at build
