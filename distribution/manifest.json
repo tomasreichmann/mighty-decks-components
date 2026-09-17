@@ -9,7 +9,7 @@
     "node": "22.14.0",
     "playwright": "1.60.0"
   },
-  "inputFingerprint": "96d57be9860241eb3e467184bd7b7485a217c76cdf0c2eba6a14df2a83aff391",
+  "inputFingerprint": "8738b19fc551f4ac29c56f19619e9b21db1a9fb96b54db99c0708ff75c83ba34",
   "inputs": [
     {
       "path": "assets/actors/base/alpha.png",
@@ -1097,7 +1097,7 @@
     },
     {
       "path": "docs/maintenance.md",
-      "sha256": "4499ef6a1ff9c5e8003d6f60efe980fe6e8db8db8c7ea43b42160046bb850412"
+      "sha256": "a42df36e0f1b425c65bc927388a22854cd7830d308e3de5c6aaef499ba11a911"
     },
     {
       "path": "docs/migration-baseline.md",
@@ -1125,7 +1125,7 @@
     },
     {
       "path": "docs/releasing.md",
-      "sha256": "28548208ee781127f6f915f9727aa759efa11528e54a33d7fa1c08bd3ad06a26"
+      "sha256": "0094aba61109de4ff2a1a2cb12d901030808dfb679a2cae4677c4635e1297d6e"
     },
     {
       "path": "export-app/main.tsx",
@@ -4357,7 +4357,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "3dd910d29a59f9274ef020ff65485f745c65aae67ca73ef35d4974a44a6ab210"
+      "sha256": "082bedf6af8f6c842c27fe45b0a6c962be39b9a1e34697bbe1833820a377767f"
     },
     {
       "path": "resources/artwork-manifest.json",
