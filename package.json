@@ -56,7 +56,6 @@
     "check:fast": "pnpm lint && pnpm typecheck",
     "check": "pnpm assets:prepare && pnpm generate:data && pnpm check:fast && pnpm test && pnpm build",
     "test": "tsx --test tests/artifacts.test.ts tests/catalog.test.ts tests/consumer-sync.test.ts tests/distribution.test.ts tests/export.test.ts tests/generation.test.ts tests/guardrails.test.ts tests/hooks.test.ts tests/incremental-export.test.ts tests/package-surface.test.ts tests/release-workflow.test.ts tests/runtime-assets.test.ts tests/standalone.test.ts tests/static-copy.test.ts tests/git-package.test.ts tests/git-consumer.test.ts tests/rulebook.test.ts",
-    "test:package": "pnpm assets:prepare && pnpm generate:data && pnpm build && pnpm pack:runtime && tsx --test tests/package.test.ts && pnpm verify:consumer -- --tarball output/runtime.tgz",
     "assets:prepare": "tsx scripts/prepare-assets.ts",
     "generate:data": "tsx scripts/generate.ts",
     "generate:runtime": "pnpm assets:prepare && pnpm generate:data",
@@ -64,17 +63,7 @@
     "generate": "pnpm assets:prepare && pnpm generate:data && pnpm generate:png",
     "distribution:prepare": "node scripts/prepare-distribution.mjs",
     "distribution:check": "node scripts/verify-distribution.mjs",
-    "pack:runtime": "node scripts/pack-runtime.mjs",
-    "stage:git": "node scripts/stage-git-package.mjs",
-    "package:runtime-assets": "node scripts/package-runtime-assets.mjs",
-    "archive:png": "node scripts/package-pngs.mjs",
-    "verify:artifacts": "node scripts/verify-artifacts.mjs",
-    "verify:consumer": "node scripts/verify-consumer.mjs",
-    "verify:browser": "tsx scripts/verify-browser.ts",
-    "verify:release": "node scripts/verify-release.mjs",
-    "check:release": "pnpm check && pnpm test:package && pnpm generate:png && pnpm pack:runtime && pnpm package:runtime-assets && pnpm archive:png && pnpm verify:artifacts && pnpm verify:consumer -- --tarball output/runtime.tgz && pnpm verify:browser -- --tarball output/runtime.tgz",
-    "hooks:install": "node scripts/install-hooks.mjs",
-    "pack:local": "pnpm build && pnpm generate && pnpm pack --pack-destination output"
+    "hooks:install": "node scripts/install-hooks.mjs"
   },
   "peerDependencies": {
     "react": "^18.0.0",

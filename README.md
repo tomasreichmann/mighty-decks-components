@@ -16,48 +16,27 @@ import { GameCard, ActorCard } from "@mighty-decks/components/react";
 must handle an unsupported locale rather than assuming translation. Compact and
 full layout are independent from output density.
 
-## Install from Git
+## Consume the checked-in distribution
 
-Consumers install the prebuilt distribution commit, never the source branch or a
-floating tag. After a Git distribution release is published, pin its full SHA
-and commit the resulting lockfile:
-
-```json
-{
-  "dependencies": {
-    "@mighty-decks/components": "git+https://github.com/tomasreichmann/mighty-decks-components.git#<FULL_DISTRIBUTION_COMMIT_SHA>"
-  }
-}
-```
-
-`dist-v<VERSION>` identifies the matching immutable distribution tag; the source
-tag `v<VERSION>` is for source provenance. Update the package SHA, package/content
-versions, and matching release-archive digests together. The package has no install
-or prepare hook.
+Consumers pin a full source commit and copy only the required distribution files
+into their own repository. Do not install the source branch, a floating tag, or a
+GitHub release archive. Copy `consumer/sync-mighty-decks.mjs` and
+`consumer/mighty-decks.config.example.json` into the consumer, then run the sync
+with the chosen 40-character commit SHA. Commit the generated lockfile and managed
+files with the consumer change.
 
 For package authors, run `pnpm assets:prepare`, `pnpm generate:data`, and `pnpm build`.
 `pnpm generate:png` is a separate browser-export command and requires Playwright
 Chromium (`pnpm exec playwright install chromium`). `pnpm generate` prepares assets
 and runs both generation steps; it is never an install hook. See the
 [maintainer workflow](https://github.com/tomasreichmann/mighty-decks-components/blob/main/docs/maintenance.md)
-for checks and release validation.
-
-In a consumer, run `mighty-decks-components copy-static --out ./public`; the
-default component asset base is then `/mighty-decks/assets`. The command is
-offline and copies assets, CSV/manifest data, guides, and the skill under
-`./public/mighty-decks`; it intentionally does not copy PNG exports. Pass
-`assetBaseUrl` only when the consumer serves the copied resources elsewhere.
-
-React consumers also need the matching versioned runtime-assets archive from the
-GitHub release; run `copy-static` first, then extract the archive into the same
-public directory. Static-image users download the matching core and/or medieval PNG
-archives instead. PNG paths are not package exports.
+for checks and distribution maintenance.
 
 `@mighty-decks/components/export` exports `cardCatalog`, `contentVersion`,
 `enumerateStaticCards`, and `validateCardExportInput`. Generated resources are
 derived from the catalogue; edit the catalogue source rather than output files.
 
-See [the packaged guides](./docs/en/) and [the usage skill](./skills/mighty-decks-components/SKILL.md). Installing the package does not automatically install an agent skill.
+See [the packaged guides](./docs/en/) and [the usage skill](./skills/mighty-decks-components/SKILL.md).
 
 ## License
 

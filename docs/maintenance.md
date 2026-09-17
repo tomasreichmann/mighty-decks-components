@@ -1,9 +1,7 @@
 # Maintainer workflow
 
 Use Node 22.14.0 and pnpm 10. Run `pnpm assets:prepare` before tests or builds when
-assets are absent. `pnpm check` is the normal clean-checkout gate; `pnpm test:package`
-checks a packed consumer; `pnpm check:release` additionally runs PNG generation and
-artifact validation. Install Chromium before PNG work with
+assets are absent. `pnpm check` is the normal clean-checkout gate. Install Chromium before PNG work with
 `pnpm exec playwright install chromium`.
 
 Use narrow, explained suppressions only when a concrete tool limitation exists, with a
@@ -30,13 +28,3 @@ Run `pnpm generate:png` for the first complete baseline, then
 `pnpm distribution:prepare` and `pnpm distribution:check`. Commit source and
 the resulting `distribution/` tree together. See [Git file distribution](./distribution.md)
 for the consumer contract and baseline size.
-
-## Legacy Git distribution releases
-
-Runtime packages are delivered through the immutable `dist` branch. Run
-`pnpm pack:runtime`, then `pnpm stage:git -- --source-commit <full-source-sha>`
-to produce `output/git-package/`; never commit that generated tree to the source
-branch. The release workflow builds this package, commits it to `dist`, tags it as
-`dist-v<VERSION>`, and binds that commit to `release-manifest.json`. It does not
-publish to npm. A failed draft/release validation is repaired with a new version;
-never force-push `dist` or retarget published tags.

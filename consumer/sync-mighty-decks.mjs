@@ -10,6 +10,7 @@ const args = process.argv.slice(2);
 const ref = args[args.indexOf("--ref") + 1];
 const check = args.includes("--check");
 const cache = resolve(root, ".cache", "mighty-decks");
+const repositoryDirectory = resolve(cache, "repository");
 const lockPath = resolve(root, "mighty-decks.lock.json");
 const configPath = resolve(root, "mighty-decks.config.json");
 const journalPath = resolve(cache, "journal.json");
@@ -47,10 +48,10 @@ const publicRoot = resolve(root, config.publicDestination);
 const ownedRoots = [runtimeRoot, publicRoot];
 if (ownedRoots.some((path) => path !== root && !path.startsWith(`${root}${sep}`))) throw new Error("Configured destination must stay within the consumer root.");
 await mkdir(dirname(cache), { recursive: true });
-if (!await exists(resolve(cache, ".git"))) await git(["clone", "--filter=blob:none", "--no-checkout", config.repository, cache]);
-await git(["-C", cache, "fetch", "--depth=1", "origin", ref]);
-if (await text(["-C", cache, "rev-parse", `${ref}^{commit}`]) !== ref) throw new Error(`Git did not resolve the requested commit: ${ref}`);
-const manifestBytes = await git(["-C", cache, "show", `${ref}:distribution/manifest.json`], { encoding: "buffer" });
+if (!await exists(resolve(repositoryDirectory, ".git"))) await git(["clone", "--filter=blob:none", "--no-checkout", config.repository, repositoryDirectory]);
+await git(["-C", repositoryDirectory, "fetch", "--depth=1", "origin", ref]);
+if (await text(["-C", repositoryDirectory, "rev-parse", `${ref}^{commit}`]) !== ref) throw new Error(`Git did not resolve the requested commit: ${ref}`);
+const manifestBytes = await git(["-C", repositoryDirectory, "show", `${ref}:distribution/manifest.json`], { encoding: "buffer" });
 const manifest = JSON.parse(manifestBytes.stdout.toString("utf8"));
 if (!Array.isArray(manifest.files) || !manifest.groups) throw new Error("Upstream distribution manifest is invalid.");
 const selectedGroups = config.groups?.length ? config.groups : Object.keys(manifest.groups);
@@ -86,17 +87,22 @@ const staging = resolve(cache, `staging-${process.pid}`);
 await rm(staging, { recursive: true, force: true });
 await mkdir(staging, { recursive: true });
 try {
+  const stagedFiles = new Set();
   for (const file of selection) {
-    const blob = await git(["-C", cache, "show", `${ref}:distribution/${file.sourcePath}`], { encoding: "buffer" });
+    const output = resolve(root, file.destination);
+    if (await exists(output) && hash(await readFile(output)) === file.sha256) continue;
+    const blob = await git(["-C", repositoryDirectory, "show", `${ref}:distribution/${file.sourcePath}`], { encoding: "buffer" });
     if (hash(blob.stdout) !== file.sha256) throw new Error(`Upstream file hash mismatch: ${file.sourcePath}`);
     const staged = resolve(staging, ...file.destination.split("/"));
     await mkdir(dirname(staged), { recursive: true });
     await writeFile(staged, blob.stdout);
+    stagedFiles.add(file.destination);
   }
   await writeFile(journalPath, `${JSON.stringify({ schemaVersion: 1, staging, files: selection.map((file) => file.destination) })}\n`);
   const selected = new Set(selection.map((file) => file.destination));
   for (const file of oldLock.files ?? []) if (!selected.has(file.destination)) await rm(resolve(root, file.destination), { force: true });
   for (const file of selection) {
+    if (!stagedFiles.has(file.destination)) continue;
     const output = resolve(root, file.destination);
     await mkdir(dirname(output), { recursive: true });
     await writeFile(output, await readFile(resolve(staging, ...file.destination.split("/"))));

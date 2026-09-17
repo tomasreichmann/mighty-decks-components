@@ -64,6 +64,8 @@ test("syncs selected runtime and core PNG files from a pinned Git commit", async
       runtimeDestination: "vendor/mighty-decks/components",
       publicDestination: "apps/web/public/mighty-decks",
     }, null, 2)}\n`);
+    await mkdir(join(consumer, ".cache", "mighty-decks"), { recursive: true });
+    await writeFile(join(consumer, ".cache", "mighty-decks", "legacy-archive.tar.gz"), "legacy cache content");
 
     const first = await runSync(consumer, ["--ref", commit]);
     assert.equal(first.code, 0, first.output);
