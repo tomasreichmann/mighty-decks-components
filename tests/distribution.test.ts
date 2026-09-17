@@ -170,3 +170,8 @@ test("ignores transient JavaScript emitted beside TypeScript authoring sources",
     await Promise.all([rm(source, { recursive: true, force: true }), rm(output, { recursive: true, force: true })]);
   }
 });
+
+test("keeps every checked-in distribution path out of generated-output ignores", async () => {
+  const ignore = await readFile(join(packageRoot, ".gitignore"), "utf8");
+  assert.match(ignore, /^!distribution\/\*\*$/m);
+});

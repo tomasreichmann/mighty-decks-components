@@ -8,3 +8,7 @@ output/
 .export-staging/
 .pnpm-store/
 .agent-logs/
+
+# The locally prepared consumer contract is committed with its source inputs.
+!distribution/
+!distribution/**
