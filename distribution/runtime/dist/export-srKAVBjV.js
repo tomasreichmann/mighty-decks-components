@@ -2635,7 +2635,9 @@ const Xe = [
   { layout: "full", width: 629, height: 1024 },
   { layout: "full", width: 315, height: 512 },
   { layout: "compact", width: 157, height: 256 }
-], dt = () => _e.flatMap((a) => rt.map((e) => ({ ...a, ...e })));
+], dt = () => _e.flatMap(
+  (a) => rt.map((e) => ({ ...a, ...e }))
+);
 export {
   nt as a,
   Xe as b,

@@ -9,7 +9,7 @@
     "node": "22.14.0",
     "playwright": "1.60.0"
   },
-  "inputFingerprint": "1245402668cd4ccffc441ed17bade3e6fbba731fa662df20e1c620abfd8b6117",
+  "inputFingerprint": "96d57be9860241eb3e467184bd7b7485a217c76cdf0c2eba6a14df2a83aff391",
   "inputs": [
     {
       "path": "assets/actors/base/alpha.png",
@@ -4357,7 +4357,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "2cd05e818d6bba02c2abf550ba80de2581174e55aa58826706fde978658b7087"
+      "sha256": "3dd910d29a59f9274ef020ff65485f745c65aae67ca73ef35d4974a44a6ab210"
     },
     {
       "path": "resources/artwork-manifest.json",
@@ -11615,8 +11615,8 @@
     },
     {
       "path": "public/mighty-decks/LICENSE",
-      "size": 1093,
-      "sha256": "34301f1e86ad0220b83d6085693a07f177e37d62c12ec87754d42f020983b05d"
+      "size": 1072,
+      "sha256": "57e3e69cba1631ffcb2546d7de4e50d980e2adfa78df9ca5727c5cd601827ffe"
     },
     {
       "path": "public/mighty-decks/LICENSES/CC-BY-4.0.md",
@@ -11625,8 +11625,8 @@
     },
     {
       "path": "public/mighty-decks/NOTICE",
-      "size": 546,
-      "sha256": "2adbb66dc75d595a417f6de16f07ec9a99519d98ad50daa6e62ced731beaad88"
+      "size": 536,
+      "sha256": "1265996b37810b593fea61d7af07d0f240292b55c3775d3219c0a961c58c17f1"
     },
     {
       "path": "runtime/assets/fonts/mighty-decks-kalam-400.ttf",
@@ -11714,9 +11714,9 @@
       "sha256": "5569dedb71ca7a7f92e1da255a5829530fd5e1463e3a80b017b75f77575a05e4"
     },
     {
-      "path": "runtime/dist/export-ChUKTv2Y.js",
-      "size": 152654,
-      "sha256": "961a2479c6a7fbb4f5b0cb447d8d208f1bc52a1eab6c6442138a46317383b51f"
+      "path": "runtime/dist/export-srKAVBjV.js",
+      "size": 152658,
+      "sha256": "b274ac22a2b9e1737a66c6f0784b04f81f34f999d616e55acfe4b5d96dc7f0bd"
     },
     {
       "path": "runtime/dist/export.d.ts",
@@ -11731,7 +11731,7 @@
     {
       "path": "runtime/dist/export.js",
       "size": 186,
-      "sha256": "570089e06bef4744b3aa624ee6863d376d53bb7df268a885fee9c1e7845f05df"
+      "sha256": "bfe52b3d8ab08a8054a0f8ae3025766cb6a2b7cc43c97684fb40942d40346d2b"
     },
     {
       "path": "runtime/dist/index.d.ts",
@@ -11746,7 +11746,7 @@
     {
       "path": "runtime/dist/index.js",
       "size": 528,
-      "sha256": "d696df721993d2dc64e083a6a80cb508ffdae31fff81acd36d6510242835b5a4"
+      "sha256": "15c02d1aa811c2f4d9883ab91383ca567ce09bf34857a3d4cc0a5d9f71ae3f9f"
     },
     {
       "path": "runtime/dist/react/index.d.ts",
@@ -11761,7 +11761,7 @@
     {
       "path": "runtime/dist/react/index.js",
       "size": 10094,
-      "sha256": "78cbefd0ec002f2f9e124705d13ebe3d745ae0adc4c504789f8e81878a3c11d6"
+      "sha256": "c66948d1c97a48048e95d3753e49112418827a3b79efcdcf0676313031d61e75"
     },
     {
       "path": "runtime/dist/styles.css",
@@ -11850,8 +11850,8 @@
     },
     {
       "path": "runtime/LICENSE",
-      "size": 1093,
-      "sha256": "34301f1e86ad0220b83d6085693a07f177e37d62c12ec87754d42f020983b05d"
+      "size": 1072,
+      "sha256": "57e3e69cba1631ffcb2546d7de4e50d980e2adfa78df9ca5727c5cd601827ffe"
     },
     {
       "path": "runtime/LICENSES/CC-BY-4.0.md",
@@ -11860,8 +11860,8 @@
     },
     {
       "path": "runtime/NOTICE",
-      "size": 546,
-      "sha256": "2adbb66dc75d595a417f6de16f07ec9a99519d98ad50daa6e62ced731beaad88"
+      "size": 536,
+      "sha256": "1265996b37810b593fea61d7af07d0f240292b55c3775d3219c0a961c58c17f1"
     },
     {
       "path": "runtime/package.json",

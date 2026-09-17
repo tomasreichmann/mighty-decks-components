@@ -1,7 +1,7 @@
 import { createHash } from "node:crypto";
 import { execFile } from "node:child_process";
 import { access, cp, mkdir, readFile, readdir, rename, rm, writeFile } from "node:fs/promises";
-import { dirname, relative, resolve } from "node:path";
+import { basename, dirname, relative, resolve } from "node:path";
 import { promisify } from "node:util";
 
 const exec = promisify(execFile);
@@ -36,7 +36,7 @@ const copy = async (from, to) => {
 };
 const normalizeText = async (root) => {
   for (const path of await collectFiles(root)) {
-    if (/\.(?:css|csv|d\.ts|json|js|md|mjs|txt)$/i.test(path)) {
+    if (/\.(?:css|csv|d\.ts|json|js|md|mjs|txt)$/i.test(path) || ["LICENSE", "NOTICE"].includes(basename(path))) {
       await writeFile(path, (await readFile(path, "utf8")).replaceAll("\r\n", "\n"));
     }
   }
