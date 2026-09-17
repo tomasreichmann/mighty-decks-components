@@ -15,13 +15,12 @@
   "type": "module",
   "packageManager": "pnpm@10.0.0",
   "engines": {
-    "node": "22.14.0"
+    "node": ">=22.14.0 <23"
   },
   "files": [
     "dist",
-    "assets/fonts",
-    "generated/csv",
-    "generated/manifest.json",
+    "assets",
+    "generated",
     "docs/en",
     "skills/mighty-decks-components",
     "NOTICE",
@@ -44,25 +43,32 @@
       "types": "./dist/export.d.ts",
       "import": "./dist/export.js"
     },
-    "./csv/*": "./generated/csv/*"
+    "./csv/*": "./generated/csv/*",
+    "./package.json": "./package.json",
+    "./assets/*": "./assets/*",
+    "./generated/*": "./generated/*",
+    "./docs/*": "./docs/*",
+    "./NOTICE": "./NOTICE",
+    "./LICENSE": "./LICENSE",
+    "./LICENSES/*": "./LICENSES/*"
   },
   "bin": {
     "mighty-decks-components": "./dist/cli.js"
   },
   "scripts": {
-    "build": "vite build && tsc -p tsconfig.build.json",
+    "build:library": "vite build && tsc -p tsconfig.build.json",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "lint": "eslint . --max-warnings 0",
     "check:fast": "pnpm lint && pnpm typecheck",
-    "check": "pnpm assets:prepare && pnpm generate:data && pnpm check:fast && pnpm test && pnpm build",
-    "test": "tsx --test tests/artifacts.test.ts tests/catalog.test.ts tests/consumer-sync.test.ts tests/distribution.test.ts tests/export.test.ts tests/generation.test.ts tests/guardrails.test.ts tests/hooks.test.ts tests/incremental-export.test.ts tests/package-surface.test.ts tests/standalone.test.ts tests/rulebook.test.ts",
+    "check": "pnpm release:prepare && pnpm check:fast && pnpm test",
+    "test": "tsx --test tests/artifacts.test.ts tests/catalog.test.ts tests/consumer-sync.test.ts tests/distribution.test.ts tests/export.test.ts tests/generation.test.ts tests/guardrails.test.ts tests/hooks.test.ts tests/incremental-export.test.ts tests/package-surface.test.ts tests/standalone.test.ts tests/rulebook.test.ts && node --test tests/git-install.test.mjs",
     "assets:prepare": "tsx scripts/prepare-assets.ts",
     "generate:data": "tsx scripts/generate.ts",
     "generate:runtime": "pnpm assets:prepare && pnpm generate:data",
     "generate:png": "tsx scripts/export.ts",
     "generate": "pnpm assets:prepare && pnpm generate:data && pnpm generate:png",
-    "distribution:prepare": "node scripts/prepare-distribution.mjs",
-    "distribution:check": "node scripts/verify-distribution.mjs",
+    "release:prepare": "pnpm assets:prepare && pnpm generate:data && pnpm build:library && pnpm generate:png && pnpm release:check",
+    "release:check": "node scripts/verify-distribution.mjs",
     "hooks:install": "node scripts/install-hooks.mjs"
   },
   "peerDependencies": {

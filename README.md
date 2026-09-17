@@ -16,19 +16,17 @@ import { GameCard, ActorCard } from "@mighty-decks/components/react";
 must handle an unsupported locale rather than assuming translation. Compact and
 full layout are independent from output density.
 
-## Consume the checked-in distribution
+## Consume the root Git package
 
-Consumers pin a full source commit and copy only the required distribution files
-into their own repository. Do not install the source branch, a floating tag, or a
-GitHub release archive. Copy `consumer/sync-mighty-decks.mjs` and
-`consumer/mighty-decks.config.example.json` into the consumer, then run the sync
-with the chosen 40-character commit SHA. Commit the generated lockfile and managed
-files with the consumer change.
+Consumers pin one reachable 40-character Git commit SHA and install it with pnpm.
+The package includes its compiled JavaScript, CSS/fonts, artwork, CSVs, PNGs, and
+English documentation. Serve the exported `assets/` and `generated/` directories
+from `node_modules`; do not copy package resources into the consumer or run its
+generator during installation.
 
-For package authors, run `pnpm assets:prepare`, `pnpm generate:data`, and `pnpm build`.
-`pnpm generate:png` is a separate browser-export command and requires Playwright
-Chromium (`pnpm exec playwright install chromium`). `pnpm generate` prepares assets
-and runs both generation steps; it is never an install hook. See the
+For package authors, run `pnpm release:prepare` and `pnpm release:check` before
+committing generated artifacts. The former is explicit and may render PNGs; the
+latter is read-only and is never an install hook. See the
 [maintainer workflow](https://github.com/tomasreichmann/mighty-decks-components/blob/main/docs/maintenance.md)
 for checks and distribution maintenance.
 

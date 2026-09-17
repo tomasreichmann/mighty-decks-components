@@ -5,7 +5,7 @@ import test from "node:test";
 
 const packageRoot = resolve(import.meta.dirname, "..");
 
-test("publishes only runtime resources and no PNG export contract", async () => {
+test("publishes the complete installed resource contract", async () => {
   const packageJson = JSON.parse(
     await readFile(resolve(packageRoot, "package.json"), "utf8"),
   ) as {
@@ -16,19 +16,24 @@ test("publishes only runtime resources and no PNG export contract", async () => 
 
   assert.deepEqual(packageJson.files, [
     "dist",
-    "assets/fonts",
-    "generated/csv",
-    "generated/manifest.json",
+    "assets",
+    "generated",
     "docs/en",
     "skills/mighty-decks-components",
     "NOTICE",
     "LICENSE",
     "LICENSES",
   ]);
-  assert.equal(packageJson.exports["./png/*"], undefined);
+  assert.equal(packageJson.exports["./package.json"], "./package.json");
+  assert.equal(packageJson.exports["./assets/*"], "./assets/*");
+  assert.equal(packageJson.exports["./generated/*"], "./generated/*");
+  assert.equal(packageJson.exports["./docs/*"], "./docs/*");
+  assert.equal(packageJson.exports["./NOTICE"], "./NOTICE");
+  assert.equal(packageJson.exports["./LICENSE"], "./LICENSE");
+  assert.equal(packageJson.exports["./LICENSES/*"], "./LICENSES/*");
   assert.match(packageJson.scripts["generate:runtime"], /assets:prepare/);
   assert.match(packageJson.scripts["generate:png"], /scripts\/export\.ts/);
-  for (const lifecycle of ["prepare", "postinstall", "preinstall"]) {
+  for (const lifecycle of ["prepare", "prepack", "preinstall", "install", "postinstall"]) {
     assert.equal(packageJson.scripts[lifecycle], undefined);
   }
 });

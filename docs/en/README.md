@@ -1,18 +1,9 @@
 # Mighty Decks package guides
 
-The runtime Git distribution package contains React components, styles, CSVs, the catalogue
-manifest, and fonts. Card images and static PNG card exports are versioned GitHub
-Release attachments. For React or Markdown images, run
-`mighty-decks-components copy-static --out <public-dir>`, then download the
-matching `mighty-decks-components-<version>-runtime-assets.tar.gz` attachment
-and extract it into `<public-dir>` (for example,
-`tar -xzf mighty-decks-components-<version>-runtime-assets.tar.gz -C <public-dir>`).
-This creates the expected
-`mighty-decks/assets` directory for offline use.
-
-Pin the full commit from `dist-v<VERSION>`, not a source ref, branch, or floating
-tag. The matching GitHub release manifest records the source commit, distribution
-commit, package/content versions, and archive checksums.
+The root Git package contains React components, styles, CSVs, the catalogue
+manifest, fonts, artwork, and static PNG card exports. Consumers install one full
+commit SHA and serve the exported `assets/` and `generated/` paths directly from
+`node_modules`; no release archive, exporter, or manual copy step is required.
 
 The public export helper (`@mighty-decks/components/export`) supplies the
 catalogue, its content version, static-entry enumeration, and custom-card input
