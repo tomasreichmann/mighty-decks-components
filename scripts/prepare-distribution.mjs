@@ -61,7 +61,7 @@ if (!skipBuild && previousManifest.inputFingerprint === inputFingerprint) {
   console.log("Skipped runtime generation because distribution inputs are unchanged.");
 } else if (!skipBuild) {
   const pnpm = process.platform === "win32" ? "pnpm.cmd" : "pnpm";
-  for (const command of ["assets:prepare", "generate:data", "build"]) {
+  for (const command of ["assets:prepare", "generate:data", "build:library"]) {
     await exec(pnpm, [command], { cwd: source, shell: process.platform === "win32" });
   }
 }

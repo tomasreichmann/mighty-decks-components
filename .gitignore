@@ -1,9 +1,5 @@
 node_modules/
-dist/
-assets/
-!resources/originals/assets/
-!resources/originals/assets/**
-generated/
+# Prebuilt package resources are committed for Git consumers.
 output/
 .export-staging/
 .pnpm-store/

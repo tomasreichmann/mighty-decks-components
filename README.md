@@ -16,21 +16,19 @@ import { GameCard, ActorCard } from "@mighty-decks/components/react";
 must handle an unsupported locale rather than assuming translation. Compact and
 full layout are independent from output density.
 
-## Consume the checked-in distribution
+## Consume the prebuilt Git package
 
-Consumers pin a full source commit and copy only the required distribution files
-into their own repository. Do not install the source branch, a floating tag, or a
-GitHub release archive. Copy `consumer/sync-mighty-decks.mjs` and
-`consumer/mighty-decks.config.example.json` into the consumer, then run the sync
-with the chosen 40-character commit SHA. Commit the generated lockfile and managed
-files with the consumer change.
+Consumers pin a full commit SHA, for example
+`git+https://github.com/tomasreichmann/mighty-decks-components.git#<SHA>`, and
+serve resources directly from the installed package. The package includes compiled
+components, fonts and artwork in `assets/`, catalog/CSV/PNG exports in `generated/`,
+guides, skills, and notices. No Components build runs during installation.
 
-For package authors, run `pnpm assets:prepare`, `pnpm generate:data`, and `pnpm build`.
-`pnpm generate:png` is a separate browser-export command and requires Playwright
-Chromium (`pnpm exec playwright install chromium`). `pnpm generate` prepares assets
-and runs both generation steps; it is never an install hook. See the
+For package authors, run `pnpm release:prepare`, then `pnpm release:check`, review
+the resulting prebuilt files, and commit them with the source change. PNG generation
+requires Playwright Chromium (`pnpm exec playwright install chromium`). See the
 [maintainer workflow](https://github.com/tomasreichmann/mighty-decks-components/blob/main/docs/maintenance.md)
-for checks and distribution maintenance.
+for checks and release maintenance.
 
 `@mighty-decks/components/export` exports `cardCatalog`, `contentVersion`,
 `enumerateStaticCards`, and `validateCardExportInput`. Generated resources are

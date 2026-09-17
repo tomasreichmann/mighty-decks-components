@@ -1,0 +1,1582 @@
+{
+  "files": [
+    {
+      "path": "/THIRD-PARTY-NOTICES.md",
+      "sourcePath": "/THIRD-PARTY-NOTICES.md",
+      "sourceChecksum": "e668884224c65e602d6442733b6adc01427412f3b197416840235ec637589b0d",
+      "outputChecksum": "e668884224c65e602d6442733b6adc01427412f3b197416840235ec637589b0d"
+    },
+    {
+      "path": "/actors/base/alpha.png",
+      "sourcePath": "/actors/base/alpha.png",
+      "sourceChecksum": "fa34a2a61b4c608bbf33691e7fb2a0a6a572dfa68117c299a315bcf61a9ee3b8",
+      "outputChecksum": "fa34a2a61b4c608bbf33691e7fb2a0a6a572dfa68117c299a315bcf61a9ee3b8"
+    },
+    {
+      "path": "/actors/base/animal-blue.png",
+      "sourcePath": "/actors/base/animal-blue.png",
+      "sourceChecksum": "c9b4d7e29ca1b03278b6c94035e4ece812b400bece79df7ea812ff140ab80450",
+      "outputChecksum": "c9b4d7e29ca1b03278b6c94035e4ece812b400bece79df7ea812ff140ab80450"
+    },
+    {
+      "path": "/actors/base/animal-green.png",
+      "sourcePath": "/actors/base/animal-green.png",
+      "sourceChecksum": "81c4bcdd9f59605bb882426a2dc7875b5971dc5d27f446fd1ee277c7ab0ea1c4",
+      "outputChecksum": "81c4bcdd9f59605bb882426a2dc7875b5971dc5d27f446fd1ee277c7ab0ea1c4"
+    },
+    {
+      "path": "/actors/base/animal-red.png",
+      "sourcePath": "/actors/base/animal-red.png",
+      "sourceChecksum": "4cb5667acf1390a6a7bad22c15e6dfd040ee5567f66b959604a1d1024a5d357c",
+      "outputChecksum": "4cb5667acf1390a6a7bad22c15e6dfd040ee5567f66b959604a1d1024a5d357c"
+    },
+    {
+      "path": "/actors/base/animal-yellow.png",
+      "sourcePath": "/actors/base/animal-yellow.png",
+      "sourceChecksum": "99d9e1126f46f311efad59b93dd33bad01068b76e7d2d866421e5b21fafc6d77",
+      "outputChecksum": "99d9e1126f46f311efad59b93dd33bad01068b76e7d2d866421e5b21fafc6d77"
+    },
+    {
+      "path": "/actors/base/aristocrat.png",
+      "sourcePath": "/actors/base/aristocrat.png",
+      "sourceChecksum": "1741e29d1f37c4ebf57fe6a0559bf0dbae35e3a47f0d455892b8f66be86e137a",
+      "outputChecksum": "1741e29d1f37c4ebf57fe6a0559bf0dbae35e3a47f0d455892b8f66be86e137a"
+    },
+    {
+      "path": "/actors/base/armoured.png",
+      "sourcePath": "/actors/base/armoured.png",
+      "sourceChecksum": "ca59ebb4d10024ea4a776c2b903333b8948f45e0795feba6dbce838cc3beee7c",
+      "outputChecksum": "ca59ebb4d10024ea4a776c2b903333b8948f45e0795feba6dbce838cc3beee7c"
+    },
+    {
+      "path": "/actors/base/artillery-acid.png",
+      "sourcePath": "/actors/base/artillery-acid.png",
+      "sourceChecksum": "a68fbda4430f07c80512b032bf2c49b027de31777371343374ce936f212b79b5",
+      "outputChecksum": "a68fbda4430f07c80512b032bf2c49b027de31777371343374ce936f212b79b5"
+    },
+    {
+      "path": "/actors/base/artillery-earth.png",
+      "sourcePath": "/actors/base/artillery-earth.png",
+      "sourceChecksum": "0a0a5e9cda7b41144d5cfa23ec93fc41edcf140cfa3af4f0fdada5d84e247660",
+      "outputChecksum": "0a0a5e9cda7b41144d5cfa23ec93fc41edcf140cfa3af4f0fdada5d84e247660"
+    },
+    {
+      "path": "/actors/base/artillery-fire.png",
+      "sourcePath": "/actors/base/artillery-fire.png",
+      "sourceChecksum": "913ab295fa22788e6951e7527d6190dba28082550d8ddf58d79a798ae40fc523",
+      "outputChecksum": "913ab295fa22788e6951e7527d6190dba28082550d8ddf58d79a798ae40fc523"
+    },
+    {
+      "path": "/actors/base/artillery-ice.png",
+      "sourcePath": "/actors/base/artillery-ice.png",
+      "sourceChecksum": "3439dd8f50fef23d16c3c9adf397f1b92d1b0b4fe8777b3a1acc74f7f33ff3e7",
+      "outputChecksum": "3439dd8f50fef23d16c3c9adf397f1b92d1b0b4fe8777b3a1acc74f7f33ff3e7"
+    },
+    {
+      "path": "/actors/base/artillery-lightning.png",
+      "sourcePath": "/actors/base/artillery-lightning.png",
+      "sourceChecksum": "41bcff755e00dfec980c583dc3f925e660a348eed32401a579eb6fa97b14c738",
+      "outputChecksum": "41bcff755e00dfec980c583dc3f925e660a348eed32401a579eb6fa97b14c738"
+    },
+    {
+      "path": "/actors/base/assassin.png",
+      "sourcePath": "/actors/base/assassin.png",
+      "sourceChecksum": "44c54e9556bec2ef568b2c2500ff5b392df6437918847404a57437be1027b71c",
+      "outputChecksum": "44c54e9556bec2ef568b2c2500ff5b392df6437918847404a57437be1027b71c"
+    },
+    {
+      "path": "/actors/base/beast.png",
+      "sourcePath": "/actors/base/beast.png",
+      "sourceChecksum": "115ba5cce16c036ea85bd859d6077437b0d6b2addea8c3bf0ec82efe213fc8f0",
+      "outputChecksum": "115ba5cce16c036ea85bd859d6077437b0d6b2addea8c3bf0ec82efe213fc8f0"
+    },
+    {
+      "path": "/actors/base/bruiser-blue.png",
+      "sourcePath": "/actors/base/bruiser-blue.png",
+      "sourceChecksum": "e841045b5d4384ccd747c77eecc8375a39bfe9e89eda25ce973c7baf75c23719",
+      "outputChecksum": "e841045b5d4384ccd747c77eecc8375a39bfe9e89eda25ce973c7baf75c23719"
+    },
+    {
+      "path": "/actors/base/bruiser-green.png",
+      "sourcePath": "/actors/base/bruiser-green.png",
+      "sourceChecksum": "b9bf5e72cb0080fbe6a2ee34fcecfceedce5a682e5c30c65cbf540193f56c520",
+      "outputChecksum": "b9bf5e72cb0080fbe6a2ee34fcecfceedce5a682e5c30c65cbf540193f56c520"
+    },
+    {
+      "path": "/actors/base/bruiser-red.png",
+      "sourcePath": "/actors/base/bruiser-red.png",
+      "sourceChecksum": "751da35021315de8c6d02d04ab52a87cd49267fa5264c34ff23f0d9a8edaabb0",
+      "outputChecksum": "751da35021315de8c6d02d04ab52a87cd49267fa5264c34ff23f0d9a8edaabb0"
+    },
+    {
+      "path": "/actors/base/bruiser-yellow.png",
+      "sourcePath": "/actors/base/bruiser-yellow.png",
+      "sourceChecksum": "d35888d636b1824e43a012b0b8f193fe00ada3c29b6e543f7cba70804b760847",
+      "outputChecksum": "d35888d636b1824e43a012b0b8f193fe00ada3c29b6e543f7cba70804b760847"
+    },
+    {
+      "path": "/actors/base/burning.png",
+      "sourcePath": "/actors/base/burning.png",
+      "sourceChecksum": "6047ddce1b98ad407740411809d9d1a6e1034cf9d8e37aa61cde502d8b3a0fb2",
+      "outputChecksum": "6047ddce1b98ad407740411809d9d1a6e1034cf9d8e37aa61cde502d8b3a0fb2"
+    },
+    {
+      "path": "/actors/base/charging.png",
+      "sourcePath": "/actors/base/charging.png",
+      "sourceChecksum": "51146e9dd21b644da7c9a7c5ea1eb842854ef6b5c270486f689ccbd66c0b7f84",
+      "outputChecksum": "51146e9dd21b644da7c9a7c5ea1eb842854ef6b5c270486f689ccbd66c0b7f84"
+    },
+    {
+      "path": "/actors/base/civilian.png",
+      "sourcePath": "/actors/base/civilian.png",
+      "sourceChecksum": "122acec34920a4f54de1aaf9267c8c6046ff1993734a5ed1a51a8999574d61f6",
+      "outputChecksum": "122acec34920a4f54de1aaf9267c8c6046ff1993734a5ed1a51a8999574d61f6"
+    },
+    {
+      "path": "/actors/base/claw-blue.png",
+      "sourcePath": "/actors/base/claw-blue.png",
+      "sourceChecksum": "17f0f8e9e0f6b6888d380473b227b7ed1e6a07f398b5d84ff13a264e7030dbde",
+      "outputChecksum": "17f0f8e9e0f6b6888d380473b227b7ed1e6a07f398b5d84ff13a264e7030dbde"
+    },
+    {
+      "path": "/actors/base/claw-green.png",
+      "sourcePath": "/actors/base/claw-green.png",
+      "sourceChecksum": "a4d3b16083e34827a6a1d84a83ca99f19dc4dcf15935c9d1c1d63cb2f2468c2b",
+      "outputChecksum": "a4d3b16083e34827a6a1d84a83ca99f19dc4dcf15935c9d1c1d63cb2f2468c2b"
+    },
+    {
+      "path": "/actors/base/claw-red.png",
+      "sourcePath": "/actors/base/claw-red.png",
+      "sourceChecksum": "43e904ce382636bd788c16ca1974f803c3899bafe953cdf5241662ef219409a6",
+      "outputChecksum": "43e904ce382636bd788c16ca1974f803c3899bafe953cdf5241662ef219409a6"
+    },
+    {
+      "path": "/actors/base/claw-yellow.png",
+      "sourcePath": "/actors/base/claw-yellow.png",
+      "sourceChecksum": "6dd8f7cae9957506ad5287f44c686fb621a420c2525af39279b479b0cb7afb1c",
+      "outputChecksum": "6dd8f7cae9957506ad5287f44c686fb621a420c2525af39279b479b0cb7afb1c"
+    },
+    {
+      "path": "/actors/base/cog.png",
+      "sourcePath": "/actors/base/cog.png",
+      "sourceChecksum": "e5661059369897c362baba66ff6faa680ac27ac2987e35e5eb15d1de27b16164",
+      "outputChecksum": "e5661059369897c362baba66ff6faa680ac27ac2987e35e5eb15d1de27b16164"
+    },
+    {
+      "path": "/actors/base/commander.png",
+      "sourcePath": "/actors/base/commander.png",
+      "sourceChecksum": "7dd7a4f6aa759be0118e2344efa8e7eba7d6de1203ffbb9cf1f3b57806470eca",
+      "outputChecksum": "7dd7a4f6aa759be0118e2344efa8e7eba7d6de1203ffbb9cf1f3b57806470eca"
+    },
+    {
+      "path": "/actors/base/construct.png",
+      "sourcePath": "/actors/base/construct.png",
+      "sourceChecksum": "9d6763e0d763c494d43b8b683acf10eff642b5a397663191bbee34b543deea11",
+      "outputChecksum": "9d6763e0d763c494d43b8b683acf10eff642b5a397663191bbee34b543deea11"
+    },
+    {
+      "path": "/actors/base/corrupting.png",
+      "sourcePath": "/actors/base/corrupting.png",
+      "sourceChecksum": "1cadbdc05f34772d703a82216ee592bf4b5c1ed0ec08feccdfbfae35d0410466",
+      "outputChecksum": "1cadbdc05f34772d703a82216ee592bf4b5c1ed0ec08feccdfbfae35d0410466"
+    },
+    {
+      "path": "/actors/base/dangerous.png",
+      "sourcePath": "/actors/base/dangerous.png",
+      "sourceChecksum": "f91db88a0376942bfaed21be814035f4822580f4443473f17899870c48f47c62",
+      "outputChecksum": "f91db88a0376942bfaed21be814035f4822580f4443473f17899870c48f47c62"
+    },
+    {
+      "path": "/actors/base/elemental.png",
+      "sourcePath": "/actors/base/elemental.png",
+      "sourceChecksum": "8538810be1b3da3446cde0e2ae1d4e2c4e2cc6cbaaf257373625e00d99d9279b",
+      "outputChecksum": "8538810be1b3da3446cde0e2ae1d4e2c4e2cc6cbaaf257373625e00d99d9279b"
+    },
+    {
+      "path": "/actors/base/encouraging.png",
+      "sourcePath": "/actors/base/encouraging.png",
+      "sourceChecksum": "e5d7470055cec47074738d83e9eff855eaefcbe37b52f172af8a5c4a2ba4ea1a",
+      "outputChecksum": "e5d7470055cec47074738d83e9eff855eaefcbe37b52f172af8a5c4a2ba4ea1a"
+    },
+    {
+      "path": "/actors/base/fast.png",
+      "sourcePath": "/actors/base/fast.png",
+      "sourceChecksum": "2ebc9be9f4a1e223db67565ee7d7748c8bfd35fed1f146843b1071a4ceb8d9cc",
+      "outputChecksum": "2ebc9be9f4a1e223db67565ee7d7748c8bfd35fed1f146843b1071a4ceb8d9cc"
+    },
+    {
+      "path": "/actors/base/fiery.png",
+      "sourcePath": "/actors/base/fiery.png",
+      "sourceChecksum": "6891e1784fa40ee0e34c627d1a4b8f6da8e54ccb285c9073ff0fbd471dfb991f",
+      "outputChecksum": "6891e1784fa40ee0e34c627d1a4b8f6da8e54ccb285c9073ff0fbd471dfb991f"
+    },
+    {
+      "path": "/actors/base/freezing.png",
+      "sourcePath": "/actors/base/freezing.png",
+      "sourceChecksum": "99a98b302752ec66d63457610c0fa33fd4023c0367336fffbfb1baf7495e5f35",
+      "outputChecksum": "99a98b302752ec66d63457610c0fa33fd4023c0367336fffbfb1baf7495e5f35"
+    },
+    {
+      "path": "/actors/base/grabbing.png",
+      "sourcePath": "/actors/base/grabbing.png",
+      "sourceChecksum": "eaff3e71cfab97a1be7dbb52b88712a8984125b51a93b8dabe8291040671b5f3",
+      "outputChecksum": "eaff3e71cfab97a1be7dbb52b88712a8984125b51a93b8dabe8291040671b5f3"
+    },
+    {
+      "path": "/actors/base/guard-blue.png",
+      "sourcePath": "/actors/base/guard-blue.png",
+      "sourceChecksum": "9f768883f9d8ce51c6c511c9c57f09143fd0048e60b94af6fbca89439a3e0fc5",
+      "outputChecksum": "9f768883f9d8ce51c6c511c9c57f09143fd0048e60b94af6fbca89439a3e0fc5"
+    },
+    {
+      "path": "/actors/base/guard-green.png",
+      "sourcePath": "/actors/base/guard-green.png",
+      "sourceChecksum": "27c8fc1a5e141d50f50a46ea24be97df77f8a7327c97caa8540358fcc8e777de",
+      "outputChecksum": "27c8fc1a5e141d50f50a46ea24be97df77f8a7327c97caa8540358fcc8e777de"
+    },
+    {
+      "path": "/actors/base/guard-red.png",
+      "sourcePath": "/actors/base/guard-red.png",
+      "sourceChecksum": "3ad6a23b4b1d5013a9c226808fd3a655e79c3a8a5e811f3965066c4409133167",
+      "outputChecksum": "3ad6a23b4b1d5013a9c226808fd3a655e79c3a8a5e811f3965066c4409133167"
+    },
+    {
+      "path": "/actors/base/guard-yellow.png",
+      "sourcePath": "/actors/base/guard-yellow.png",
+      "sourceChecksum": "1fd819d4138b338a254b95b47041783c54011d68426ea562e7515eb73465bb13",
+      "outputChecksum": "1fd819d4138b338a254b95b47041783c54011d68426ea562e7515eb73465bb13"
+    },
+    {
+      "path": "/actors/base/harassing.png",
+      "sourcePath": "/actors/base/harassing.png",
+      "sourceChecksum": "ba199c2113e125176046892317eac633f351a599870ac68921cd79b53d8fc6c2",
+      "outputChecksum": "ba199c2113e125176046892317eac633f351a599870ac68921cd79b53d8fc6c2"
+    },
+    {
+      "path": "/actors/base/healer.png",
+      "sourcePath": "/actors/base/healer.png",
+      "sourceChecksum": "134a259400960eb90d6eb78078a896e74177350e07f96c0a8144b8d0c9a74f5e",
+      "outputChecksum": "134a259400960eb90d6eb78078a896e74177350e07f96c0a8144b8d0c9a74f5e"
+    },
+    {
+      "path": "/actors/base/healing.png",
+      "sourcePath": "/actors/base/healing.png",
+      "sourceChecksum": "bdf193c46d7281bcd4226e9529d7d4a790069a6a132abeeb87b9f36836ffcba5",
+      "outputChecksum": "bdf193c46d7281bcd4226e9529d7d4a790069a6a132abeeb87b9f36836ffcba5"
+    },
+    {
+      "path": "/actors/base/horror.png",
+      "sourcePath": "/actors/base/horror.png",
+      "sourceChecksum": "c8471ff37b4fa4c46f53829a5a5336d63766102cf6deb34a1a90a8eee7caab88",
+      "outputChecksum": "c8471ff37b4fa4c46f53829a5a5336d63766102cf6deb34a1a90a8eee7caab88"
+    },
+    {
+      "path": "/actors/base/icy.png",
+      "sourcePath": "/actors/base/icy.png",
+      "sourceChecksum": "2800e3e0de657d0a1e5468a2ba8f913d32a4b20d0fab4f315bd0343db7d5c48a",
+      "outputChecksum": "2800e3e0de657d0a1e5468a2ba8f913d32a4b20d0fab4f315bd0343db7d5c48a"
+    },
+    {
+      "path": "/actors/base/irritating.png",
+      "sourcePath": "/actors/base/irritating.png",
+      "sourceChecksum": "f7ed8137aa0cb09c782deb648e921d5ca9465442993a05e2e240ca7e06026633",
+      "outputChecksum": "f7ed8137aa0cb09c782deb648e921d5ca9465442993a05e2e240ca7e06026633"
+    },
+    {
+      "path": "/actors/base/manipulator.png",
+      "sourcePath": "/actors/base/manipulator.png",
+      "sourceChecksum": "34586760c7c79dd06658e0d567586a53e62afe6d7dff7ecd2f282150fbb46527",
+      "outputChecksum": "34586760c7c79dd06658e0d567586a53e62afe6d7dff7ecd2f282150fbb46527"
+    },
+    {
+      "path": "/actors/base/marksman-blue.png",
+      "sourcePath": "/actors/base/marksman-blue.png",
+      "sourceChecksum": "066d348ae02bcfb7610e4bf05c32d42691084ce48f4d05ae7eae91e6bbf0c335",
+      "outputChecksum": "066d348ae02bcfb7610e4bf05c32d42691084ce48f4d05ae7eae91e6bbf0c335"
+    },
+    {
+      "path": "/actors/base/marksman-green.png",
+      "sourcePath": "/actors/base/marksman-green.png",
+      "sourceChecksum": "fffaa2c9d580e316c5020de999017a2b494a03ed94f721e10b97d0bd5cc10841",
+      "outputChecksum": "fffaa2c9d580e316c5020de999017a2b494a03ed94f721e10b97d0bd5cc10841"
+    },
+    {
+      "path": "/actors/base/marksman-red.png",
+      "sourcePath": "/actors/base/marksman-red.png",
+      "sourceChecksum": "7ee53a513d20549b7d6208ff30ff505ddd81b3b2ce5cf52a9658fcee3b77bef8",
+      "outputChecksum": "7ee53a513d20549b7d6208ff30ff505ddd81b3b2ce5cf52a9658fcee3b77bef8"
+    },
+    {
+      "path": "/actors/base/marksman-yellow.png",
+      "sourcePath": "/actors/base/marksman-yellow.png",
+      "sourceChecksum": "e34e91972a859532a940c5a3dc797fba2a3f149110fa1d16ec4a4d1f902e8efe",
+      "outputChecksum": "e34e91972a859532a940c5a3dc797fba2a3f149110fa1d16ec4a4d1f902e8efe"
+    },
+    {
+      "path": "/actors/base/merchant.png",
+      "sourcePath": "/actors/base/merchant.png",
+      "sourceChecksum": "d499e83fa977b61c12afc51d4d6123fb22ce035d840e5330b46ab106edcd6ce7",
+      "outputChecksum": "d499e83fa977b61c12afc51d4d6123fb22ce035d840e5330b46ab106edcd6ce7"
+    },
+    {
+      "path": "/actors/base/minion-blue.png",
+      "sourcePath": "/actors/base/minion-blue.png",
+      "sourceChecksum": "31672c858e12bba68da93b244ead51a6dd626efe51621531d84a28ed7e47246b",
+      "outputChecksum": "31672c858e12bba68da93b244ead51a6dd626efe51621531d84a28ed7e47246b"
+    },
+    {
+      "path": "/actors/base/minion-green.png",
+      "sourcePath": "/actors/base/minion-green.png",
+      "sourceChecksum": "706fc44528f92721287179691d985e108df2d2af77b30714fadabb9cb904b483",
+      "outputChecksum": "706fc44528f92721287179691d985e108df2d2af77b30714fadabb9cb904b483"
+    },
+    {
+      "path": "/actors/base/minion-red.png",
+      "sourcePath": "/actors/base/minion-red.png",
+      "sourceChecksum": "f0b71feb0685c2a12d2a65d0f08db7f34cf3198b7c2a9bf6b145c7a9748731cc",
+      "outputChecksum": "f0b71feb0685c2a12d2a65d0f08db7f34cf3198b7c2a9bf6b145c7a9748731cc"
+    },
+    {
+      "path": "/actors/base/minion-yellow.png",
+      "sourcePath": "/actors/base/minion-yellow.png",
+      "sourceChecksum": "d033b1f4da0603da09887e78ec44b1dcd77e724befb4a704ebb4bed030347dc9",
+      "outputChecksum": "d033b1f4da0603da09887e78ec44b1dcd77e724befb4a704ebb4bed030347dc9"
+    },
+    {
+      "path": "/actors/base/reaching.png",
+      "sourcePath": "/actors/base/reaching.png",
+      "sourceChecksum": "e8c0a2dc63e49f68b5547ab48e5292c248dc3ed025ac66bb00d8694dada5becc",
+      "outputChecksum": "e8c0a2dc63e49f68b5547ab48e5292c248dc3ed025ac66bb00d8694dada5becc"
+    },
+    {
+      "path": "/actors/base/regenerating.png",
+      "sourcePath": "/actors/base/regenerating.png",
+      "sourceChecksum": "54c043327279ceca5b88b0d77bab4bc665880c81e4795cb56f78b954f88830de",
+      "outputChecksum": "54c043327279ceca5b88b0d77bab4bc665880c81e4795cb56f78b954f88830de"
+    },
+    {
+      "path": "/actors/base/restoring.png",
+      "sourcePath": "/actors/base/restoring.png",
+      "sourceChecksum": "1eb73b042f9f4a273838e9a0e6daebff6449a5c870d0ea6ccdc72bbe894eb2a4",
+      "outputChecksum": "1eb73b042f9f4a273838e9a0e6daebff6449a5c870d0ea6ccdc72bbe894eb2a4"
+    },
+    {
+      "path": "/actors/base/sentry.png",
+      "sourcePath": "/actors/base/sentry.png",
+      "sourceChecksum": "95bffddbdaf4af324b8763a0bb7efc1c606c96efb64a835d5b6e092462ecf997",
+      "outputChecksum": "95bffddbdaf4af324b8763a0bb7efc1c606c96efb64a835d5b6e092462ecf997"
+    },
+    {
+      "path": "/actors/base/shielded.png",
+      "sourcePath": "/actors/base/shielded.png",
+      "sourceChecksum": "d56c86d537a60bf811cc9f80a1a576ec8a7535bb17d558a0130fecfe396012bf",
+      "outputChecksum": "d56c86d537a60bf811cc9f80a1a576ec8a7535bb17d558a0130fecfe396012bf"
+    },
+    {
+      "path": "/actors/base/slowing.png",
+      "sourcePath": "/actors/base/slowing.png",
+      "sourceChecksum": "81fc33a003239a5944bb3fc9c14f60e8c6b2f4b452940bbcfbb8e7c4e1d29380",
+      "outputChecksum": "81fc33a003239a5944bb3fc9c14f60e8c6b2f4b452940bbcfbb8e7c4e1d29380"
+    },
+    {
+      "path": "/actors/base/specialist.png",
+      "sourcePath": "/actors/base/specialist.png",
+      "sourceChecksum": "a8f61db70d195608ee109bd43b3c7ea7ce2b0f5cd5429fd58d36dff2ed0d8511",
+      "outputChecksum": "a8f61db70d195608ee109bd43b3c7ea7ce2b0f5cd5429fd58d36dff2ed0d8511"
+    },
+    {
+      "path": "/actors/base/suicide.png",
+      "sourcePath": "/actors/base/suicide.png",
+      "sourceChecksum": "bd525557f94ad0b676bdfe6027462958e5402f140b9990f5fa50a30753b73212",
+      "outputChecksum": "bd525557f94ad0b676bdfe6027462958e5402f140b9990f5fa50a30753b73212"
+    },
+    {
+      "path": "/actors/base/swarm.png",
+      "sourcePath": "/actors/base/swarm.png",
+      "sourceChecksum": "8aa66c4495802020ea679ebc3d3e2dbc9e9e39dce3c0349f270fd94da8314b7e",
+      "outputChecksum": "8aa66c4495802020ea679ebc3d3e2dbc9e9e39dce3c0349f270fd94da8314b7e"
+    },
+    {
+      "path": "/actors/base/tough.png",
+      "sourcePath": "/actors/base/tough.png",
+      "sourceChecksum": "1661ccb066ce722e0c2d186c180b9698b59602283710e0b1a8b6eb2ca357d2f1",
+      "outputChecksum": "1661ccb066ce722e0c2d186c180b9698b59602283710e0b1a8b6eb2ca357d2f1"
+    },
+    {
+      "path": "/actors/base/webbing.png",
+      "sourcePath": "/actors/base/webbing.png",
+      "sourceChecksum": "6fa4c12eb6ff0a01c5db0d703b83a43c8c51edfd8f7c34319667b10e75329acf",
+      "outputChecksum": "6fa4c12eb6ff0a01c5db0d703b83a43c8c51edfd8f7c34319667b10e75329acf"
+    },
+    {
+      "path": "/actors/base/zealot.png",
+      "sourcePath": "/actors/base/zealot.png",
+      "sourceChecksum": "b1341bbce36bd18291d9a8246c769d4a70d6557bdfb885f9de03a8a73156755c",
+      "outputChecksum": "b1341bbce36bd18291d9a8246c769d4a70d6557bdfb885f9de03a8a73156755c"
+    },
+    {
+      "path": "/art/effects/taken-out.png",
+      "sourcePath": "/effects/dying.png",
+      "sourceChecksum": "5e92728e28fe0b0f5f87373913b92ddb9aa3703d52fe7afa2fd10ed09dbd1b2f",
+      "outputChecksum": "5e92728e28fe0b0f5f87373913b92ddb9aa3703d52fe7afa2fd10ed09dbd1b2f"
+    },
+    {
+      "path": "/assets/base/annoying.png",
+      "sourcePath": "/assets/base/annoying.png",
+      "sourceChecksum": "7ae548d784c6f3b697667548f303f40b52dfe624de2ab51276227cd02eea0315",
+      "outputChecksum": "7ae548d784c6f3b697667548f303f40b52dfe624de2ab51276227cd02eea0315"
+    },
+    {
+      "path": "/assets/base/area.png",
+      "sourcePath": "/assets/base/area.png",
+      "sourceChecksum": "932a59fdc8b7ffe949ec10194ae0548a8fe7baf62abd963b02d4208e97d356e2",
+      "outputChecksum": "932a59fdc8b7ffe949ec10194ae0548a8fe7baf62abd963b02d4208e97d356e2"
+    },
+    {
+      "path": "/assets/base/artillery_weapon.png",
+      "sourcePath": "/assets/base/artillery_weapon.png",
+      "sourceChecksum": "e9eadf0281502bd28a3370eb379ee56899b90b5dce628ff0a9fd233d58e21d58",
+      "outputChecksum": "e9eadf0281502bd28a3370eb379ee56899b90b5dce628ff0a9fd233d58e21d58"
+    },
+    {
+      "path": "/assets/base/burning.png",
+      "sourcePath": "/assets/base/burning.png",
+      "sourceChecksum": "6bed7b1662018cbbbef944319002abb342aba05da84a76ac0b487f2feccd0418",
+      "outputChecksum": "6bed7b1662018cbbbef944319002abb342aba05da84a76ac0b487f2feccd0418"
+    },
+    {
+      "path": "/assets/base/comfort.png",
+      "sourcePath": "/assets/base/comfort.png",
+      "sourceChecksum": "e38e3136fc6ce6aa992915f0d60a20adbe0a4b5784e43f9e02a034959cddba77",
+      "outputChecksum": "e38e3136fc6ce6aa992915f0d60a20adbe0a4b5784e43f9e02a034959cddba77"
+    },
+    {
+      "path": "/assets/base/dangerous.png",
+      "sourcePath": "/assets/base/dangerous.png",
+      "sourceChecksum": "01b17a379560b0472f7b70ec431461ec2091c4f165690d818318dc689f1e8959",
+      "outputChecksum": "01b17a379560b0472f7b70ec431461ec2091c4f165690d818318dc689f1e8959"
+    },
+    {
+      "path": "/assets/base/document.png",
+      "sourcePath": "/assets/base/document.png",
+      "sourceChecksum": "d030d53da9ad0ecf433100e715376bec7c250317f5bd587b5ff30c7cb7c5bec1",
+      "outputChecksum": "d030d53da9ad0ecf433100e715376bec7c250317f5bd587b5ff30c7cb7c5bec1"
+    },
+    {
+      "path": "/assets/base/empowered.png",
+      "sourcePath": "/assets/base/empowered.png",
+      "sourceChecksum": "38a1e8312ebc8c2f88efa2a92dff1e63bc2bc2047e05b52eec190b15e10fd169",
+      "outputChecksum": "38a1e8312ebc8c2f88efa2a92dff1e63bc2bc2047e05b52eec190b15e10fd169"
+    },
+    {
+      "path": "/assets/base/fast.png",
+      "sourcePath": "/assets/base/fast.png",
+      "sourceChecksum": "3c00fa871c520b0afefaca4475ebe08a3d033a7d719b8ad3b7f71054a8e6cb7b",
+      "outputChecksum": "3c00fa871c520b0afefaca4475ebe08a3d033a7d719b8ad3b7f71054a8e6cb7b"
+    },
+    {
+      "path": "/assets/base/fragile.png",
+      "sourcePath": "/assets/base/fragile.png",
+      "sourceChecksum": "cc858805620569ae1c46d30068d7c3fc82b8a807443877b28e5e49641a42a7bf",
+      "outputChecksum": "cc858805620569ae1c46d30068d7c3fc82b8a807443877b28e5e49641a42a7bf"
+    },
+    {
+      "path": "/assets/base/freezing.png",
+      "sourcePath": "/assets/base/freezing.png",
+      "sourceChecksum": "a948f2c5469b832e6b22a1a2de770b101cb731ba48039c832fd060bd1a4ba6f9",
+      "outputChecksum": "a948f2c5469b832e6b22a1a2de770b101cb731ba48039c832fd060bd1a4ba6f9"
+    },
+    {
+      "path": "/assets/base/healing.png",
+      "sourcePath": "/assets/base/healing.png",
+      "sourceChecksum": "79516198d200abd6e66114512696bc7983148f2d9f5b54d88e6c2e6cfd3faf00",
+      "outputChecksum": "79516198d200abd6e66114512696bc7983148f2d9f5b54d88e6c2e6cfd3faf00"
+    },
+    {
+      "path": "/assets/base/heavy_armor.png",
+      "sourcePath": "/assets/base/heavy_armor.png",
+      "sourceChecksum": "8e82a1f524cfb9bea12290feaa6bcde30827e45074b53d610d7fca203a9e8f93",
+      "outputChecksum": "8e82a1f524cfb9bea12290feaa6bcde30827e45074b53d610d7fca203a9e8f93"
+    },
+    {
+      "path": "/assets/base/heavy_weapon.png",
+      "sourcePath": "/assets/base/heavy_weapon.png",
+      "sourceChecksum": "b4dc638386a95defa7c04c34389cb29759feefe651c8506220f03fee8092a96b",
+      "outputChecksum": "b4dc638386a95defa7c04c34389cb29759feefe651c8506220f03fee8092a96b"
+    },
+    {
+      "path": "/assets/base/hidden.png",
+      "sourcePath": "/assets/base/hidden.png",
+      "sourceChecksum": "3ef526b5c36637d46552abf72d3a19c40d0d15434a99c1de09b9bd00d9fb4896",
+      "outputChecksum": "3ef526b5c36637d46552abf72d3a19c40d0d15434a99c1de09b9bd00d9fb4896"
+    },
+    {
+      "path": "/assets/base/insulating.png",
+      "sourcePath": "/assets/base/insulating.png",
+      "sourceChecksum": "f95e93925e34041c5000cac7ed3bff5cea0e8d7e9d8e9101626f4609d3a5aa43",
+      "outputChecksum": "f95e93925e34041c5000cac7ed3bff5cea0e8d7e9d8e9101626f4609d3a5aa43"
+    },
+    {
+      "path": "/assets/base/irritating.png",
+      "sourcePath": "/assets/base/irritating.png",
+      "sourceChecksum": "02a89ae17d445adb8a4481709114eb8e6662bd6f2abc0fd74c400140a0ecd4a9",
+      "outputChecksum": "02a89ae17d445adb8a4481709114eb8e6662bd6f2abc0fd74c400140a0ecd4a9"
+    },
+    {
+      "path": "/assets/base/key.png",
+      "sourcePath": "/assets/base/key.png",
+      "sourceChecksum": "b1365f5b5bae001e65882315ebf430a2ad70b88fde97a597b2e01578f191a624",
+      "outputChecksum": "b1365f5b5bae001e65882315ebf430a2ad70b88fde97a597b2e01578f191a624"
+    },
+    {
+      "path": "/assets/base/light.png",
+      "sourcePath": "/assets/base/light.png",
+      "sourceChecksum": "dc07d04a5e82a292b77644790666531b25af2faa05c6459b00380e4a5dbb3125",
+      "outputChecksum": "dc07d04a5e82a292b77644790666531b25af2faa05c6459b00380e4a5dbb3125"
+    },
+    {
+      "path": "/assets/base/light_armor.png",
+      "sourcePath": "/assets/base/light_armor.png",
+      "sourceChecksum": "23f43efbdc7947548088f4eca5d58178c2aa10c54022851adba7aa0a0e71e93e",
+      "outputChecksum": "23f43efbdc7947548088f4eca5d58178c2aa10c54022851adba7aa0a0e71e93e"
+    },
+    {
+      "path": "/assets/base/light_weapon.png",
+      "sourcePath": "/assets/base/light_weapon.png",
+      "sourceChecksum": "10980d7232efa19472eff187ec99e9310c4cde83cc499e409d653e66aa8ebda4",
+      "outputChecksum": "10980d7232efa19472eff187ec99e9310c4cde83cc499e409d653e66aa8ebda4"
+    },
+    {
+      "path": "/assets/base/package.png",
+      "sourcePath": "/assets/base/package.png",
+      "sourceChecksum": "294eb530f62f8be80caccff5c41a84eebd9b6161df2f9cd7f14ca2d858537310",
+      "outputChecksum": "294eb530f62f8be80caccff5c41a84eebd9b6161df2f9cd7f14ca2d858537310"
+    },
+    {
+      "path": "/assets/base/penetrating.png",
+      "sourcePath": "/assets/base/penetrating.png",
+      "sourceChecksum": "75e65901eb596134f94320538b9fd4c88b9f572b20831ef633fc74b984665822",
+      "outputChecksum": "75e65901eb596134f94320538b9fd4c88b9f572b20831ef633fc74b984665822"
+    },
+    {
+      "path": "/assets/base/permanent.png",
+      "sourcePath": "/assets/base/permanent.png",
+      "sourceChecksum": "17b77dd07cde47245877d759c03ac8590a82d295fbc02f1ed91aba9c7a2cab1b",
+      "outputChecksum": "17b77dd07cde47245877d759c03ac8590a82d295fbc02f1ed91aba9c7a2cab1b"
+    },
+    {
+      "path": "/assets/base/precision_weapon.png",
+      "sourcePath": "/assets/base/precision_weapon.png",
+      "sourceChecksum": "ba4286f3a800b703bbcd8eff27935b7f1736548e99e1e76991b8406cbe76ce87",
+      "outputChecksum": "ba4286f3a800b703bbcd8eff27935b7f1736548e99e1e76991b8406cbe76ce87"
+    },
+    {
+      "path": "/assets/base/pulling.png",
+      "sourcePath": "/assets/base/pulling.png",
+      "sourceChecksum": "1b15ab0a29b603ed4db17ad01f5a3ffb6888e45e96501d3b5fb0b66605cc7598",
+      "outputChecksum": "1b15ab0a29b603ed4db17ad01f5a3ffb6888e45e96501d3b5fb0b66605cc7598"
+    },
+    {
+      "path": "/assets/base/pushing.png",
+      "sourcePath": "/assets/base/pushing.png",
+      "sourceChecksum": "2112107f8086cd0bf9db7c32832c8ca44ff175cae8b1a51d1a9dd983c862a2c6",
+      "outputChecksum": "2112107f8086cd0bf9db7c32832c8ca44ff175cae8b1a51d1a9dd983c862a2c6"
+    },
+    {
+      "path": "/assets/base/reach_weapon.png",
+      "sourcePath": "/assets/base/reach_weapon.png",
+      "sourceChecksum": "08aa8b140977584a46edddcfce521fdcb870701c7e5b68e232727108560af097",
+      "outputChecksum": "08aa8b140977584a46edddcfce521fdcb870701c7e5b68e232727108560af097"
+    },
+    {
+      "path": "/assets/base/repeating_weapon.png",
+      "sourcePath": "/assets/base/repeating_weapon.png",
+      "sourceChecksum": "068354bcb9ce717aa57b257594e69f2f5fb2217a3d22300944043b1b2d401a0f",
+      "outputChecksum": "068354bcb9ce717aa57b257594e69f2f5fb2217a3d22300944043b1b2d401a0f"
+    },
+    {
+      "path": "/assets/base/resources.png",
+      "sourcePath": "/assets/base/resources.png",
+      "sourceChecksum": "6e305199683fce5997ece9a267d6cfffc7f2cc813c71294da61cd90db306cffc",
+      "outputChecksum": "6e305199683fce5997ece9a267d6cfffc7f2cc813c71294da61cd90db306cffc"
+    },
+    {
+      "path": "/assets/base/shield.png",
+      "sourcePath": "/assets/base/shield.png",
+      "sourceChecksum": "676947164418eaa9bfef98d7a9a2f7eef2e3cbe1ae6fe6608d597ebe2a15ab85",
+      "outputChecksum": "676947164418eaa9bfef98d7a9a2f7eef2e3cbe1ae6fe6608d597ebe2a15ab85"
+    },
+    {
+      "path": "/assets/base/spread_weapon.png",
+      "sourcePath": "/assets/base/spread_weapon.png",
+      "sourceChecksum": "7bed608339a6d6f414a36c9995be7089eec0cbfbffa2afe45e9d32281a79db0e",
+      "outputChecksum": "7bed608339a6d6f414a36c9995be7089eec0cbfbffa2afe45e9d32281a79db0e"
+    },
+    {
+      "path": "/assets/base/surge.png",
+      "sourcePath": "/assets/base/surge.png",
+      "sourceChecksum": "6b802e449ebac044efcb9d606e5fa87733db7488c523c0fbab494cc8b2325c76",
+      "outputChecksum": "6b802e449ebac044efcb9d606e5fa87733db7488c523c0fbab494cc8b2325c76"
+    },
+    {
+      "path": "/assets/base/throwable_weapon.png",
+      "sourcePath": "/assets/base/throwable_weapon.png",
+      "sourceChecksum": "834b42f1e561fe145ec088cbb25e2632603943989ed5f778e8a436c065f5cd8c",
+      "outputChecksum": "834b42f1e561fe145ec088cbb25e2632603943989ed5f778e8a436c065f5cd8c"
+    },
+    {
+      "path": "/assets/base/tools.png",
+      "sourcePath": "/assets/base/tools.png",
+      "sourceChecksum": "2cd1784754ad90312396e0dace4447f8c10d2850beb39ba11ae02293a6422bde",
+      "outputChecksum": "2cd1784754ad90312396e0dace4447f8c10d2850beb39ba11ae02293a6422bde"
+    },
+    {
+      "path": "/assets/base/valuables.png",
+      "sourcePath": "/assets/base/valuables.png",
+      "sourceChecksum": "1945ef93a0b92461ff748f272aa72dabfcc673be490d310cc2bad829912ab76a",
+      "outputChecksum": "1945ef93a0b92461ff748f272aa72dabfcc673be490d310cc2bad829912ab76a"
+    },
+    {
+      "path": "/assets/base/vehicle.png",
+      "sourcePath": "/assets/base/vehicle.png",
+      "sourceChecksum": "952d68e381cd87252425ce2169ff0a8cab4532a9b29d56dc35f09b0535b51aac",
+      "outputChecksum": "952d68e381cd87252425ce2169ff0a8cab4532a9b29d56dc35f09b0535b51aac"
+    },
+    {
+      "path": "/assets/base/wide.png",
+      "sourcePath": "/assets/base/wide.png",
+      "sourceChecksum": "4a74c205b259acdb86c0373ff9c3f3a94143d2d5c2409f35628cc9c5c1a4d559",
+      "outputChecksum": "4a74c205b259acdb86c0373ff9c3f3a94143d2d5c2409f35628cc9c5c1a4d559"
+    },
+    {
+      "path": "/assets/medieval/bandages.png",
+      "sourcePath": "/assets/medieval/bandages.png",
+      "sourceChecksum": "07314e74a2974c609059633bc28167c1ab31d178abb8ebb9f8dac532ed494186",
+      "outputChecksum": "07314e74a2974c609059633bc28167c1ab31d178abb8ebb9f8dac532ed494186"
+    },
+    {
+      "path": "/assets/medieval/billhook.png",
+      "sourcePath": "/assets/medieval/billhook.png",
+      "sourceChecksum": "c2573254be6352ead5dfd097beb765a33363166ee808b4dcb88eb5310096fd52",
+      "outputChecksum": "c2573254be6352ead5dfd097beb765a33363166ee808b4dcb88eb5310096fd52"
+    },
+    {
+      "path": "/assets/medieval/buckler.png",
+      "sourcePath": "/assets/medieval/buckler.png",
+      "sourceChecksum": "415379b8aab1c7bce6ab1ae4de9a48513057b6856d496b6e7a6cdbc929364f1d",
+      "outputChecksum": "415379b8aab1c7bce6ab1ae4de9a48513057b6856d496b6e7a6cdbc929364f1d"
+    },
+    {
+      "path": "/assets/medieval/cannon.png",
+      "sourcePath": "/assets/medieval/cannon.png",
+      "sourceChecksum": "267e65d4194bd098c945c373914ae34dac3c3aaf9d48334afbdf8e558b563f54",
+      "outputChecksum": "267e65d4194bd098c945c373914ae34dac3c3aaf9d48334afbdf8e558b563f54"
+    },
+    {
+      "path": "/assets/medieval/chainmail.png",
+      "sourcePath": "/assets/medieval/chainmail.png",
+      "sourceChecksum": "500c50d00a09aea2715b1864dff0a6415f8b3f950ec9930da8bda12895a33d34",
+      "outputChecksum": "500c50d00a09aea2715b1864dff0a6415f8b3f950ec9930da8bda12895a33d34"
+    },
+    {
+      "path": "/assets/medieval/chest.png",
+      "sourcePath": "/assets/medieval/chest.png",
+      "sourceChecksum": "19ae96709447446b23747c6d195bf99fd2dfde2b11e4406171f26001c87a3a27",
+      "outputChecksum": "19ae96709447446b23747c6d195bf99fd2dfde2b11e4406171f26001c87a3a27"
+    },
+    {
+      "path": "/assets/medieval/crossbow.png",
+      "sourcePath": "/assets/medieval/crossbow.png",
+      "sourceChecksum": "c7c32939f2a24c8445488359ada79fe63ed017317f67598e6ad1bb1e2ee9610e",
+      "outputChecksum": "c7c32939f2a24c8445488359ada79fe63ed017317f67598e6ad1bb1e2ee9610e"
+    },
+    {
+      "path": "/assets/medieval/dagger.png",
+      "sourcePath": "/assets/medieval/dagger.png",
+      "sourceChecksum": "57921610fbae068c5d448e1e4a229897c47503b26a647e1838fa0fbbe66176b4",
+      "outputChecksum": "57921610fbae068c5d448e1e4a229897c47503b26a647e1838fa0fbbe66176b4"
+    },
+    {
+      "path": "/assets/medieval/digging.png",
+      "sourcePath": "/assets/medieval/digging.png",
+      "sourceChecksum": "fbe168fcc666f9cc297e11145a2808f507a980ba43c67c8073d675a7ec09ebc7",
+      "outputChecksum": "fbe168fcc666f9cc297e11145a2808f507a980ba43c67c8073d675a7ec09ebc7"
+    },
+    {
+      "path": "/assets/medieval/gambeson.png",
+      "sourcePath": "/assets/medieval/gambeson.png",
+      "sourceChecksum": "400488f9e1380544a15f2a8bed0cc6ddf1f57685423b75ddd0367d2593c35dce",
+      "outputChecksum": "400488f9e1380544a15f2a8bed0cc6ddf1f57685423b75ddd0367d2593c35dce"
+    },
+    {
+      "path": "/assets/medieval/gold.png",
+      "sourcePath": "/assets/medieval/gold.png",
+      "sourceChecksum": "25bdbbabffa7d6e816e08f26076f6573c02ed9fc7cdc98868e4f408c48433bac",
+      "outputChecksum": "25bdbbabffa7d6e816e08f26076f6573c02ed9fc7cdc98868e4f408c48433bac"
+    },
+    {
+      "path": "/assets/medieval/grappling-hook.png",
+      "sourcePath": "/assets/medieval/grappling-hook.png",
+      "sourceChecksum": "db990ee2998038eca8b6edae1088bd50edc38c9894fddd22e9bdcced6fbb5a64",
+      "outputChecksum": "db990ee2998038eca8b6edae1088bd50edc38c9894fddd22e9bdcced6fbb5a64"
+    },
+    {
+      "path": "/assets/medieval/great-axe.png",
+      "sourcePath": "/assets/medieval/great-axe.png",
+      "sourceChecksum": "f03289d5a3455d44d675359ffce3d76959e702190faf2ef4cd2a320fcbc729ed",
+      "outputChecksum": "f03289d5a3455d44d675359ffce3d76959e702190faf2ef4cd2a320fcbc729ed"
+    },
+    {
+      "path": "/assets/medieval/grenade.png",
+      "sourcePath": "/assets/medieval/grenade.png",
+      "sourceChecksum": "65ec3bad09555282cf6c817702bdfb7d22836e2c39f8e61a287b405264e66466",
+      "outputChecksum": "65ec3bad09555282cf6c817702bdfb7d22836e2c39f8e61a287b405264e66466"
+    },
+    {
+      "path": "/assets/medieval/hand-axe.png",
+      "sourcePath": "/assets/medieval/hand-axe.png",
+      "sourceChecksum": "6cca56c4d07a7f976bfd869b5ad7ccccc7ded7ca4575b927489a731e6262670d",
+      "outputChecksum": "6cca56c4d07a7f976bfd869b5ad7ccccc7ded7ca4575b927489a731e6262670d"
+    },
+    {
+      "path": "/assets/medieval/hand-cannon.png",
+      "sourcePath": "/assets/medieval/hand-cannon.png",
+      "sourceChecksum": "d469683e050372722906a6482be9f97094ea7b9b1239a5c50dbe12fd4c9b22cf",
+      "outputChecksum": "d469683e050372722906a6482be9f97094ea7b9b1239a5c50dbe12fd4c9b22cf"
+    },
+    {
+      "path": "/assets/medieval/healing-salve.png",
+      "sourcePath": "/assets/medieval/healing-salve.png",
+      "sourceChecksum": "3056ff92d6d730d0168eb3c14f8d83d973840b1402d968b7e6c78a4d20f8df01",
+      "outputChecksum": "3056ff92d6d730d0168eb3c14f8d83d973840b1402d968b7e6c78a4d20f8df01"
+    },
+    {
+      "path": "/assets/medieval/herbal-remedy.png",
+      "sourcePath": "/assets/medieval/herbal-remedy.png",
+      "sourceChecksum": "2326085ee3f3a0e4053f7f04320424c2033519aac1e38f2ef3d6d3dfad064411",
+      "outputChecksum": "2326085ee3f3a0e4053f7f04320424c2033519aac1e38f2ef3d6d3dfad064411"
+    },
+    {
+      "path": "/assets/medieval/hunting-bow.png",
+      "sourcePath": "/assets/medieval/hunting-bow.png",
+      "sourceChecksum": "3b8bd58d219ce49526e1bffc67b8c1e3106ec2631df917cb850c345c1fd185d3",
+      "outputChecksum": "3b8bd58d219ce49526e1bffc67b8c1e3106ec2631df917cb850c345c1fd185d3"
+    },
+    {
+      "path": "/assets/medieval/iron.png",
+      "sourcePath": "/assets/medieval/iron.png",
+      "sourceChecksum": "0750a3c122f1cda407887e09daa53fec30439e7448922808a7a070535b136abf",
+      "outputChecksum": "0750a3c122f1cda407887e09daa53fec30439e7448922808a7a070535b136abf"
+    },
+    {
+      "path": "/assets/medieval/key.png",
+      "sourcePath": "/assets/medieval/key.png",
+      "sourceChecksum": "322fccef7de9ae455276f8ae73d98eab9495bf7d79e6984fd8085e32884c596a",
+      "outputChecksum": "322fccef7de9ae455276f8ae73d98eab9495bf7d79e6984fd8085e32884c596a"
+    },
+    {
+      "path": "/assets/medieval/kite-shield.png",
+      "sourcePath": "/assets/medieval/kite-shield.png",
+      "sourceChecksum": "243e7c5a5ae02cb89c44cfb8533e39d4480fb7de32e09d619c7056659d6fd0a4",
+      "outputChecksum": "243e7c5a5ae02cb89c44cfb8533e39d4480fb7de32e09d619c7056659d6fd0a4"
+    },
+    {
+      "path": "/assets/medieval/lantern.png",
+      "sourcePath": "/assets/medieval/lantern.png",
+      "sourceChecksum": "8b460f90a2ed6733ed4625bb550549bd16e506a6929038607a4f2f77df3833fb",
+      "outputChecksum": "8b460f90a2ed6733ed4625bb550549bd16e506a6929038607a4f2f77df3833fb"
+    },
+    {
+      "path": "/assets/medieval/letter.png",
+      "sourcePath": "/assets/medieval/letter.png",
+      "sourceChecksum": "33f064dbe8069d71c2c5356cdac94988511d304f6ddcee5d83a77ee7e78addf7",
+      "outputChecksum": "33f064dbe8069d71c2c5356cdac94988511d304f6ddcee5d83a77ee7e78addf7"
+    },
+    {
+      "path": "/assets/medieval/lockpick-set.png",
+      "sourcePath": "/assets/medieval/lockpick-set.png",
+      "sourceChecksum": "3bd8b57e8e14e454dd700917e3e7b8cdf3ee198f9940b66a71826e30de2d54d9",
+      "outputChecksum": "3bd8b57e8e14e454dd700917e3e7b8cdf3ee198f9940b66a71826e30de2d54d9"
+    },
+    {
+      "path": "/assets/medieval/longsword.png",
+      "sourcePath": "/assets/medieval/longsword.png",
+      "sourceChecksum": "2338bf0d893a617036598a4c0682872807e1ce409179dbe1a767909dda401174",
+      "outputChecksum": "2338bf0d893a617036598a4c0682872807e1ce409179dbe1a767909dda401174"
+    },
+    {
+      "path": "/assets/medieval/mace.png",
+      "sourcePath": "/assets/medieval/mace.png",
+      "sourceChecksum": "1327d527c4609f244e006a41d455e0d8ad7de29d9c4e7bd6306ce6c1cbdb2dbd",
+      "outputChecksum": "1327d527c4609f244e006a41d455e0d8ad7de29d9c4e7bd6306ce6c1cbdb2dbd"
+    },
+    {
+      "path": "/assets/medieval/mead.png",
+      "sourcePath": "/assets/medieval/mead.png",
+      "sourceChecksum": "a9aa33f6c18e2a5d39232c472b7391ec748ac52789ac801387e7eeb0a1a48ca2",
+      "outputChecksum": "a9aa33f6c18e2a5d39232c472b7391ec748ac52789ac801387e7eeb0a1a48ca2"
+    },
+    {
+      "path": "/assets/medieval/morningstar.png",
+      "sourcePath": "/assets/medieval/morningstar.png",
+      "sourceChecksum": "e0592591b7c2f93c95eb113e010923a6368c5534e567cae08271cbf11d52e458",
+      "outputChecksum": "e0592591b7c2f93c95eb113e010923a6368c5534e567cae08271cbf11d52e458"
+    },
+    {
+      "path": "/assets/medieval/ore.png",
+      "sourcePath": "/assets/medieval/ore.png",
+      "sourceChecksum": "df8d9668a0b98f8ae1f8b8d127c078e9201477e486ec9ed3ccf470666cda9fb3",
+      "outputChecksum": "df8d9668a0b98f8ae1f8b8d127c078e9201477e486ec9ed3ccf470666cda9fb3"
+    },
+    {
+      "path": "/assets/medieval/plate-armor.png",
+      "sourcePath": "/assets/medieval/plate-armor.png",
+      "sourceChecksum": "43a3f23805141973f0b47868e261723927b1d4d4107888026fcda6e01040fa97",
+      "outputChecksum": "43a3f23805141973f0b47868e261723927b1d4d4107888026fcda6e01040fa97"
+    },
+    {
+      "path": "/assets/medieval/poison.png",
+      "sourcePath": "/assets/medieval/poison.png",
+      "sourceChecksum": "b4f4a7f6b4c4da8970ee6c421668ba2009812ce4afc1423a336632e8f8c59463",
+      "outputChecksum": "b4f4a7f6b4c4da8970ee6c421668ba2009812ce4afc1423a336632e8f8c59463"
+    },
+    {
+      "path": "/assets/medieval/pouch.png",
+      "sourcePath": "/assets/medieval/pouch.png",
+      "sourceChecksum": "bf2e524dcf3cc626e7be7e5398e8fbf630132eeda99b566739aaabbeef42b8ca",
+      "outputChecksum": "bf2e524dcf3cc626e7be7e5398e8fbf630132eeda99b566739aaabbeef42b8ca"
+    },
+    {
+      "path": "/assets/medieval/prayer-book.png",
+      "sourcePath": "/assets/medieval/prayer-book.png",
+      "sourceChecksum": "4de46f0cdaa69e0dc5076277f97fd39a16e8df99236734c2ee9d04a82ee01fca",
+      "outputChecksum": "4de46f0cdaa69e0dc5076277f97fd39a16e8df99236734c2ee9d04a82ee01fca"
+    },
+    {
+      "path": "/assets/medieval/rations.png",
+      "sourcePath": "/assets/medieval/rations.png",
+      "sourceChecksum": "722a5329f37245b09d104d53a349e9e979f2edcf58d1324a10261dbfbcf60d94",
+      "outputChecksum": "722a5329f37245b09d104d53a349e9e979f2edcf58d1324a10261dbfbcf60d94"
+    },
+    {
+      "path": "/assets/medieval/riding-horse.png",
+      "sourcePath": "/assets/medieval/riding-horse.png",
+      "sourceChecksum": "a04c51232000a7c213b53e3aec90aafd507335f62dac1471c14d9caf21cdc18d",
+      "outputChecksum": "a04c51232000a7c213b53e3aec90aafd507335f62dac1471c14d9caf21cdc18d"
+    },
+    {
+      "path": "/assets/medieval/silver.png",
+      "sourcePath": "/assets/medieval/silver.png",
+      "sourceChecksum": "8e47dc015772ad4f760a95e3efcd6ba839cceb38506989b9711081f3b5449b2c",
+      "outputChecksum": "8e47dc015772ad4f760a95e3efcd6ba839cceb38506989b9711081f3b5449b2c"
+    },
+    {
+      "path": "/assets/medieval/spear.png",
+      "sourcePath": "/assets/medieval/spear.png",
+      "sourceChecksum": "59369590605fbae0a7f873052554b23ba98989ffd8128ec1904dbcf67efeb2c7",
+      "outputChecksum": "59369590605fbae0a7f873052554b23ba98989ffd8128ec1904dbcf67efeb2c7"
+    },
+    {
+      "path": "/assets/medieval/staff.png",
+      "sourcePath": "/assets/medieval/staff.png",
+      "sourceChecksum": "d3a6f9e6471bd59b74100483a48b2e54feb5a6c57607663bb354a47f694f4a79",
+      "outputChecksum": "d3a6f9e6471bd59b74100483a48b2e54feb5a6c57607663bb354a47f694f4a79"
+    },
+    {
+      "path": "/assets/medieval/stone.png",
+      "sourcePath": "/assets/medieval/stone.png",
+      "sourceChecksum": "647dfabb47509220393120b04d9cd7d15a4822aa1d21334a0493ebd9be919ddc",
+      "outputChecksum": "647dfabb47509220393120b04d9cd7d15a4822aa1d21334a0493ebd9be919ddc"
+    },
+    {
+      "path": "/assets/medieval/tools.png",
+      "sourcePath": "/assets/medieval/tools.png",
+      "sourceChecksum": "f0b36d40b2589499c255074d3d22706c12a631b2bd0d0157730e6abc632193c1",
+      "outputChecksum": "f0b36d40b2589499c255074d3d22706c12a631b2bd0d0157730e6abc632193c1"
+    },
+    {
+      "path": "/assets/medieval/torch.png",
+      "sourcePath": "/assets/medieval/torch.png",
+      "sourceChecksum": "7503ef0ac4ff951827a91d160ba679b8f06b5ee705bb12b229863aaa68ec18e8",
+      "outputChecksum": "7503ef0ac4ff951827a91d160ba679b8f06b5ee705bb12b229863aaa68ec18e8"
+    },
+    {
+      "path": "/assets/medieval/trap.png",
+      "sourcePath": "/assets/medieval/trap.png",
+      "sourceChecksum": "9dadd68d154a1a9c7b0c6990b842b033ef76528fc335e4ec0b2c377093720dbd",
+      "outputChecksum": "9dadd68d154a1a9c7b0c6990b842b033ef76528fc335e4ec0b2c377093720dbd"
+    },
+    {
+      "path": "/assets/medieval/wagon.png",
+      "sourcePath": "/assets/medieval/wagon.png",
+      "sourceChecksum": "384e77cac26c0c270463d46281cb253d35af6d5bc3e6a7ff1d7d2eb96a0167f8",
+      "outputChecksum": "384e77cac26c0c270463d46281cb253d35af6d5bc3e6a7ff1d7d2eb96a0167f8"
+    },
+    {
+      "path": "/assets/medieval/war-hammer.png",
+      "sourcePath": "/assets/medieval/war-hammer.png",
+      "sourceChecksum": "0c6e18d88475e4ffcc629d4cc8dbdb44296f53102f553f0db48c3fbf18881e41",
+      "outputChecksum": "0c6e18d88475e4ffcc629d4cc8dbdb44296f53102f553f0db48c3fbf18881e41"
+    },
+    {
+      "path": "/assets/medieval/wood.png",
+      "sourcePath": "/assets/medieval/wood.png",
+      "sourceChecksum": "728afec9ff18c1e8c0a5c9f9e1388a6581e8f2be827fc5afab2ae27f9ffec5ba",
+      "outputChecksum": "728afec9ff18c1e8c0a5c9f9e1388a6581e8f2be827fc5afab2ae27f9ffec5ba"
+    },
+    {
+      "path": "/assets/medieval/zweihandler.png",
+      "sourcePath": "/assets/medieval/zweihandler.png",
+      "sourceChecksum": "80bdc9a236283d4a0dd590d16e1bf174b8e9a766d9085dafdb1339613e001a56",
+      "outputChecksum": "80bdc9a236283d4a0dd590d16e1bf174b8e9a766d9085dafdb1339613e001a56"
+    },
+    {
+      "path": "/backgrounds/paper-with-image-shadow.png",
+      "sourcePath": "/backgrounds/paper-with-image-shadow.png",
+      "sourceChecksum": "1a04080b36fd402a1935027a1e380b6f3bf64ea02830babf71df83f85fd39f9f",
+      "outputChecksum": "1a04080b36fd402a1935027a1e380b6f3bf64ea02830babf71df83f85fd39f9f"
+    },
+    {
+      "path": "/counters/agreement.png",
+      "sourcePath": "/counters/agreement.png",
+      "sourceChecksum": "4344a12ec2effc8aa57e2750a7407d2069aa1484bae32455a7674982ad44e25c",
+      "outputChecksum": "4344a12ec2effc8aa57e2750a7407d2069aa1484bae32455a7674982ad44e25c"
+    },
+    {
+      "path": "/counters/construction.png",
+      "sourcePath": "/counters/construction.png",
+      "sourceChecksum": "606cdb0014d88529bfdaaba6c82e7262bc556234123d39f7b38fa0138f31eb3e",
+      "outputChecksum": "606cdb0014d88529bfdaaba6c82e7262bc556234123d39f7b38fa0138f31eb3e"
+    },
+    {
+      "path": "/counters/crafting.png",
+      "sourcePath": "/counters/crafting.png",
+      "sourceChecksum": "22c92f9d80bd908950f10f7e8e39a65c25e8089809e886e8eb440d29a62ab54b",
+      "outputChecksum": "22c92f9d80bd908950f10f7e8e39a65c25e8089809e886e8eb440d29a62ab54b"
+    },
+    {
+      "path": "/counters/danger.png",
+      "sourcePath": "/counters/danger.png",
+      "sourceChecksum": "d0673bc0f70bf8672458e1149162789dbb71f6dc6ce42302b83d212f1c590609",
+      "outputChecksum": "d0673bc0f70bf8672458e1149162789dbb71f6dc6ce42302b83d212f1c590609"
+    },
+    {
+      "path": "/counters/defense.png",
+      "sourcePath": "/counters/defense.png",
+      "sourceChecksum": "a1ac16f912d15e5d1c107eeffa345625473ecc99569d3d366d80e4e7619192a1",
+      "outputChecksum": "a1ac16f912d15e5d1c107eeffa345625473ecc99569d3d366d80e4e7619192a1"
+    },
+    {
+      "path": "/counters/destruction.png",
+      "sourcePath": "/counters/destruction.png",
+      "sourceChecksum": "420e73e240f6582623e22ce55df8dfd0ad631195a8b927b12b5a936d3f336c15",
+      "outputChecksum": "420e73e240f6582623e22ce55df8dfd0ad631195a8b927b12b5a936d3f336c15"
+    },
+    {
+      "path": "/counters/distance.png",
+      "sourcePath": "/counters/distance.png",
+      "sourceChecksum": "12ab47be83b7d0d209519d7c23417eae5fbf111e734be3fd3ce78c63269dac59",
+      "outputChecksum": "12ab47be83b7d0d209519d7c23417eae5fbf111e734be3fd3ce78c63269dac59"
+    },
+    {
+      "path": "/counters/drop.png",
+      "sourcePath": "/counters/drop.png",
+      "sourceChecksum": "418ab8c7ba301951048aec2771c0df4bf1928aff398ee1e6b4e8edd7f275bceb",
+      "outputChecksum": "418ab8c7ba301951048aec2771c0df4bf1928aff398ee1e6b4e8edd7f275bceb"
+    },
+    {
+      "path": "/counters/energy.png",
+      "sourcePath": "/counters/energy.png",
+      "sourceChecksum": "99599b1810496195486b5679159e6f080b5e9ecb4752197f54ae4330f47f21d2",
+      "outputChecksum": "99599b1810496195486b5679159e6f080b5e9ecb4752197f54ae4330f47f21d2"
+    },
+    {
+      "path": "/counters/escape.png",
+      "sourcePath": "/counters/escape.png",
+      "sourceChecksum": "ee32e2a5030f0c07327e4f9be4b032375b16995317e35467d9b3c1b8115dddb8",
+      "outputChecksum": "ee32e2a5030f0c07327e4f9be4b032375b16995317e35467d9b3c1b8115dddb8"
+    },
+    {
+      "path": "/counters/euphoria.png",
+      "sourcePath": "/counters/euphoria.png",
+      "sourceChecksum": "bb80b4ac97ba119c2c52a19a9d5da99fcf5e2f6df653b8c2c944f54d292b552b",
+      "outputChecksum": "bb80b4ac97ba119c2c52a19a9d5da99fcf5e2f6df653b8c2c944f54d292b552b"
+    },
+    {
+      "path": "/counters/incognito.png",
+      "sourcePath": "/counters/incognito.png",
+      "sourceChecksum": "828f84233e96922b401e0b6d6cbb7a78fbd99943e137ff13ed92b1e99fcee15d",
+      "outputChecksum": "828f84233e96922b401e0b6d6cbb7a78fbd99943e137ff13ed92b1e99fcee15d"
+    },
+    {
+      "path": "/counters/investigation.png",
+      "sourcePath": "/counters/investigation.png",
+      "sourceChecksum": "3230241658fd6ef4a1e85c6c7f01a43c4e10ea7d60433912a6f6ac10a64bb12a",
+      "outputChecksum": "3230241658fd6ef4a1e85c6c7f01a43c4e10ea7d60433912a6f6ac10a64bb12a"
+    },
+    {
+      "path": "/counters/morale.png",
+      "sourcePath": "/counters/morale.png",
+      "sourceChecksum": "1afa43fbf5427a9d31ee43b1b14e816f18c3f4e987e5686e25d56786a7dae460",
+      "outputChecksum": "1afa43fbf5427a9d31ee43b1b14e816f18c3f4e987e5686e25d56786a7dae460"
+    },
+    {
+      "path": "/counters/performance.png",
+      "sourcePath": "/counters/performance.png",
+      "sourceChecksum": "dc1d4be330c12ad1407e4b0d7ddb3e93fedba6d2bea541c8f9b43af6ba41d18e",
+      "outputChecksum": "dc1d4be330c12ad1407e4b0d7ddb3e93fedba6d2bea541c8f9b43af6ba41d18e"
+    },
+    {
+      "path": "/counters/persuasion.png",
+      "sourcePath": "/counters/persuasion.png",
+      "sourceChecksum": "63b01ec92590546f808b35b86cb4f193c5d9fee157d61143d6b212dcb31f1930",
+      "outputChecksum": "63b01ec92590546f808b35b86cb4f193c5d9fee157d61143d6b212dcb31f1930"
+    },
+    {
+      "path": "/counters/race.png",
+      "sourcePath": "/counters/race.png",
+      "sourceChecksum": "1ccaf11fe777c7407acb3ad81995c45da01fef9ceb25cba6cec55eb70181e808",
+      "outputChecksum": "1ccaf11fe777c7407acb3ad81995c45da01fef9ceb25cba6cec55eb70181e808"
+    },
+    {
+      "path": "/counters/reputation.png",
+      "sourcePath": "/counters/reputation.png",
+      "sourceChecksum": "4a8d7053b1da07668b3021bb3f332131b264218592053202b7b7bbcbc4829a78",
+      "outputChecksum": "4a8d7053b1da07668b3021bb3f332131b264218592053202b7b7bbcbc4829a78"
+    },
+    {
+      "path": "/counters/resources.png",
+      "sourcePath": "/counters/resources.png",
+      "sourceChecksum": "7aebce7aaf243ac7869ddd780a121c597a31e3feed85579833897f37e68ac748",
+      "outputChecksum": "7aebce7aaf243ac7869ddd780a121c597a31e3feed85579833897f37e68ac748"
+    },
+    {
+      "path": "/counters/stealth.png",
+      "sourcePath": "/counters/stealth.png",
+      "sourceChecksum": "e0bafa6e40de8a3176e37f3d7a83ead7cd4b5c7a48d19dd4c3550aad723649f4",
+      "outputChecksum": "e0bafa6e40de8a3176e37f3d7a83ead7cd4b5c7a48d19dd4c3550aad723649f4"
+    },
+    {
+      "path": "/counters/study.png",
+      "sourcePath": "/counters/study.png",
+      "sourceChecksum": "222042d2238b474f0b046953aea68ee495cca59b4ae3dfc7d5dd259c22ee9639",
+      "outputChecksum": "222042d2238b474f0b046953aea68ee495cca59b4ae3dfc7d5dd259c22ee9639"
+    },
+    {
+      "path": "/counters/time.png",
+      "sourcePath": "/counters/time.png",
+      "sourceChecksum": "3855ab01bff0d8aa9520a8612ca73b3b7378bd619c6806f9f824efc3029f7dec",
+      "outputChecksum": "3855ab01bff0d8aa9520a8612ca73b3b7378bd619c6806f9f824efc3029f7dec"
+    },
+    {
+      "path": "/counters/tracking.png",
+      "sourcePath": "/counters/tracking.png",
+      "sourceChecksum": "7a7d893ea562665f02e5b38b793024cb665dd908eb61f9017f5b32382649753d",
+      "outputChecksum": "7a7d893ea562665f02e5b38b793024cb665dd908eb61f9017f5b32382649753d"
+    },
+    {
+      "path": "/counters/wealth.png",
+      "sourcePath": "/counters/wealth.png",
+      "sourceChecksum": "4182cd3fc08fa81f425395e89fc61e115e804373558047103a677f7354885d75",
+      "outputChecksum": "4182cd3fc08fa81f425395e89fc61e115e804373558047103a677f7354885d75"
+    },
+    {
+      "path": "/effects/boost.png",
+      "sourcePath": "/effects/boost.png",
+      "sourceChecksum": "693456754188e16b591fcb137a758bcc0d63d19ad8a2a75b13b3d13dfac8de62",
+      "outputChecksum": "693456754188e16b591fcb137a758bcc0d63d19ad8a2a75b13b3d13dfac8de62"
+    },
+    {
+      "path": "/effects/burning.png",
+      "sourcePath": "/effects/burning.png",
+      "sourceChecksum": "0b6a469efac9948b2e553f2878fe7cf8a6db0bcc13587ddd13f72bfe5b2903c1",
+      "outputChecksum": "0b6a469efac9948b2e553f2878fe7cf8a6db0bcc13587ddd13f72bfe5b2903c1"
+    },
+    {
+      "path": "/effects/complication.png",
+      "sourcePath": "/effects/complication.png",
+      "sourceChecksum": "7da1e31768e479b96686aebd6908e952ec4c6e8c12c75193da1b48b8ee778715",
+      "outputChecksum": "7da1e31768e479b96686aebd6908e952ec4c6e8c12c75193da1b48b8ee778715"
+    },
+    {
+      "path": "/effects/distress.png",
+      "sourcePath": "/effects/distress.png",
+      "sourceChecksum": "978d6a60e06552122adfaffcccd5db406a28c8d4f84a41c57c5caaf4b540c52a",
+      "outputChecksum": "978d6a60e06552122adfaffcccd5db406a28c8d4f84a41c57c5caaf4b540c52a"
+    },
+    {
+      "path": "/effects/freezing.png",
+      "sourcePath": "/effects/freezing.png",
+      "sourceChecksum": "5ab02ab65577f8c172e23e147548b357bc75fadf7980821492eb5de463a82cc8",
+      "outputChecksum": "5ab02ab65577f8c172e23e147548b357bc75fadf7980821492eb5de463a82cc8"
+    },
+    {
+      "path": "/effects/hindered.png",
+      "sourcePath": "/effects/hindered.png",
+      "sourceChecksum": "b7db41ee9837b5661e328d63a79691d5e463b480592b078facca6cd28dd67c37",
+      "outputChecksum": "b7db41ee9837b5661e328d63a79691d5e463b480592b078facca6cd28dd67c37"
+    },
+    {
+      "path": "/effects/hopeless.png",
+      "sourcePath": "/effects/hopeless.png",
+      "sourceChecksum": "606b6287b1323e4ec8e84f13d91db7c8829a1f6129622924022590a9c471427b",
+      "outputChecksum": "606b6287b1323e4ec8e84f13d91db7c8829a1f6129622924022590a9c471427b"
+    },
+    {
+      "path": "/effects/injury.png",
+      "sourcePath": "/effects/injury.png",
+      "sourceChecksum": "52c02c01cdd702c4f41de4b5507bfea3dec9383ba0e633a74ee62845b8a9d75c",
+      "outputChecksum": "52c02c01cdd702c4f41de4b5507bfea3dec9383ba0e633a74ee62845b8a9d75c"
+    },
+    {
+      "path": "/effects/panicked.png",
+      "sourcePath": "/effects/panicked.png",
+      "sourceChecksum": "8eaabd98353c3ee28efeb23ffab2ea6d0c0bbcc25557de4db69d57f9b296bfc6",
+      "outputChecksum": "8eaabd98353c3ee28efeb23ffab2ea6d0c0bbcc25557de4db69d57f9b296bfc6"
+    },
+    {
+      "path": "/effects/stuck.png",
+      "sourcePath": "/effects/stuck.png",
+      "sourceChecksum": "3b57f746d7fb6c7f3e27da484599a29315849d0bbae33484fd70832a517e1896",
+      "outputChecksum": "3b57f746d7fb6c7f3e27da484599a29315849d0bbae33484fd70832a517e1896"
+    },
+    {
+      "path": "/fonts/OFL-Kalam.txt",
+      "sourcePath": "/fonts/OFL-Kalam.txt",
+      "sourceChecksum": "bb36ea0b5e02431f0372edde87b029ceb071806f5296c4ffb38756850a54e2ed",
+      "outputChecksum": "bb36ea0b5e02431f0372edde87b029ceb071806f5296c4ffb38756850a54e2ed"
+    },
+    {
+      "path": "/fonts/OFL-ShantellSans.txt",
+      "sourcePath": "/fonts/OFL-ShantellSans.txt",
+      "sourceChecksum": "66c92722ff16058addbfeb32787744df97608a388fe1ee8209f6482a07a0cb89",
+      "outputChecksum": "66c92722ff16058addbfeb32787744df97608a388fe1ee8209f6482a07a0cb89"
+    },
+    {
+      "path": "/fonts/mighty-decks-kalam-400.ttf",
+      "sourcePath": "/fonts/mighty-decks-kalam-400.ttf",
+      "sourceChecksum": "f20e9de66ca054e1d1376b3c811d2240b1b5ef831474bda9fbbaf28d67e67902",
+      "outputChecksum": "f20e9de66ca054e1d1376b3c811d2240b1b5ef831474bda9fbbaf28d67e67902"
+    },
+    {
+      "path": "/fonts/mighty-decks-kalam-700.ttf",
+      "sourcePath": "/fonts/mighty-decks-kalam-700.ttf",
+      "sourceChecksum": "7463b42e3630f003f355b3f37e1cf8e2c0b0855374d483aef580ff45fdac3ba4",
+      "outputChecksum": "7463b42e3630f003f355b3f37e1cf8e2c0b0855374d483aef580ff45fdac3ba4"
+    },
+    {
+      "path": "/fonts/mighty-decks-shantell-400.ttf",
+      "sourcePath": "/fonts/mighty-decks-shantell-400.ttf",
+      "sourceChecksum": "335ce03b4f2e90df95a7e4a383979a817fc4843a33498e8cdb77e692cc740fc4",
+      "outputChecksum": "335ce03b4f2e90df95a7e4a383979a817fc4843a33498e8cdb77e692cc740fc4"
+    },
+    {
+      "path": "/fonts/mighty-decks-shantell-700.ttf",
+      "sourcePath": "/fonts/mighty-decks-shantell-700.ttf",
+      "sourceChecksum": "8582d69250e8a78463d49e5388fc28f20e0496abb65bc7cae848599128c74d57",
+      "outputChecksum": "8582d69250e8a78463d49e5388fc28f20e0496abb65bc7cae848599128c74d57"
+    },
+    {
+      "path": "/outcomes/chaos.png",
+      "sourcePath": "/outcomes/chaos.png",
+      "sourceChecksum": "5486fb182c11f461d6e790cead31ff96a0b271f2fbd8e1350537de9d81293690",
+      "outputChecksum": "5486fb182c11f461d6e790cead31ff96a0b271f2fbd8e1350537de9d81293690"
+    },
+    {
+      "path": "/outcomes/fumble.png",
+      "sourcePath": "/outcomes/fumble.png",
+      "sourceChecksum": "8afd8a4e02e2b1da6e0fb744b028063bd17fc02821f315ce8ea2aac121ff910d",
+      "outputChecksum": "8afd8a4e02e2b1da6e0fb744b028063bd17fc02821f315ce8ea2aac121ff910d"
+    },
+    {
+      "path": "/outcomes/partial-success.png",
+      "sourcePath": "/outcomes/partial-success.png",
+      "sourceChecksum": "96345ab64552a1ce210d59de693964342e4b6d52127bc6e4a260cd13b738c26a",
+      "outputChecksum": "96345ab64552a1ce210d59de693964342e4b6d52127bc6e4a260cd13b738c26a"
+    },
+    {
+      "path": "/outcomes/special-action.png",
+      "sourcePath": "/outcomes/special-action.png",
+      "sourceChecksum": "c85b2c36dc7fb6a136a22766e99e88646d6be3f25f189ac5224778ccfa74c73f",
+      "outputChecksum": "c85b2c36dc7fb6a136a22766e99e88646d6be3f25f189ac5224778ccfa74c73f"
+    },
+    {
+      "path": "/outcomes/success.png",
+      "sourcePath": "/outcomes/success.png",
+      "sourceChecksum": "c410ff6602e0dd790a76df17318d67b01a8218b3ea5ce31e31bd16cd148cd568",
+      "outputChecksum": "c410ff6602e0dd790a76df17318d67b01a8218b3ea5ce31e31bd16cd148cd568"
+    },
+    {
+      "path": "/stunts/base/academic.png",
+      "sourcePath": "/stunts/base/academic.png",
+      "sourceChecksum": "2410ae512618c4a4d464bcfca56c5406d5ffdb9dafa27f09a251ac2d07e6e663",
+      "outputChecksum": "2410ae512618c4a4d464bcfca56c5406d5ffdb9dafa27f09a251ac2d07e6e663"
+    },
+    {
+      "path": "/stunts/base/animal-friend.png",
+      "sourcePath": "/stunts/base/animal-friend.png",
+      "sourceChecksum": "7928052a8821da39e2e718408fec6e98449c3f07122ffc3ca8ae88ab5022a776",
+      "outputChecksum": "7928052a8821da39e2e718408fec6e98449c3f07122ffc3ca8ae88ab5022a776"
+    },
+    {
+      "path": "/stunts/base/animal-trainer.png",
+      "sourcePath": "/stunts/base/animal-trainer.png",
+      "sourceChecksum": "f0f01dd63532c2e9dd71e97f5e82c782987b5fe5c86c22e80e21518e9732f04b",
+      "outputChecksum": "f0f01dd63532c2e9dd71e97f5e82c782987b5fe5c86c22e80e21518e9732f04b"
+    },
+    {
+      "path": "/stunts/base/bless.png",
+      "sourcePath": "/stunts/base/bless.png",
+      "sourceChecksum": "a93f7eda19c97348564e856818e1ca76bbb7156c97f37cf0d9e5b6ad3afb897d",
+      "outputChecksum": "a93f7eda19c97348564e856818e1ca76bbb7156c97f37cf0d9e5b6ad3afb897d"
+    },
+    {
+      "path": "/stunts/base/botanist.png",
+      "sourcePath": "/stunts/base/botanist.png",
+      "sourceChecksum": "48130afa67f2a7c46469ebf6d11c4b778047560a0d5c3e76d18418992c540f3a",
+      "outputChecksum": "48130afa67f2a7c46469ebf6d11c4b778047560a0d5c3e76d18418992c540f3a"
+    },
+    {
+      "path": "/stunts/base/bring-the-pain.png",
+      "sourcePath": "/stunts/base/bring-the-pain.png",
+      "sourceChecksum": "dbf1ad33c69c444415245b2fe72f02c4acb5134c381be668859bb06b657ce38d",
+      "outputChecksum": "dbf1ad33c69c444415245b2fe72f02c4acb5134c381be668859bb06b657ce38d"
+    },
+    {
+      "path": "/stunts/base/camouflage.png",
+      "sourcePath": "/stunts/base/camouflage.png",
+      "sourceChecksum": "e125c7cc6064f5fc872da4ca37388f4ab992e936720455ac99a4f75e6657176f",
+      "outputChecksum": "e125c7cc6064f5fc872da4ca37388f4ab992e936720455ac99a4f75e6657176f"
+    },
+    {
+      "path": "/stunts/base/chemist.png",
+      "sourcePath": "/stunts/base/chemist.png",
+      "sourceChecksum": "6ba04f8a41b967b2cd0318b51cc30d138b75475ca4278f9e2dd0ede0049afbbd",
+      "outputChecksum": "6ba04f8a41b967b2cd0318b51cc30d138b75475ca4278f9e2dd0ede0049afbbd"
+    },
+    {
+      "path": "/stunts/base/choke-out.png",
+      "sourcePath": "/stunts/base/choke-out.png",
+      "sourceChecksum": "3b996e2edb7cce5a4320063cad46b912d1f62eb1ed6cbb25298d71e1cc095b52",
+      "outputChecksum": "3b996e2edb7cce5a4320063cad46b912d1f62eb1ed6cbb25298d71e1cc095b52"
+    },
+    {
+      "path": "/stunts/base/circle-of-protection.png",
+      "sourcePath": "/stunts/base/circle-of-protection.png",
+      "sourceChecksum": "5fe64b5818aa1936f0313b1fb04d05dc31cbf43367f2757f5bbedb7fb615a96a",
+      "outputChecksum": "5fe64b5818aa1936f0313b1fb04d05dc31cbf43367f2757f5bbedb7fb615a96a"
+    },
+    {
+      "path": "/stunts/base/crowd-control.png",
+      "sourcePath": "/stunts/base/crowd-control.png",
+      "sourceChecksum": "acc5bf5819616a4c45af27c149b7e1f2764ba035ba110c804f910bfe70d016b4",
+      "outputChecksum": "acc5bf5819616a4c45af27c149b7e1f2764ba035ba110c804f910bfe70d016b4"
+    },
+    {
+      "path": "/stunts/base/dont-give-up.png",
+      "sourcePath": "/stunts/base/dont-give-up.png",
+      "sourceChecksum": "4e0bdc2fce55eac10bc513436ef5bbc38cc1f31f793f497d1f661da946ae829f",
+      "outputChecksum": "4e0bdc2fce55eac10bc513436ef5bbc38cc1f31f793f497d1f661da946ae829f"
+    },
+    {
+      "path": "/stunts/base/elusive.png",
+      "sourcePath": "/stunts/base/elusive.png",
+      "sourceChecksum": "4696b5e30c67f09c1f2b5eef81d35d96e56f5a0729f170560299479e3cc226dc",
+      "outputChecksum": "4696b5e30c67f09c1f2b5eef81d35d96e56f5a0729f170560299479e3cc226dc"
+    },
+    {
+      "path": "/stunts/base/fearless.png",
+      "sourcePath": "/stunts/base/fearless.png",
+      "sourceChecksum": "46cfc3680d49479e97cb7c9e01f0bf22c39f4f31eb29b298e77850d25a23af53",
+      "outputChecksum": "46cfc3680d49479e97cb7c9e01f0bf22c39f4f31eb29b298e77850d25a23af53"
+    },
+    {
+      "path": "/stunts/base/flex.png",
+      "sourcePath": "/stunts/base/flex.png",
+      "sourceChecksum": "8b05aa4a0848adcd8c281b2afcc0bbbe6172b939d0de466c009af4cd7b0f05ca",
+      "outputChecksum": "8b05aa4a0848adcd8c281b2afcc0bbbe6172b939d0de466c009af4cd7b0f05ca"
+    },
+    {
+      "path": "/stunts/base/forager.png",
+      "sourcePath": "/stunts/base/forager.png",
+      "sourceChecksum": "98000dd741aa90d2e0a32b9965f6ccad2c5663d810c1cf975d5eb5e58d619366",
+      "outputChecksum": "98000dd741aa90d2e0a32b9965f6ccad2c5663d810c1cf975d5eb5e58d619366"
+    },
+    {
+      "path": "/stunts/base/foresight.png",
+      "sourcePath": "/stunts/base/foresight.png",
+      "sourceChecksum": "ff40720c6232fa258010ae47a17327fc7b9f06cc197b4a8a7579d080d884cdd6",
+      "outputChecksum": "ff40720c6232fa258010ae47a17327fc7b9f06cc197b4a8a7579d080d884cdd6"
+    },
+    {
+      "path": "/stunts/base/forger.png",
+      "sourcePath": "/stunts/base/forger.png",
+      "sourceChecksum": "6fc75dca4b6a3f465e8feeee0c19fb52325a78a53fb25082e8b773d3c7489797",
+      "outputChecksum": "6fc75dca4b6a3f465e8feeee0c19fb52325a78a53fb25082e8b773d3c7489797"
+    },
+    {
+      "path": "/stunts/base/genus-loci.png",
+      "sourcePath": "/stunts/base/genus-loci.png",
+      "sourceChecksum": "4fa694e80c9483c3d62a03ce88a7e806b10b93b17fcf84a87ac90253387a34e6",
+      "outputChecksum": "4fa694e80c9483c3d62a03ce88a7e806b10b93b17fcf84a87ac90253387a34e6"
+    },
+    {
+      "path": "/stunts/base/ghost-step.png",
+      "sourcePath": "/stunts/base/ghost-step.png",
+      "sourceChecksum": "3c7dd4a7e6cd3b64ef0b0573dc810c6a3202b32f4b1c96ddc555f78f8e7eee5c",
+      "outputChecksum": "3c7dd4a7e6cd3b64ef0b0573dc810c6a3202b32f4b1c96ddc555f78f8e7eee5c"
+    },
+    {
+      "path": "/stunts/base/grapple.png",
+      "sourcePath": "/stunts/base/grapple.png",
+      "sourceChecksum": "54968caac15c55ac48647cab4bdba3bb3aaf729f3a080ba548a6af57115a5cdf",
+      "outputChecksum": "54968caac15c55ac48647cab4bdba3bb3aaf729f3a080ba548a6af57115a5cdf"
+    },
+    {
+      "path": "/stunts/base/guide-emotions.png",
+      "sourcePath": "/stunts/base/guide-emotions.png",
+      "sourceChecksum": "06379b94b8c4a83ca985517bbc72ed22a036e415957eb04ec8b55a55c9baaa84",
+      "outputChecksum": "06379b94b8c4a83ca985517bbc72ed22a036e415957eb04ec8b55a55c9baaa84"
+    },
+    {
+      "path": "/stunts/base/hidden-arsenal.png",
+      "sourcePath": "/stunts/base/hidden-arsenal.png",
+      "sourceChecksum": "4b69af1431716c9a1ef1f782a16ec8adf5499f5861b94e812d317479b2e34d12",
+      "outputChecksum": "4b69af1431716c9a1ef1f782a16ec8adf5499f5861b94e812d317479b2e34d12"
+    },
+    {
+      "path": "/stunts/base/historian.png",
+      "sourcePath": "/stunts/base/historian.png",
+      "sourceChecksum": "93b3737385657cc5aaff4abf1ca2b343f21a3ed3e734c08ddea55aa92e8ca172",
+      "outputChecksum": "93b3737385657cc5aaff4abf1ca2b343f21a3ed3e734c08ddea55aa92e8ca172"
+    },
+    {
+      "path": "/stunts/base/hunter.png",
+      "sourcePath": "/stunts/base/hunter.png",
+      "sourceChecksum": "700f91472d9f7e2130ca0324e9465bc88392bf0337e98643312a4e7b263e2503",
+      "outputChecksum": "700f91472d9f7e2130ca0324e9465bc88392bf0337e98643312a4e7b263e2503"
+    },
+    {
+      "path": "/stunts/base/inventor.png",
+      "sourcePath": "/stunts/base/inventor.png",
+      "sourceChecksum": "d668684458fbc8445b1536e67e7154e25a5173cf1277c4c4de7a5542426fc78b",
+      "outputChecksum": "d668684458fbc8445b1536e67e7154e25a5173cf1277c4c4de7a5542426fc78b"
+    },
+    {
+      "path": "/stunts/base/linguist.png",
+      "sourcePath": "/stunts/base/linguist.png",
+      "sourceChecksum": "9393c047dc1455676002aa0fdf86b527d1556834be11184c75cf8a54bda41138",
+      "outputChecksum": "9393c047dc1455676002aa0fdf86b527d1556834be11184c75cf8a54bda41138"
+    },
+    {
+      "path": "/stunts/base/mark-an-omen.png",
+      "sourcePath": "/stunts/base/mark-an-omen.png",
+      "sourceChecksum": "627a918806871c055964dc7273bc599fc051a2e298b10f63003ef862bfdd89f3",
+      "outputChecksum": "627a918806871c055964dc7273bc599fc051a2e298b10f63003ef862bfdd89f3"
+    },
+    {
+      "path": "/stunts/base/marksman.png",
+      "sourcePath": "/stunts/base/marksman.png",
+      "sourceChecksum": "f06230697d72c2b3a2dc7ef405a9e6aedc1ff6e051ff5c4d0ca674fb0a942e48",
+      "outputChecksum": "f06230697d72c2b3a2dc7ef405a9e6aedc1ff6e051ff5c4d0ca674fb0a942e48"
+    },
+    {
+      "path": "/stunts/base/master-of-disguise.png",
+      "sourcePath": "/stunts/base/master-of-disguise.png",
+      "sourceChecksum": "98a5b42be72e6eb66e7b5663aba6cf95467432356f2bfc5740445894a38a3b5d",
+      "outputChecksum": "98a5b42be72e6eb66e7b5663aba6cf95467432356f2bfc5740445894a38a3b5d"
+    },
+    {
+      "path": "/stunts/base/medic.png",
+      "sourcePath": "/stunts/base/medic.png",
+      "sourceChecksum": "cc3f56d01d115ccc1d9606668531f8cd783e563b6919ad5d538c81faccc68d74",
+      "outputChecksum": "cc3f56d01d115ccc1d9606668531f8cd783e563b6919ad5d538c81faccc68d74"
+    },
+    {
+      "path": "/stunts/base/offensive-throw.png",
+      "sourcePath": "/stunts/base/offensive-throw.png",
+      "sourceChecksum": "fe52678ad71ae1486ff21824b019d20b8044539ee6c6e8b8a0e629a7d0d790d9",
+      "outputChecksum": "fe52678ad71ae1486ff21824b019d20b8044539ee6c6e8b8a0e629a7d0d790d9"
+    },
+    {
+      "path": "/stunts/base/oversized-weaponry.png",
+      "sourcePath": "/stunts/base/oversized-weaponry.png",
+      "sourceChecksum": "d391f8fd3e7e45b2c11cd18be9ff7fb68a720d72e88d86b300087b5459523818",
+      "outputChecksum": "d391f8fd3e7e45b2c11cd18be9ff7fb68a720d72e88d86b300087b5459523818"
+    },
+    {
+      "path": "/stunts/base/penetration.png",
+      "sourcePath": "/stunts/base/penetration.png",
+      "sourceChecksum": "5191e0df3d09980eb051aa37be74715075b53191dcc2f0a9f158f6f7ef999dc9",
+      "outputChecksum": "5191e0df3d09980eb051aa37be74715075b53191dcc2f0a9f158f6f7ef999dc9"
+    },
+    {
+      "path": "/stunts/base/physician.png",
+      "sourcePath": "/stunts/base/physician.png",
+      "sourceChecksum": "a47d8f9bca1a2a2fdefcd0306703b59b6691e9dad72d6742e4a207c7ad90ff9a",
+      "outputChecksum": "a47d8f9bca1a2a2fdefcd0306703b59b6691e9dad72d6742e4a207c7ad90ff9a"
+    },
+    {
+      "path": "/stunts/base/pickpocket.png",
+      "sourcePath": "/stunts/base/pickpocket.png",
+      "sourceChecksum": "a52f891db2bad1781037e9033320579614b4d7342ab3a495b7b2835a54d9092d",
+      "outputChecksum": "a52f891db2bad1781037e9033320579614b4d7342ab3a495b7b2835a54d9092d"
+    },
+    {
+      "path": "/stunts/base/power-attack.png",
+      "sourcePath": "/stunts/base/power-attack.png",
+      "sourceChecksum": "3088fecf86d8f63e9dc803db28f2a5725b2f4f5d8b283e26e859c9ab594e9810",
+      "outputChecksum": "3088fecf86d8f63e9dc803db28f2a5725b2f4f5d8b283e26e859c9ab594e9810"
+    },
+    {
+      "path": "/stunts/base/powerful-rhetoric.png",
+      "sourcePath": "/stunts/base/powerful-rhetoric.png",
+      "sourceChecksum": "109471febc63343ae8697c69116b5ba36f934794d2e29332496cc61e081239c2",
+      "outputChecksum": "109471febc63343ae8697c69116b5ba36f934794d2e29332496cc61e081239c2"
+    },
+    {
+      "path": "/stunts/base/pummel.png",
+      "sourcePath": "/stunts/base/pummel.png",
+      "sourceChecksum": "48d3f4d7700d2de00219da9eb8f74b20516f6808a5f43525ecc0accfa4d658c2",
+      "outputChecksum": "48d3f4d7700d2de00219da9eb8f74b20516f6808a5f43525ecc0accfa4d658c2"
+    },
+    {
+      "path": "/stunts/base/rallying-call.png",
+      "sourcePath": "/stunts/base/rallying-call.png",
+      "sourceChecksum": "82c179ef4a7e5b0c6cf42efb1105919d869e677aef1ec7ba09daa0048f76c06f",
+      "outputChecksum": "82c179ef4a7e5b0c6cf42efb1105919d869e677aef1ec7ba09daa0048f76c06f"
+    },
+    {
+      "path": "/stunts/base/read-emotions.png",
+      "sourcePath": "/stunts/base/read-emotions.png",
+      "sourceChecksum": "ddfc307b5c1b005b446f993586c089e663c98cb90b2c0a9610a0693f24c57f63",
+      "outputChecksum": "ddfc307b5c1b005b446f993586c089e663c98cb90b2c0a9610a0693f24c57f63"
+    },
+    {
+      "path": "/stunts/base/safecracker.png",
+      "sourcePath": "/stunts/base/safecracker.png",
+      "sourceChecksum": "dffe0856e8eb111f46df0ca21a316e0f884a88692574a963ff6580b874c0e93e",
+      "outputChecksum": "dffe0856e8eb111f46df0ca21a316e0f884a88692574a963ff6580b874c0e93e"
+    },
+    {
+      "path": "/stunts/base/seductive.png",
+      "sourcePath": "/stunts/base/seductive.png",
+      "sourceChecksum": "a304a24a3320536cae63f55fee6af37e0660f8c0f28875788d395ea774aed013",
+      "outputChecksum": "a304a24a3320536cae63f55fee6af37e0660f8c0f28875788d395ea774aed013"
+    },
+    {
+      "path": "/stunts/base/sense-danger.png",
+      "sourcePath": "/stunts/base/sense-danger.png",
+      "sourceChecksum": "b48d0c00eb4c53a786c3880daf9fe45856b2a2faa852d86a520678e486d0a805",
+      "outputChecksum": "b48d0c00eb4c53a786c3880daf9fe45856b2a2faa852d86a520678e486d0a805"
+    },
+    {
+      "path": "/stunts/base/smash.png",
+      "sourcePath": "/stunts/base/smash.png",
+      "sourceChecksum": "3faf0fd89b0a76237ca0060d2f230491abcafc5a05f2ee3da423ed6367eb4c81",
+      "outputChecksum": "3faf0fd89b0a76237ca0060d2f230491abcafc5a05f2ee3da423ed6367eb4c81"
+    },
+    {
+      "path": "/stunts/base/staged-accident.png",
+      "sourcePath": "/stunts/base/staged-accident.png",
+      "sourceChecksum": "c37926bac89d172f5e4914f118e5d3b2f0900700a2ca92020ef5b60091b2602e",
+      "outputChecksum": "c37926bac89d172f5e4914f118e5d3b2f0900700a2ca92020ef5b60091b2602e"
+    },
+    {
+      "path": "/stunts/base/stalker.png",
+      "sourcePath": "/stunts/base/stalker.png",
+      "sourceChecksum": "fc649e21d9bb3d6115127f5cbe2c4f8f057b6c6004987064a0af63f3daae94e1",
+      "outputChecksum": "fc649e21d9bb3d6115127f5cbe2c4f8f057b6c6004987064a0af63f3daae94e1"
+    },
+    {
+      "path": "/stunts/base/strategist.png",
+      "sourcePath": "/stunts/base/strategist.png",
+      "sourceChecksum": "31415e48ff3884eed316b802a173c457cfc9f0117b1029dcc5f248363689465c",
+      "outputChecksum": "31415e48ff3884eed316b802a173c457cfc9f0117b1029dcc5f248363689465c"
+    },
+    {
+      "path": "/stunts/base/survivor.png",
+      "sourcePath": "/stunts/base/survivor.png",
+      "sourceChecksum": "07af559fd1732002a6c901361365f38cb67e9d785bde1ac8f5e1f9cfcdceff54",
+      "outputChecksum": "07af559fd1732002a6c901361365f38cb67e9d785bde1ac8f5e1f9cfcdceff54"
+    },
+    {
+      "path": "/stunts/base/tinkerer.png",
+      "sourcePath": "/stunts/base/tinkerer.png",
+      "sourceChecksum": "f65b1a4706d7b94e9af0f06a4dc35ae7f1c781da862c642857692257ec272a60",
+      "outputChecksum": "f65b1a4706d7b94e9af0f06a4dc35ae7f1c781da862c642857692257ec272a60"
+    },
+    {
+      "path": "/stunts/base/tracker.png",
+      "sourcePath": "/stunts/base/tracker.png",
+      "sourceChecksum": "f24837126c24542fdb1d0a2acf0ac180d4730740c04db2268b950417303137f4",
+      "outputChecksum": "f24837126c24542fdb1d0a2acf0ac180d4730740c04db2268b950417303137f4"
+    },
+    {
+      "path": "/stunts/base/trapper.png",
+      "sourcePath": "/stunts/base/trapper.png",
+      "sourceChecksum": "55b7c09050f803926572f047d0424f950b8972113e7cf27ce95cec0483863b69",
+      "outputChecksum": "55b7c09050f803926572f047d0424f950b8972113e7cf27ce95cec0483863b69"
+    },
+    {
+      "path": "/stunts/base/venomous.png",
+      "sourcePath": "/stunts/base/venomous.png",
+      "sourceChecksum": "d7913743d86d39ec86e201d90a3703a92422e1cd517cdb94c8fca028bab87833",
+      "outputChecksum": "d7913743d86d39ec86e201d90a3703a92422e1cd517cdb94c8fca028bab87833"
+    },
+    {
+      "path": "/stunts/base/volatile-mastery.png",
+      "sourcePath": "/stunts/base/volatile-mastery.png",
+      "sourceChecksum": "85f8090cb152fcbac107272d84e6b92ce9b3b7efe46c1df3603de476d81eeb82",
+      "outputChecksum": "85f8090cb152fcbac107272d84e6b92ce9b3b7efe46c1df3603de476d81eeb82"
+    },
+    {
+      "path": "/stunts/base/war-cry.png",
+      "sourcePath": "/stunts/base/war-cry.png",
+      "sourceChecksum": "ec5e2e6030c70ce40a4e57cd5104af14bbf52340a0237c410f486153f5f10603",
+      "outputChecksum": "ec5e2e6030c70ce40a4e57cd5104af14bbf52340a0237c410f486153f5f10603"
+    },
+    {
+      "path": "/stunts/base/weapon-maintenance.png",
+      "sourcePath": "/stunts/base/weapon-maintenance.png",
+      "sourceChecksum": "1bee8084bb22bbbc9e5ed6d87c64e7d7818de5db94ad0b91eb32357c99b6b8f2",
+      "outputChecksum": "1bee8084bb22bbbc9e5ed6d87c64e7d7818de5db94ad0b91eb32357c99b6b8f2"
+    },
+    {
+      "path": "/types/actor.png",
+      "sourcePath": "/types/actor.png",
+      "sourceChecksum": "7e8e910125efb7bb7bf76cf85bfde4e71383bc49836a91283ccacc202a5561e0",
+      "outputChecksum": "7e8e910125efb7bb7bf76cf85bfde4e71383bc49836a91283ccacc202a5561e0"
+    },
+    {
+      "path": "/types/asset.png",
+      "sourcePath": "/types/asset.png",
+      "sourceChecksum": "576dcde073528e729a09225eb1c69fb6cea98302c18325026fd4c32015a0bf9c",
+      "outputChecksum": "576dcde073528e729a09225eb1c69fb6cea98302c18325026fd4c32015a0bf9c"
+    },
+    {
+      "path": "/types/counter.png",
+      "sourcePath": "/types/counter.png",
+      "sourceChecksum": "0b8e7a09ad2d947bb49cb52fe7309d48ceb5f7cc34c8a9be641b2a07c7338e56",
+      "outputChecksum": "0b8e7a09ad2d947bb49cb52fe7309d48ceb5f7cc34c8a9be641b2a07c7338e56"
+    },
+    {
+      "path": "/types/effect.png",
+      "sourcePath": "/types/effect.png",
+      "sourceChecksum": "0180652d78db1c67757f53e429bcc13fea50725f2ec3ef684016c9820b208250",
+      "outputChecksum": "0180652d78db1c67757f53e429bcc13fea50725f2ec3ef684016c9820b208250"
+    },
+    {
+      "path": "/types/outcome.png",
+      "sourcePath": "/types/outcome.png",
+      "sourceChecksum": "0d6d338d4cec97ae720ebab10d17de7c6d939179b0c3c6dd90eeb043cfd169f6",
+      "outputChecksum": "0d6d338d4cec97ae720ebab10d17de7c6d939179b0c3c6dd90eeb043cfd169f6"
+    },
+    {
+      "path": "/types/stunt.png",
+      "sourcePath": "/types/stunt.png",
+      "sourceChecksum": "6f015195c092f29ee9ee9a97400afa1a3bc5d34705057d2864ebbc2312b6b9b3",
+      "outputChecksum": "6f015195c092f29ee9ee9a97400afa1a3bc5d34705057d2864ebbc2312b6b9b3"
+    }
+  ]
+}

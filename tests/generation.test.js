@@ -37,7 +37,7 @@ test("generates CSV and manifest from a standalone project fixture", async () =>
         await writeFile(catalogPath, `${JSON.stringify(catalog)}\n`);
         assert.equal(await run(fixture, process.execPath, [tsx, "scripts/prepare-assets.ts"]), 0);
         assert.equal(await run(fixture, process.execPath, [tsx, "scripts/generate.ts"]), 0);
-        assert.equal(await run(fixture, pnpm, ["build"]), 0);
+        assert.equal(await run(fixture, pnpm, ["build:library"]), 0);
         const manifest = JSON.parse(await readFile(join(fixture, "generated", "manifest.json"), "utf8"));
         const csv = await readFile(join(fixture, "generated", "csv", "outcome.csv"), "utf8");
         assert.ok(manifest.cards.some((card) => card.id === "outcome:success"));
