@@ -66,6 +66,7 @@
     "generate:runtime": "pnpm assets:prepare && pnpm generate:data",
     "generate:png": "tsx scripts/export.ts",
     "generate": "pnpm assets:prepare && pnpm generate:data && pnpm generate:png",
+    "verify:actor-parity": "node scripts/verify-actor-parity.mjs",
     "release:prepare": "pnpm assets:prepare && pnpm generate:data && pnpm build:library && pnpm generate:png && pnpm release:check",
     "release:check": "node scripts/verify-release.mjs",
     "distribution:prepare": "node scripts/prepare-distribution.mjs",
