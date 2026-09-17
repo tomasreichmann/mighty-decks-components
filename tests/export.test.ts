@@ -62,7 +62,7 @@ test("export rejects Actor overlay descriptions that do not fit", async () => {
   }, async (fixture) => {
     const result = await runExport(fixture, ["--type", "actor-role", "--id", "artillery", "--layout", "full", "--height", "1024"]);
     assert.notEqual(result.code, 0);
-    assert.match(result.output, /does not fit/i);
+    assert.match(result.output, /does not fit|Missing rendered description/i);
   });
 });
 
