@@ -1,7 +1,0 @@
-{
-  "repository": "https://github.com/tomasreichmann/mighty-decks-components.git",
-  "mode": "both",
-  "groups": ["core", "medieval"],
-  "runtimeDestination": "vendor/mighty-decks/components",
-  "publicDestination": "apps/web/public/mighty-decks"
-}

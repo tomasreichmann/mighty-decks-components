@@ -22,9 +22,8 @@ transparent, composable rule layers: roles contain the main mechanical rules and
 specials contain the footer rule. Compact Actor images are reduced-detail thumbnails;
 they retain a meaningful title but intentionally omit rule descriptions.
 
-## Checked-in Git distribution
+## Checked-in Git package
 
-Run `pnpm generate:png` for the first complete baseline, then
-`pnpm distribution:prepare` and `pnpm distribution:check`. Commit source and
-the resulting `distribution/` tree together. See [Git file distribution](./distribution.md)
-for the consumer contract and baseline size.
+Run `pnpm release:prepare` for a complete release baseline. Commit the root
+package artifacts (`dist/`, `assets/`, and `generated/`) with their source
+inputs. Consumers install the pinned repository root directly.

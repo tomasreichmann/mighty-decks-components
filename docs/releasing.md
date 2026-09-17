@@ -1,13 +1,11 @@
-# Updating the checked-in distribution
+# Updating the Git package
 
-The source repository is the distribution channel. After changing runtime or
+The repository root is the Git-installable package. After changing runtime or
 public content, regenerate the complete PNG baseline when required, then run:
 
 ```powershell
-pnpm distribution:prepare
-pnpm distribution:check
+pnpm release:prepare
 ```
 
-Commit the changed `distribution/` tree with its source inputs. Consumers pin a
-full commit SHA and verify the copied files with their local sync script; no npm
-publish, GitHub Release asset, or release branch is part of this workflow.
+Commit the changed root-package artifacts with their source inputs. Consumers
+pin a full commit SHA; installation runs no generation or sync scripts.
