@@ -1222,7 +1222,8 @@
       "slug": "pawn",
       "title": "Pawn",
       "artworkPath": "/types/actor.png",
-      "locale": "en"
+      "locale": "en",
+      "description": "Toughness 1. Move 1 zone. Melee: 1 Injury. Ranged: 1 Injury, range 1."
     },
     {
       "id": "actor-role:minion",
@@ -1230,7 +1231,8 @@
       "slug": "minion",
       "title": "Minion",
       "artworkPath": "/types/actor.png",
-      "locale": "en"
+      "locale": "en",
+      "description": "Toughness 2. Move 1 zone. Melee: 1 Injury. Ranged: 1 Injury, range 1-2."
     },
     {
       "id": "actor-role:thug",
@@ -1238,7 +1240,8 @@
       "slug": "thug",
       "title": "Thug",
       "artworkPath": "/types/actor.png",
-      "locale": "en"
+      "locale": "en",
+      "description": "Toughness 2. Move 1 zone. Melee: 2 Injuries. Ranged: 1 Injury, range 1."
     },
     {
       "id": "actor-role:brute",
@@ -1246,7 +1249,8 @@
       "slug": "brute",
       "title": "Brute",
       "artworkPath": "/types/actor.png",
-      "locale": "en"
+      "locale": "en",
+      "description": "Toughness 3. Move 1 zone. Melee: 2 Injuries. Melee: 1 Injury, splash."
     },
     {
       "id": "actor-role:tank",
@@ -1254,7 +1258,8 @@
       "slug": "tank",
       "title": "Tank",
       "artworkPath": "/types/actor.png",
-      "locale": "en"
+      "locale": "en",
+      "description": "Toughness 6. Move 1 zone. Melee: 2 Injuries. Direct: Push, range 1, splash."
     },
     {
       "id": "actor-role:champion",
@@ -1262,7 +1267,8 @@
       "slug": "champion",
       "title": "Champion",
       "artworkPath": "/types/actor.png",
-      "locale": "en"
+      "locale": "en",
+      "description": "Toughness 4. Move 1 zone. Melee: 3 Injuries. Direct: 2 Distress, splash."
     },
     {
       "id": "actor-role:assassin",
@@ -1270,7 +1276,8 @@
       "slug": "assassin",
       "title": "Assassin",
       "artworkPath": "/types/actor.png",
-      "locale": "en"
+      "locale": "en",
+      "description": "Toughness 2. Move 1 zone. Melee: 4 Injuries. Direct: 2 Complications, splash."
     },
     {
       "id": "actor-role:skirmisher",
@@ -1278,7 +1285,8 @@
       "slug": "skirmisher",
       "title": "Skirmisher",
       "artworkPath": "/types/actor.png",
-      "locale": "en"
+      "locale": "en",
+      "description": "Toughness 2. Move 1 zone. Melee: 2 attacks, 1 Injury each. Ranged: 2 attacks, 1 Injury each, range 1-2."
     },
     {
       "id": "actor-role:ranger",
@@ -1286,7 +1294,8 @@
       "slug": "ranger",
       "title": "Ranger",
       "artworkPath": "/types/actor.png",
-      "locale": "en"
+      "locale": "en",
+      "description": "Toughness 3. Move 1 zone. Ranged: 2 Injuries, range 1-2. Melee: 2 Injuries."
     },
     {
       "id": "actor-role:stalker",
@@ -1294,7 +1303,8 @@
       "slug": "stalker",
       "title": "Stalker",
       "artworkPath": "/types/actor.png",
-      "locale": "en"
+      "locale": "en",
+      "description": "Toughness 2. Move 1 zone. Melee: 3 Injuries. Ranged: 3 Injuries, range 1-2."
     },
     {
       "id": "actor-role:commando",
@@ -1302,7 +1312,8 @@
       "slug": "commando",
       "title": "Commando",
       "artworkPath": "/types/actor.png",
-      "locale": "en"
+      "locale": "en",
+      "description": "Toughness 3. Move 1 zone. Melee: 3 Injuries. Ranged: 3 attacks, 1 Injury each, range 1-2."
     },
     {
       "id": "actor-role:marksman",
@@ -1310,7 +1321,8 @@
       "slug": "marksman",
       "title": "Marksman",
       "artworkPath": "/types/actor.png",
-      "locale": "en"
+      "locale": "en",
+      "description": "Toughness 2. Move 1 zone. Ranged: 3 Injuries, range 1-3. Melee: 1 Injury."
     },
     {
       "id": "actor-role:sniper",
@@ -1318,7 +1330,8 @@
       "slug": "sniper",
       "title": "Sniper",
       "artworkPath": "/types/actor.png",
-      "locale": "en"
+      "locale": "en",
+      "description": "Toughness 2. Move 1 zone. Ranged: 4 Injuries, range 1 or more. Melee: 1 Injury."
     },
     {
       "id": "actor-role:grenadier",
@@ -1326,7 +1339,8 @@
       "slug": "grenadier",
       "title": "Grenadier",
       "artworkPath": "/types/actor.png",
-      "locale": "en"
+      "locale": "en",
+      "description": "Toughness 2. Move 1 zone. Ranged: 2 Injuries, range 1, splash. Melee: 1 Injury."
     },
     {
       "id": "actor-role:bomber",
@@ -1334,7 +1348,8 @@
       "slug": "bomber",
       "title": "Bomber",
       "artworkPath": "/types/actor.png",
-      "locale": "en"
+      "locale": "en",
+      "description": "Toughness 3. Move 1 zone. Ranged: 3 Injuries, range 0, splash."
     },
     {
       "id": "actor-role:artillery",
@@ -1342,7 +1357,8 @@
       "slug": "artillery",
       "title": "Artillery",
       "artworkPath": "/types/actor.png",
-      "locale": "en"
+      "locale": "en",
+      "description": "Toughness 2. Move 1 zone. Ranged: 2 Injuries, range 1 or more, splash."
     },
     {
       "id": "actor-special:tough",
@@ -1350,7 +1366,8 @@
       "slug": "tough",
       "title": "Tough",
       "artworkPath": "/actors/base/tough.png",
-      "locale": "en"
+      "locale": "en",
+      "description": "+2 Toughness."
     },
     {
       "id": "actor-special:shielded",
@@ -1358,7 +1375,8 @@
       "slug": "shielded",
       "title": "Shielded",
       "artworkPath": "/actors/base/shielded.png",
-      "locale": "en"
+      "locale": "en",
+      "description": "-1 Injury taken."
     },
     {
       "id": "actor-special:armoured",
@@ -1366,7 +1384,8 @@
       "slug": "armoured",
       "title": "Armoured",
       "artworkPath": "/actors/base/armoured.png",
-      "locale": "en"
+      "locale": "en",
+      "description": "-2 Injuries taken."
     },
     {
       "id": "actor-special:alpha",
@@ -1374,7 +1393,8 @@
       "slug": "alpha",
       "title": "Alpha",
       "artworkPath": "/actors/base/alpha.png",
-      "locale": "en"
+      "locale": "en",
+      "description": "+1 Toughness and +1 Injury for all attacks."
     },
     {
       "id": "actor-special:dangerous",
@@ -1382,7 +1402,8 @@
       "slug": "dangerous",
       "title": "Dangerous",
       "artworkPath": "/actors/base/dangerous.png",
-      "locale": "en"
+      "locale": "en",
+      "description": "Primary attack also deals +1 Injury."
     },
     {
       "id": "actor-special:burning",
@@ -1390,7 +1411,8 @@
       "slug": "burning",
       "title": "Burning",
       "artworkPath": "/actors/base/burning.png",
-      "locale": "en"
+      "locale": "en",
+      "description": "Primary attack also deals +1 Burning."
     },
     {
       "id": "actor-special:fiery",
@@ -1398,7 +1420,8 @@
       "slug": "fiery",
       "title": "Fiery",
       "artworkPath": "/actors/base/fiery.png",
-      "locale": "en"
+      "locale": "en",
+      "description": "Secondary attack deals Burning instead."
     },
     {
       "id": "actor-special:freezing",
@@ -1406,7 +1429,8 @@
       "slug": "freezing",
       "title": "Freezing",
       "artworkPath": "/actors/base/freezing.png",
-      "locale": "en"
+      "locale": "en",
+      "description": "Primary attack also deals +1 Freezing."
     },
     {
       "id": "actor-special:icy",
@@ -1414,7 +1438,8 @@
       "slug": "icy",
       "title": "Icy",
       "artworkPath": "/actors/base/icy.png",
-      "locale": "en"
+      "locale": "en",
+      "description": "Secondary attack deals Freezing instead."
     },
     {
       "id": "actor-special:irritating",
@@ -1422,7 +1447,8 @@
       "slug": "irritating",
       "title": "Irritating",
       "artworkPath": "/actors/base/irritating.png",
-      "locale": "en"
+      "locale": "en",
+      "description": "Primary attack also deals +1 Distress."
     },
     {
       "id": "actor-special:corrupting",
@@ -1430,7 +1456,8 @@
       "slug": "corrupting",
       "title": "Corrupting",
       "artworkPath": "/actors/base/corrupting.png",
-      "locale": "en"
+      "locale": "en",
+      "description": "Secondary attack deals Distress instead."
     },
     {
       "id": "actor-special:fast",
@@ -1438,7 +1465,8 @@
       "slug": "fast",
       "title": "Fast",
       "artworkPath": "/actors/base/fast.png",
-      "locale": "en"
+      "locale": "en",
+      "description": "Moves an extra zone per turn."
     },
     {
       "id": "actor-special:harassing",
@@ -1446,7 +1474,8 @@
       "slug": "harassing",
       "title": "Harassing",
       "artworkPath": "/actors/base/harassing.png",
-      "locale": "en"
+      "locale": "en",
+      "description": "Secondary attack also deals +1 Complication."
     },
     {
       "id": "actor-special:slowing",
@@ -1454,7 +1483,8 @@
       "slug": "slowing",
       "title": "Slowing",
       "artworkPath": "/actors/base/slowing.png",
-      "locale": "en"
+      "locale": "en",
+      "description": "Secondary attack also deals +1 Hindered."
     },
     {
       "id": "actor-special:elemental",
@@ -1462,7 +1492,8 @@
       "slug": "elemental",
       "title": "Elemental",
       "artworkPath": "/actors/base/elemental.png",
-      "locale": "en"
+      "locale": "en",
+      "description": "All attacks can deal Freezing or Burning."
     },
     {
       "id": "actor-special:charging",
@@ -1470,7 +1501,8 @@
       "slug": "charging",
       "title": "Charging",
       "artworkPath": "/actors/base/charging.png",
-      "locale": "en"
+      "locale": "en",
+      "description": "Primary attack also deals +2 Injuries when entering a zone."
     },
     {
       "id": "actor-special:suicide",
@@ -1478,7 +1510,8 @@
       "slug": "suicide",
       "title": "Suicide",
       "artworkPath": "/actors/base/suicide.png",
-      "locale": "en"
+      "locale": "en",
+      "description": "Can die and deal 2 Injuries, splash."
     },
     {
       "id": "actor-special:grabbing",
@@ -1486,7 +1519,8 @@
       "slug": "grabbing",
       "title": "Grabbing",
       "artworkPath": "/actors/base/grabbing.png",
-      "locale": "en"
+      "locale": "en",
+      "description": "Melee attacks also deal +1 Stuck."
     },
     {
       "id": "actor-special:webbing",
@@ -1494,7 +1528,8 @@
       "slug": "webbing",
       "title": "Webbing",
       "artworkPath": "/actors/base/webbing.png",
-      "locale": "en"
+      "locale": "en",
+      "description": "Primary attack also deals +1 Stuck, splash."
     },
     {
       "id": "actor-special:reaching",
@@ -1502,7 +1537,8 @@
       "slug": "reaching",
       "title": "Reaching",
       "artworkPath": "/actors/base/reaching.png",
-      "locale": "en"
+      "locale": "en",
+      "description": "Melee attacks reach adjacent zones."
     },
     {
       "id": "actor-special:healing",
@@ -1510,7 +1546,8 @@
       "slug": "healing",
       "title": "Healing",
       "artworkPath": "/actors/base/healing.png",
-      "locale": "en"
+      "locale": "en",
+      "description": "Heal 2 Injuries from one ally in the zone."
     },
     {
       "id": "actor-special:restoring",
@@ -1518,7 +1555,8 @@
       "slug": "restoring",
       "title": "Restoring",
       "artworkPath": "/actors/base/restoring.png",
-      "locale": "en"
+      "locale": "en",
+      "description": "Heal 1 Injury from all allies in the zone."
     },
     {
       "id": "actor-special:regenerating",
@@ -1526,7 +1564,8 @@
       "slug": "regenerating",
       "title": "Regenerating",
       "artworkPath": "/actors/base/regenerating.png",
-      "locale": "en"
+      "locale": "en",
+      "description": "Heal 2 Injuries at the end of the turn."
     },
     {
       "id": "actor-special:encouraging",
@@ -1534,7 +1573,8 @@
       "slug": "encouraging",
       "title": "Encouraging",
       "artworkPath": "/actors/base/encouraging.png",
-      "locale": "en"
+      "locale": "en",
+      "description": "Boost all allies in the zone."
     },
     {
       "id": "asset-base:medieval_gambeson",

@@ -2,10 +2,91 @@ import assert from "node:assert/strict";
 import test from "node:test";
 
 import {
+  cardCatalog,
   enumerateStaticCards,
   staticCardPresets,
   validateCardExportInput,
 } from "../src/catalog";
+
+test("all Actor roles and specials include descriptions", () => {
+  const actors = cardCatalog.filter((card) => card.family === "actor-role" || card.family === "actor-special");
+  assert.equal(actors.length, 40);
+  for (const card of actors) assert.ok(card.description?.trim(), `${card.id} needs a description`);
+});
+
+test("Actor mechanics retain representative role and special semantics", () => {
+  const descriptions = new Map(
+    cardCatalog
+      .filter((card) => card.family === "actor-role" || card.family === "actor-special")
+      .map((card) => [card.slug, card.description]),
+  );
+
+  assert.equal(descriptions.get("minion"), "Toughness 2. Move 1 zone. Melee: 1 Injury. Ranged: 1 Injury, range 1-2.");
+  assert.equal(descriptions.get("artillery"), "Toughness 2. Move 1 zone. Ranged: 2 Injuries, range 1 or more, splash.");
+  assert.doesNotMatch(descriptions.get("artillery") ?? "", /Melee/);
+  assert.equal(descriptions.get("armoured"), "-2 Injuries taken.");
+  assert.equal(descriptions.get("fast"), "Moves an extra zone per turn.");
+  assert.equal(descriptions.get("tough"), "+2 Toughness.");
+  assert.equal(descriptions.get("fiery"), "Secondary attack deals Burning instead.");
+  assert.equal(descriptions.get("charging"), "Primary attack also deals +2 Injuries when entering a zone.");
+});
+
+test("renders Actor descriptions on overlays and combined cards", async () => {
+  const { createServer } = await import("vite");
+  const { createElement } = await import("react");
+  const { renderToStaticMarkup } = await import("react-dom/server");
+  const server = await createServer({ server: { middlewareMode: true } });
+  try {
+    const { GameCard, ActorCard, LayeredCard } = await server.ssrLoadModule("/src/react/index.tsx");
+    const overlay = renderToStaticMarkup(createElement(LayeredCard, { transparent: true, nounEffect: "Role rules", adjectiveEffect: "Special rules" }));
+    assert.ok(overlay.includes("Role rules"));
+    assert.ok(overlay.includes("Special rules"));
+    const combined = renderToStaticMarkup(createElement(ActorCard, {
+      baseLayerSlug: "civilian",
+      tacticalRoleSlug: "minion",
+      tacticalSpecialSlug: "fast",
+    }));
+    assert.match(combined, /Toughness 2\. Move 1 zone\. Melee: 1 Injury\. Ranged: 1 Injury, range 1-2\./);
+    assert.match(combined, /Moves an extra zone per turn\./);
+    assert.match(combined, /data-card-text-region="main"/);
+    assert.match(combined, /data-card-text-region="footer"/);
+    const custom = renderToStaticMarkup(createElement(ActorCard, {
+      custom: { imageUrl: "/custom.png", noun: "Custom", nounDescription: "Custom role rule", adjectiveDescription: "Custom special rule" },
+      nounEffect: "Explicit role rule",
+      adjectiveEffect: "Explicit special rule",
+    }));
+    assert.match(custom, /Explicit role rule/);
+    assert.match(custom, /Explicit special rule/);
+    for (const card of cardCatalog.filter((entry) => entry.family === "actor-role" || entry.family === "actor-special")) {
+      assert.ok(card.description);
+      const expected = renderToStaticMarkup(createElement("span", null, card.description)).slice(6, -7);
+      assert.ok(renderToStaticMarkup(createElement(GameCard, { type: card.family, slug: card.slug })).includes(expected), card.id);
+      const combined = renderToStaticMarkup(createElement(ActorCard, {
+        baseLayerSlug: "civilian",
+        ...(card.family === "actor-role" ? { tacticalRoleSlug: card.slug } : { tacticalSpecialSlug: card.slug }),
+      }));
+      assert.ok(combined.includes(expected), `combined ${card.id}`);
+    }
+  } finally {
+    await server.close();
+  }
+});
+
+test("compact Actor special overlays retain their title", async () => {
+  const { createServer } = await import("vite");
+  const { createElement } = await import("react");
+  const { renderToStaticMarkup } = await import("react-dom/server");
+  const server = await createServer({ server: { middlewareMode: true } });
+  try {
+    const { GameCard } = await server.ssrLoadModule("/src/react/index.tsx");
+    const compactSpecial = renderToStaticMarkup(
+      createElement(GameCard, { type: "actor-special", slug: "fast", layout: "compact" }),
+    );
+    assert.match(compactSpecial, />Fast</);
+  } finally {
+    await server.close();
+  }
+});
 
 test("rejects unsupported locales and incomplete custom cards", () => {
   assert.throws(() => validateCardExportInput({ locale: "cs", cards: [] }));

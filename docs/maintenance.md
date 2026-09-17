@@ -11,3 +11,15 @@ removal condition beside the suppression. Hooks are optional early feedback and 
 replace CI. Install the repository-local pre-commit check with `pnpm hooks:install`.
 It runs `pnpm check:fast` without changing formatting or staged files; unrelated
 working-tree errors can therefore block a commit. Generated outputs are never hand-edited.
+
+`pnpm check` refreshes source-derived data but does not render PNGs. Use
+`pnpm generate:png` to regenerate the complete PNG inventory and its authoritative
+`generated/png-manifest.json`; run it sequentially because exports share
+`.export-staging`. A filtered `pnpm generate:png --type …` updates only matching
+PNGs and writes `generated/png-manifest.filtered.json`, so it is useful for
+diagnostics but not a release-ready inventory refresh.
+
+Actor bases are opaque artwork layers. Full-size Actor role and special PNGs are
+transparent, composable rule layers: roles contain the main mechanical rules and
+specials contain the footer rule. Compact Actor images are reduced-detail thumbnails;
+they retain a meaningful title but intentionally omit rule descriptions.
