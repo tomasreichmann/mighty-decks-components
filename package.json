@@ -1,6 +1,6 @@
 {
   "name": "@mighty-decks/components",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Reusable React components, assets, and export tools for Mighty Decks.",
   "license": "MIT",
   "repository": {
@@ -55,7 +55,7 @@
     "lint": "eslint . --max-warnings 0",
     "check:fast": "pnpm lint && pnpm typecheck",
     "check": "pnpm assets:prepare && pnpm generate:data && pnpm check:fast && pnpm test && pnpm build",
-    "test": "tsx --test tests/artifacts.test.ts tests/catalog.test.ts tests/export.test.ts tests/generation.test.ts tests/guardrails.test.ts tests/hooks.test.ts tests/package-surface.test.ts tests/release-workflow.test.ts tests/runtime-assets.test.ts tests/standalone.test.ts tests/static-copy.test.ts tests/git-package.test.ts tests/git-consumer.test.ts",
+    "test": "tsx --test tests/artifacts.test.ts tests/catalog.test.ts tests/export.test.ts tests/generation.test.ts tests/guardrails.test.ts tests/hooks.test.ts tests/package-surface.test.ts tests/release-workflow.test.ts tests/runtime-assets.test.ts tests/standalone.test.ts tests/static-copy.test.ts tests/git-package.test.ts tests/git-consumer.test.ts tests/rulebook.test.ts",
     "test:package": "pnpm assets:prepare && pnpm generate:data && pnpm build && pnpm pack:runtime && tsx --test tests/package.test.ts && pnpm verify:consumer -- --tarball output/runtime.tgz",
     "assets:prepare": "tsx scripts/prepare-assets.ts",
     "generate:data": "tsx scripts/generate.ts",

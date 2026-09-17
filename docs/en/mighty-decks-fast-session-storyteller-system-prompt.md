@@ -453,6 +453,14 @@ Good Asset:
 
 - “Smuggler’s Tunnel Map — lets you bypass one guarded route; its card may explicitly allow Special Action for navigating the old city if that is part of the Asset design.”
 
+For a composed Asset, retain the base's rules and apply the modifier's stated changes and conditions once. Tools grant +1 Effect while using a tool to work; Empowered adds +1 only on Success or better. Do not treat assembling the parts as another bonus. Use the English Mighty Decks rulebook's card-composition sections for the complete rules.
+
+---
+
+# Actor cards
+
+Build a generic Actor from a base, tactical role and optional tactical special. The base provides its illustrated identity; the role provides Toughness and listed attacks; the special provides its stated changes. Civilian + Minion + Fast has Toughness 2, melee 1 Injury, ranged 1 Injury at range 1–2, and moves an extra zone per turn. NPCs use fixed Effects, not Outcome hands. Read added, replacement and conditional Effects according to their wording. A bonus beside an attack and its explanatory footer are one rule, not two bonuses. Do not invent unspecified targeting or timing rules. See the English Mighty Decks rulebook's card-composition sections for the complete rules.
+
 ---
 
 # Stunts

@@ -483,6 +483,26 @@ Assets can:
 
 Assets may be built from a **base card plus one or more modifier cards in a sleeve**, allowing the physical object to change during play.
 
+### Building an Asset card
+
+An Asset can be used on its own or combined with a modifier. Start with the base Asset, then read any modifier alongside it.
+
+**Base — Tools.** The base supplies the illustration, the name **Tools**, and its rule: **+1 Effect on an action while using a tool to work.** This is a complete Asset without a modifier.
+
+**Optional modifier — Empowered.** The modifier adds its overlay, the name **Empowered**, and its rule: **+1 Effect on Success or better.**
+
+**Tools + Empowered = Empowered Tools.** The combined card keeps the Tools illustration and rule, with Empowered's overlay, name and additional rule. Read both descriptions and check when each applies.
+
+### Reading a combined Asset card
+
+When you use Empowered Tools to work and play **Success**, start with **2 Effect**, add **1 for Tools**, and add **1 for Empowered**: **4 Effect** before any other relevant modifiers.
+
+With **Partial Success**, start with **1 Effect** and add **1 for Tools**: **2 Effect**. Empowered requires Success or better, so it adds nothing here. For these examples, the action involves using the tools to work and no other modifiers apply.
+
+Each rule contributes once. The assembled card shows the same rules as its parts; assembling it does not give you another copy of either bonus. Some modifiers change a rule rather than adding a number, so always read their wording.
+
+These examples show one optional modifier. Physical Assets can have more than one modifier in a sleeve; apply their actual rules rather than assuming this example limits all Assets to one.
+
 ### Example — Stacking Modifiers
 
 Mira uses a magical throwing knife that gives **+1 Effect when thrown**.
@@ -552,6 +572,41 @@ Invite players to **name, customize, or describe** persistent Assets and importa
 Actor cards represent NPCs, creatures, hazards, or other characters that matter in a scene.
 
 Player characters may also use Actor cards for illustration, but the Storyteller usually controls Actors.
+
+### Building an Actor card
+
+An Actor card combines a **base**, a **tactical role**, and, optionally, a **tactical special**. Read the parts together as one Actor.
+
+1. **Base — Civilian.** The base provides the background and illustration or symbol: what the Actor looks like. It does not supply this example's Toughness or attacks.
+2. **Tactical role — Minion.** The role provides the role title and its mechanics. This Minion has **2 Toughness**, a **melee attack for 1 Injury**, and a **ranged attack for 1 Injury at range 1–2**.
+3. **Tactical special — Fast.** The optional special adds its title, visual overlay and extra rules. Read the bottom description: **“Moves an extra zone per turn.”**
+
+**Civilian + Minion + Fast = a Fast Minion with the Civilian illustration.** It keeps the Minion's Toughness and attacks and gains Fast's extra movement. Fast does not add Toughness, Injury or attacks. Without a special, the base and role still make a complete Actor.
+
+Toughness is how much Injury and Distress an Actor can sustain before being Taken Out. Track what remains with a die; at zero, the Actor is Taken Out. Taken Out does not necessarily mean dead. Other Effects do not directly reduce Toughness unless a special rule says so.
+
+### Reading Actor attacks and specials
+
+Read each attack row from its attack type through its Effects, then check its range, Splash and any special rule that changes it. NPC Actors use the listed fixed Effects; they do not play Outcome cards.
+
+| What you see | How to read it |
+| --- | --- |
+| Melee | An attack in the same Zone by default; a card can extend its reach. |
+| Ranged, range 1–2 | A ranged attack against a target one or two Zones away. |
+| Injury symbols | The amount of Injury: two symbols mean 2 Injury. |
+| `2×` before an attack | Two attacks, with the listed Effect for each. For example, Skirmisher lists two attacks for 1 Injury each. |
+| Splash | Every valid target in the affected Zone receives the full listed Effect; do not divide it between targets. |
+| A bonus beside a row | Read the special's description to learn which attack it changes and when. |
+
+**Added Effect — Burning:** a Burning Minion's primary attack deals its normal **1 Injury plus 1 Burning**.
+
+**Replacement Effect — Fiery:** a Fiery Minion's secondary attack deals **1 Burning instead of 1 Injury**. “Instead” replaces the Effect; it does not add another one.
+
+**Conditional Effect — Charging:** its primary attack adds **2 Injury when entering a zone**. Keep that condition attached to the bonus; it is not a permanent increase.
+
+The bonus next to an attack and the special's bottom description explain the **same rule**. Apply that rule once. A printed +1 Burning and a sentence saying the attack also deals Burning do not give +2 Burning.
+
+For a Splash example, Brute's second attack lists **melee, 1 Injury, Splash**. Every valid target in its affected Zone receives 1 Injury before any applicable Defense; the Injury is not shared between them.
 
 ### 10.1 Toughness
 
