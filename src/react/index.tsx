@@ -78,12 +78,19 @@ const actorIconPaths: Record<string, string> = {
 };
 const tokenLabel: Record<string, string> = { toughness: "toughness", shield: "shield", melee: "melee", ranged: "ranged", direct: "direct", heal: "heal", range: "range", splash: "splash", replace: "replace", speed: "speed", ...Object.fromEntries(Object.keys(actorIconPaths).map((key) => [key, key])) };
 const actorToken = /\[([a-z-]+?)(\d+)?\]/gi;
-export const ActorCardTextWithIcons = ({ text, assetBaseUrl = "/mighty-decks/assets" }: { text: string; assetBaseUrl?: string }): JSX.Element => <span className={styles.actorIconText} aria-label={text.replace(actorToken, (_: string, name: string, count: string | undefined) => ` ${count ?? ""} ${tokenLabel[name] ?? name} `).replace(/\s+/g, " ").trim()}>{text.split(actorToken).map((part, index, parts) => {
-  if (index % 3 !== 1) return part;
-  const name = part.toLowerCase(); const count = Math.min(Number(parts[index + 1] || 1), 9); const path = actorIconPaths[name];
-  if (!path || !Number.isInteger(count) || count < 1) return `[${part}${parts[index + 1] ?? ""}]`;
-  return <span key={`${name}-${index}`} className={styles.actorIcons} aria-hidden="true">{Array.from({ length: count }, (_, iconIndex) => <img key={iconIndex} src={resolveAssetUrl(assetBaseUrl, path)} alt="" />)}</span>;
-})}</span>;
+export const ActorCardTextWithIcons = ({ text, assetBaseUrl = "/mighty-decks/assets" }: { text: string; assetBaseUrl?: string }): JSX.Element => {
+  const children: ReactNode[] = [];
+  let end = 0;
+  for (const match of text.matchAll(actorToken)) {
+    children.push(text.slice(end, match.index));
+    const [, rawName, rawCount] = match;
+    const name = rawName.toLowerCase(); const count = Math.min(Number(rawCount ?? 1), 9); const path = actorIconPaths[name];
+    children.push(!path || !Number.isInteger(count) || count < 1 ? match[0] : <span key={`${name}-${match.index}`} className={styles.actorIcons} aria-hidden="true">{Array.from({ length: count }, (_, iconIndex) => <img key={iconIndex} src={resolveAssetUrl(assetBaseUrl, path)} alt="" />)}</span>);
+    end = (match.index ?? 0) + match[0].length;
+  }
+  children.push(text.slice(end));
+  return <span className={styles.actorIconText} aria-label={text.replace(actorToken, (_: string, name: string, count: string | undefined) => ` ${count ?? ""} ${tokenLabel[name] ?? name} `).replace(/\s+/g, " ").trim()}>{children}</span>;
+};
 const actorPresentation = (card: ReturnType<typeof getCard> | undefined): ActorPresentation | undefined => {
   if (!card) return undefined;
   const known: Record<string, ActorPresentation> = {

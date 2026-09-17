@@ -73,6 +73,26 @@ test("renders Actor descriptions on overlays and combined cards", async () => {
   }
 });
 
+test("Actor icon text repeats known tokens without exposing their numeric suffix", async () => {
+  const { createServer } = await import("vite");
+  const { createElement } = await import("react");
+  const { renderToStaticMarkup } = await import("react-dom/server");
+  const server = await createServer({ server: { middlewareMode: true } });
+  try {
+    const { ActorCardTextWithIcons } = await server.ssrLoadModule("/src/react/index.tsx");
+    const markup = renderToStaticMarkup(createElement(ActorCardTextWithIcons, {
+      text: "+[injury2] / [unknown]",
+      assetBaseUrl: "/custom-assets",
+    }));
+    assert.equal((markup.match(/effects\/injury\.png/g) ?? []).length, 2);
+    assert.match(markup, /\/custom-assets\/effects\/injury\.png/);
+    assert.match(markup, /\[unknown\]/);
+    assert.doesNotMatch(markup, />2</);
+  } finally {
+    await server.close();
+  }
+});
+
 test("renders Asset modifier rules in the footer slot for standalone and layered cards", async () => {
   const { createServer } = await import("vite");
   const { createElement } = await import("react");
