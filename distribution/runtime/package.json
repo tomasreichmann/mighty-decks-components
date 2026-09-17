@@ -1,0 +1,47 @@
+{
+  "name": "@mighty-decks/components",
+  "version": "0.1.5",
+  "description": "Reusable React components, assets, and export tools for Mighty Decks.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomasreichmann/mighty-decks-components.git"
+  },
+  "homepage": "https://github.com/tomasreichmann/mighty-decks-components#readme",
+  "bugs": {
+    "url": "https://github.com/tomasreichmann/mighty-decks-components/issues"
+  },
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": "22.14.0"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./react": {
+      "types": "./dist/react/index.d.ts",
+      "import": "./dist/react/index.js"
+    },
+    "./styles.css": "./dist/styles.css",
+    "./export": {
+      "types": "./dist/export.d.ts",
+      "import": "./dist/export.js"
+    },
+    "./csv/*": "./generated/csv/*"
+  },
+  "bin": {
+    "mighty-decks-components": "./dist/cli.js"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "dependencies": {
+    "zod": "^3.24.1"
+  }
+}

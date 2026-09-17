@@ -4,9 +4,10 @@ import { basename, relative, resolve } from "node:path";
 import { chromium } from "playwright";
 import { createServer } from "vite";
 import { contentVersion, enumerateStaticCards, getCard, type StaticCardEntry } from "../src/catalog";
+import { planExport } from "./export-plan.mjs";
 
 const packageRoot = resolve(import.meta.dirname, "..");
-const packageJson = JSON.parse(await readFile(resolve(packageRoot, "package.json"), "utf8")) as { version: string };
+const hash = (value: string | Buffer): string => createHash("sha256").update(value).digest("hex");
 const parseArgs = (): { family?: string; slug?: string; layout?: string; height?: number } => {
   const args = process.argv.slice(2);
   const get = (name: string): string | undefined => {
@@ -28,98 +29,107 @@ const assertPathWithin = (path: string, root: string, label: string): void => {
 };
 const assertActorOverlayDescription = (entry: StaticCardEntry): void => {
   if (!isFullActorOverlay(entry)) return;
-  if (!getCard(entry.family, entry.slug)?.description?.trim()) {
-    throw new Error(`Missing description for ${entry.id} (${entry.layout}/${entry.height}).`);
-  }
+  if (!getCard(entry.family, entry.slug)?.description?.trim()) throw new Error(`Missing description for ${entry.id} (${entry.layout}/${entry.height}).`);
 };
+const sharedFingerprint = async (): Promise<string> => hash(JSON.stringify(await Promise.all([
+  "src/react/cards.module.css", "src/react/index.tsx", "export-app/main.tsx", "assets/inventory.json",
+].map(async (path) => [path, hash(await readFile(resolve(packageRoot, path)).catch(() => ""))]))));
 
 const filter = parseArgs();
 const requestedCompact512 = filter.layout === "compact" && filter.height === 512;
 const entries = (requestedCompact512
-  ? enumerateStaticCards()
-      .filter((entry) => entry.layout === "compact")
-      .map((entry) => ({ ...entry, width: 315, height: 512 }))
+  ? enumerateStaticCards().filter((entry) => entry.layout === "compact").map((entry) => ({ ...entry, width: 315, height: 512 }))
   : enumerateStaticCards()
 ).filter((entry) => matches(entry, filter));
 if (entries.length === 0) throw new Error("No static cards match the requested filter.");
 for (const entry of entries) assertActorOverlayDescription(entry);
-const staging = resolve(packageRoot, ".export-staging");
+
+const allEntries = requestedCompact512 ? entries : enumerateStaticCards();
+const shared = await sharedFingerprint();
+const expectedAll = allEntries.map((entry) => ({ ...entry, path: outputPath(entry), fingerprint: hash(JSON.stringify({ entry, shared })) }));
 const generated = resolve(packageRoot, "generated");
+const previousPath = resolve(generated, "png-manifest.json");
+const previous = JSON.parse(await readFile(previousPath, "utf8").catch(() => "{\"entries\":[]}")) as { entries: Array<StaticCardEntry & { path: string; checksum: string; fingerprint?: string }> };
+const hasFilter = Boolean(filter.family || filter.slug || filter.layout || filter.height);
+const selected = new Set(entries.map(outputPath));
+const baselineComplete = previous.entries.length === expectedAll.length && previous.entries.every((entry) => expectedAll.some((expected) => expected.path === entry.path));
+const partial = hasFilter && !baselineComplete;
+const expected = partial ? expectedAll.filter((entry) => selected.has(entry.path)) : expectedAll;
+const plan = planExport(expected, partial ? { entries: [] } : previous);
+const renderPaths = plan.render.filter((path) => !hasFilter || selected.has(path));
+if (renderPaths.length === 0 && plan.remove.length === 0) {
+  console.log("PNG inventory is unchanged; skipped browser rendering.");
+  process.exit(0);
+}
+
+const staging = resolve(packageRoot, ".export-staging");
 assertPathWithin(staging, packageRoot, "Export staging path");
 assertPathWithin(resolve(generated, "png"), generated, "PNG output path");
 await rm(staging, { recursive: true, force: true });
 await mkdir(staging, { recursive: true });
-const server = await createServer({ root: packageRoot, logLevel: "error", server: { host: "127.0.0.1" } });
-await server.listen();
-const address = server.resolvedUrls?.local[0];
-if (!address) throw new Error("Vite did not expose a local exporter URL.");
-const browser = await chromium.launch({ headless: true });
-const page = await browser.newPage({ viewport: { width: 700, height: 1100 }, deviceScaleFactor: 1 });
-const manifests: Array<StaticCardEntry & { path: string; checksum: string }> = [];
-let browserErrors: string[] = [];
-page.on("console", (message) => {
-  if (message.type() === "error" && !message.text().includes("createRoot()")) browserErrors.push(message.text());
-});
-try {
-  for (const [index, entry] of entries.entries()) {
-    const query = new URLSearchParams({ family: entry.family, slug: entry.slug, layout: entry.layout, width: String(entry.width) });
-    browserErrors = [];
-    await page.goto(`${address}?${query}`, { waitUntil: "networkidle" });
-    const validation = await page.evaluate(async ({ isFullActorOverlay, isSpecial, description }) => {
-      await document.fonts.ready;
-      await Promise.all([...document.images].map((image) => image.decode().catch(() => undefined)));
-      const missingImages = [...document.images].filter((image) => image.naturalWidth === 0).map((image) => image.currentSrc || image.src);
-      const svgImageHrefs = [...document.querySelectorAll("svg image")]
-        .map((image) => image.getAttribute("href"))
-        .filter((href): href is string => Boolean(href));
-      const missingSvgImages = (await Promise.all(svgImageHrefs.map(async (href) => (await fetch(href)).ok ? undefined : href)))
-        .filter((href): href is string => Boolean(href));
-      if (!isFullActorOverlay) return { missingImages, missingSvgImages };
-      const region = document.querySelector(`[data-card-text-region="${isSpecial ? "footer" : "main"}"]`);
-      const inner = region?.firstElementChild?.firstElementChild as HTMLElement | null;
-      const bounds = region?.getBoundingClientRect();
-      const innerBounds = inner?.getBoundingClientRect();
-      return {
-        missingImages,
-        missingSvgImages,
-        hasDescription: inner?.textContent?.trim() === description,
-        descriptionFits: Boolean(bounds && innerBounds && innerBounds.width <= bounds.width + 0.5 && innerBounds.height <= bounds.height + 0.5),
-      };
-    }, { isFullActorOverlay: isFullActorOverlay(entry), isSpecial: entry.family === "actor-special", description: getCard(entry.family, entry.slug)?.description });
-    const card = page.locator("[data-card-export] article");
-    const box = await card.boundingBox();
-    if (!box || Math.abs(box.width - entry.width) > 1 || Math.abs(box.height - entry.height) > 1) throw new Error(`Incorrect export geometry for ${entry.id}: ${JSON.stringify(box)}`);
-    if (validation.missingImages.length > 0 || validation.missingSvgImages.length > 0) throw new Error(`Missing artwork for ${entry.id}: ${[...validation.missingImages, ...validation.missingSvgImages].join(", ")}`);
-    if (isFullActorOverlay(entry) && !validation.hasDescription) throw new Error(`Missing rendered description for ${entry.id}.`);
-    if (isFullActorOverlay(entry) && !validation.descriptionFits) throw new Error(`Actor description does not fit for ${entry.id} (${entry.layout}/${entry.height}).`);
-    if (browserErrors.length > 0) throw new Error(`Browser errors for ${entry.id}: ${browserErrors.join("; ")}`);
-    const relativePath = outputPath(entry);
-    const destination = resolve(staging, relativePath);
-    await mkdir(resolve(destination, ".."), { recursive: true });
-    await page.screenshot({ path: destination, clip: { x: box.x, y: box.y, width: entry.width, height: entry.height }, omitBackground: true });
-    manifests.push({ ...entry, path: relativePath, checksum: createHash("sha256").update(await readFile(destination)).digest("hex") });
-    if ((index + 1) % 25 === 0 || index + 1 === entries.length) console.log(`Rendered ${index + 1}/${entries.length}.`);
+if (!partial && previous.entries.length > 0) await cp(resolve(generated, "png"), resolve(staging, "png"), { recursive: true, force: true });
+const renderSet = new Set(renderPaths);
+const rendered = new Map<string, string>();
+if (renderPaths.length > 0) {
+  const server = await createServer({ root: packageRoot, logLevel: "error", server: { host: "127.0.0.1" } });
+  await server.listen();
+  const address = server.resolvedUrls?.local[0];
+  if (!address) throw new Error("Vite did not expose a local exporter URL.");
+  const browser = await chromium.launch({ headless: true });
+  const page = await browser.newPage({ viewport: { width: 700, height: 1100 }, deviceScaleFactor: 1 });
+  let browserErrors: string[] = [];
+  page.on("console", (message) => { if (message.type() === "error" && !message.text().includes("createRoot()")) browserErrors.push(message.text()); });
+  try {
+    for (const [index, entry] of expected.filter((entry) => renderSet.has(entry.path)).entries()) {
+      browserErrors = [];
+      const query = new URLSearchParams({ family: entry.family, slug: entry.slug, layout: entry.layout, width: String(entry.width) });
+      await page.goto(`${address}?${query}`, { waitUntil: "networkidle" });
+      const validation = await page.evaluate(async ({ actorOverlay, special, description }) => {
+        await document.fonts.ready;
+        await Promise.all([...document.images].map((image) => image.decode().catch(() => undefined)));
+        const missingImages = [...document.images].filter((image) => image.naturalWidth === 0).map((image) => image.currentSrc || image.src);
+        const svgImageHrefs = [...document.querySelectorAll("svg image")].map((image) => image.getAttribute("href")).filter((href): href is string => Boolean(href));
+        const missingSvgImages = (await Promise.all(svgImageHrefs.map(async (href) => (await fetch(href)).ok ? undefined : href))).filter((href): href is string => Boolean(href));
+        if (!actorOverlay) return { missingImages, missingSvgImages };
+        const region = document.querySelector(`[data-card-text-region="${special ? "footer" : "main"}"]`);
+        const inner = region?.firstElementChild?.firstElementChild as HTMLElement | null;
+        const bounds = region?.getBoundingClientRect();
+        const innerBounds = inner?.getBoundingClientRect();
+        return { missingImages, missingSvgImages, hasDescription: inner?.textContent?.trim() === description, descriptionFits: Boolean(bounds && innerBounds && innerBounds.width <= bounds.width + 0.5 && innerBounds.height <= bounds.height + 0.5) };
+      }, { actorOverlay: isFullActorOverlay(entry), special: entry.family === "actor-special", description: getCard(entry.family, entry.slug)?.description });
+      const card = page.locator("[data-card-export] article");
+      const box = await card.boundingBox();
+      if (!box || Math.abs(box.width - entry.width) > 1 || Math.abs(box.height - entry.height) > 1) throw new Error(`Incorrect export geometry for ${entry.id}: ${JSON.stringify(box)}`);
+      if (validation.missingImages.length > 0 || validation.missingSvgImages.length > 0) throw new Error(`Missing artwork for ${entry.id}: ${[...validation.missingImages, ...validation.missingSvgImages].join(", ")}`);
+      if (isFullActorOverlay(entry) && !validation.hasDescription) throw new Error(`Missing rendered description for ${entry.id}.`);
+      if (isFullActorOverlay(entry) && !validation.descriptionFits) throw new Error(`Actor description does not fit for ${entry.id} (${entry.layout}/${entry.height}).`);
+      if (browserErrors.length > 0) throw new Error(`Browser errors for ${entry.id}: ${browserErrors.join("; ")}`);
+      const destination = resolve(staging, entry.path);
+      await mkdir(resolve(destination, ".."), { recursive: true });
+      await page.screenshot({ path: destination, clip: { x: box.x, y: box.y, width: entry.width, height: entry.height }, omitBackground: true });
+      rendered.set(entry.path, hash(await readFile(destination)));
+      if ((index + 1) % 25 === 0 || index + 1 === renderPaths.length) console.log(`Rendered ${index + 1}/${renderPaths.length}.`);
+    }
+  } finally {
+    await browser.close();
+    await server.close();
   }
-} finally {
-  await browser.close();
-  await server.close();
 }
-await writeFile(resolve(staging, "manifest.json"), JSON.stringify({ packageVersion: packageJson.version, contentVersion: contentVersion, locale: "en", toolchain: { node: process.version, playwright: "1.60.0", platform: process.platform, arch: process.arch }, entries: manifests }, null, 2) + "\n");
-if (filter.family || filter.slug || filter.layout || filter.height) {
-  // A filtered export supplements PNG output only. Catalog data owns
-  // generated/manifest.json and a complete export owns generated/png-manifest.json.
-  await cp(resolve(staging, "png"), resolve(generated, "png"), { recursive: true, force: true });
-  await writeFile(resolve(generated, "png-manifest.filtered.json"), JSON.stringify({ locale: "en", entries: manifests }, null, 2) + "\n");
-} else {
-  await rm(resolve(generated, "png"), { recursive: true, force: true });
-  // Windows can retain a directory handle briefly after Vite closes, making a
-  // same-volume rename fail with EPERM. Copy the fully validated staging tree
-  // instead; staging is retained until this branch completes successfully.
-  await cp(resolve(staging, "png"), resolve(generated, "png"), {
-    recursive: true,
-    force: true,
+try {
+  for (const path of plan.remove) await rm(resolve(staging, path), { force: true });
+  const previousByPath = new Map(previous.entries.map((entry) => [entry.path, entry]));
+  const manifestEntries = expected.map((entry) => {
+    const prior = previousByPath.get(entry.path);
+    const checksum = rendered.get(entry.path) ?? prior?.checksum;
+    if (!checksum) throw new Error(`Missing staged PNG for ${entry.path}.`);
+    return rendered.has(entry.path) || partial ? { ...entry, checksum } : prior;
   });
-  await writeFile(resolve(generated, "png-manifest.json"), JSON.stringify({ locale: "en", entries: manifests }, null, 2) + "\n");
+  const manifestPath = partial ? resolve(generated, "png-manifest.filtered.json") : previousPath;
+  await writeFile(resolve(staging, "manifest.json"), JSON.stringify({ locale: "en", contentVersion, sharedFingerprint: shared, entries: manifestEntries }, null, 2) + "\n");
+  if (!partial) await rm(resolve(generated, "png"), { recursive: true, force: true });
+  await cp(resolve(staging, "png"), resolve(generated, "png"), { recursive: true, force: true });
+  await writeFile(manifestPath, JSON.stringify({ locale: "en", contentVersion, sharedFingerprint: shared, entries: manifestEntries }, null, 2) + "\n");
+} finally {
+  await rm(staging, { recursive: true, force: true });
 }
-await rm(staging, { recursive: true, force: true });
-console.log(`Exported ${manifests.length} PNG cards (${basename(staging)} staging).`);
+console.log(`Exported ${renderPaths.length} PNG cards (${basename(staging)} staging).`);

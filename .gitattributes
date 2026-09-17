@@ -1,0 +1,7 @@
+*.png binary
+*.ttf binary
+*.otf binary
+distribution/** text=auto eol=lf
+distribution/**/*.png binary
+distribution/**/*.ttf binary
+distribution/**/*.otf binary
