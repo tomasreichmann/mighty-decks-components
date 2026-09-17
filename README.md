@@ -12,6 +12,10 @@ import { GameCard, ActorCard } from "@mighty-decks/components/react";
 <ActorCard baseLayerSlug="guard_blue" tacticalRoleSlug="thug" />
 ```
 
+Full Actor layers render their structured mechanics as icons while retaining
+plaintext rules for consumers and assistive technology. See the
+[Actor parity guide](./docs/actor-card-parity.md) for composition and review.
+
 `en` is currently the only accepted locale. IDs are language-neutral; callers
 must handle an unsupported locale rather than assuming translation. Compact and
 full layout are independent from output density.

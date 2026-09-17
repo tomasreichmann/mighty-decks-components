@@ -21,6 +21,9 @@ Actor bases are opaque artwork layers. Full-size Actor role and special PNGs are
 transparent, composable rule layers: roles contain the main mechanical rules and
 specials contain the footer rule. Compact Actor images are reduced-detail thumbnails;
 they retain a meaningful title but intentionally omit rule descriptions.
+Run `pnpm verify:actor-parity` after changing Actor geometry, mechanics, or artwork;
+it checks the representative full-size browser rendering described in
+[`actor-card-parity.md`](./actor-card-parity.md).
 
 ## Checked-in prebuilt package
 
