@@ -1,7 +1,7 @@
 import { createHash } from "node:crypto";
 import { execFile } from "node:child_process";
 import { access, cp, mkdir, readFile, readdir, rename, rm, writeFile } from "node:fs/promises";
-import { basename, dirname, relative, resolve } from "node:path";
+import { basename, relative, resolve } from "node:path";
 import { promisify } from "node:util";
 
 const exec = promisify(execFile);

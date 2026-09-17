@@ -25,7 +25,7 @@ const noNodeImports = {
 };
 
 export default [
-  { ignores: ["assets/**", "dist/**", "generated/**", "node_modules/**", "output/**", "tests/consumer/**", "**/*.json"] },
+  { ignores: ["assets/**", "dist/**", "distribution/**", "generated/**", "node_modules/**", "output/**", "tests/consumer/**", "**/*.json"] },
   js.configs.recommended,
   {
     files: ["**/*.mjs", "eslint.config.mjs"],

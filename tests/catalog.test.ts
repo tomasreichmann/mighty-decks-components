@@ -4,6 +4,7 @@ import test from "node:test";
 import {
   cardCatalog,
   enumerateStaticCards,
+  getCard,
   staticCardPresets,
   validateCardExportInput,
 } from "../src/catalog";
@@ -67,6 +68,54 @@ test("renders Actor descriptions on overlays and combined cards", async () => {
       }));
       assert.ok(combined.includes(expected), `combined ${card.id}`);
     }
+  } finally {
+    await server.close();
+  }
+});
+
+test("renders Asset modifier rules in the footer slot for standalone and layered cards", async () => {
+  const { createServer } = await import("vite");
+  const { createElement } = await import("react");
+  const { renderToStaticMarkup } = await import("react-dom/server");
+  const server = await createServer({ server: { middlewareMode: true } });
+  try {
+    const { AssetCard, GameCard } = await server.ssrLoadModule("/src/react/index.tsx");
+    const textInRegion = (markup: string, region: "main" | "footer"): string => {
+      const match = markup.match(new RegExp(`data-card-text-region="${region}"[^>]*><div[^>]*><div[^>]*>(.*?)</div></div>`));
+      return match?.[1] ?? "";
+    };
+    for (const modifier of cardCatalog.filter((card) => card.family === "asset-modifier")) {
+      const standalone = renderToStaticMarkup(createElement(GameCard, { type: "asset-modifier", slug: modifier.slug }));
+      assert.equal(textInRegion(standalone, "main"), "", `${modifier.id} must not use the base-rule slot`);
+      assert.equal(textInRegion(standalone, "footer"), modifier.body ?? modifier.description ?? "", `${modifier.id} must use the modifier-rule slot`);
+    }
+    for (const [baseAssetSlug, modifierSlug] of [["base_artillery_weapon", "base_permanent"], ["base_tools", "base_hidden"], ["base_resources", "base_insulating"]] as const) {
+      const combined = renderToStaticMarkup(createElement(AssetCard, { baseAssetSlug, modifierSlug }));
+      assert.match(textInRegion(combined, "main"), /\S/, `${baseAssetSlug} must retain its base rule`);
+      assert.match(textInRegion(combined, "footer"), /\S/, `${modifierSlug} must retain its modifier rule`);
+    }
+  } finally {
+    await server.close();
+  }
+});
+
+test("consumable Asset bodies contain real line breaks", () => {
+  for (const slug of ["base_healing", "base_comfort", "base_surge"]) {
+    const card = getCard("asset-base", slug);
+    assert.ok(card?.body?.includes("\n"), `${slug} needs a line break`);
+    assert.doesNotMatch(card?.body ?? "", /\\\\n/, `${slug} must not contain an escaped line break`);
+  }
+});
+
+test("allocates a readable footer region for long Effect rules", async () => {
+  const { createServer } = await import("vite");
+  const { createElement } = await import("react");
+  const { renderToStaticMarkup } = await import("react-dom/server");
+  const server = await createServer({ server: { middlewareMode: true } });
+  try {
+    const { GameCard } = await server.ssrLoadModule("/src/react/index.tsx");
+    const complication = renderToStaticMarkup(createElement(GameCard, { type: "effect", slug: "complication" }));
+    assert.match(complication, /<foreignObject x="16" y="258" width="172" height="60" data-card-text-region="footer">/);
   } finally {
     await server.close();
   }

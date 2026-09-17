@@ -2220,8 +2220,8 @@
       "family": "asset-base",
       "slug": "base_healing",
       "title": "Healing",
-      "body": "Consumable.\\nRemove 1 Injury or spend an action and remove Effect +1 Injury.",
-      "description": "Consumable.\\nRemove 1 Injury or spend an action and remove Effect +1 Injury.",
+      "body": "Consumable.\nRemove 1 Injury or spend an action and remove Effect +1 Injury.",
+      "description": "Consumable.\nRemove 1 Injury or spend an action and remove Effect +1 Injury.",
       "deck": "base",
       "artworkPath": "/assets/base/healing.png",
       "locale": "en"
@@ -2231,8 +2231,8 @@
       "family": "asset-base",
       "slug": "base_comfort",
       "title": "Comfort",
-      "body": "Consumable.\\nRemove 1 Distress or spend an action and remove Effect +1 Distress.",
-      "description": "Consumable.\\nRemove 1 Distress or spend an action and remove Effect +1 Distress.",
+      "body": "Consumable.\nRemove 1 Distress or spend an action and remove Effect +1 Distress.",
+      "description": "Consumable.\nRemove 1 Distress or spend an action and remove Effect +1 Distress.",
       "deck": "base",
       "artworkPath": "/assets/base/comfort.png",
       "locale": "en"
@@ -2242,8 +2242,8 @@
       "family": "asset-base",
       "slug": "base_surge",
       "title": "Surge",
-      "body": "Consumable.\\nReceive 2x Boost.",
-      "description": "Consumable.\\nReceive 2x Boost.",
+      "body": "Consumable.\nReceive 2x Boost.",
+      "description": "Consumable.\nReceive 2x Boost.",
       "deck": "base",
       "artworkPath": "/assets/base/surge.png",
       "locale": "en"

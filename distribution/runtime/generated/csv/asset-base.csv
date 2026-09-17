@@ -57,9 +57,12 @@ id,locale,family,slug,title,description,artwork_path,content_version
 "asset-base:base_light_armor","en","asset-base","base_light_armor","Light Armor","Reduce received Injury by 1 and convert it to a Distress.","/assets/base/light_armor.png","2026-09-16"
 "asset-base:base_heavy_armor","en","asset-base","base_heavy_armor","Heavy Armor","Reduce received Injury by 1.","/assets/base/heavy_armor.png","2026-09-16"
 "asset-base:base_shield","en","asset-base","base_shield","Shield","Convert a Partial Success into a Success when defending.","/assets/base/shield.png","2026-09-16"
-"asset-base:base_healing","en","asset-base","base_healing","Healing","Consumable.\nRemove 1 Injury or spend an action and remove Effect +1 Injury.","/assets/base/healing.png","2026-09-16"
-"asset-base:base_comfort","en","asset-base","base_comfort","Comfort","Consumable.\nRemove 1 Distress or spend an action and remove Effect +1 Distress.","/assets/base/comfort.png","2026-09-16"
-"asset-base:base_surge","en","asset-base","base_surge","Surge","Consumable.\nReceive 2x Boost.","/assets/base/surge.png","2026-09-16"
+"asset-base:base_healing","en","asset-base","base_healing","Healing","Consumable.
+Remove 1 Injury or spend an action and remove Effect +1 Injury.","/assets/base/healing.png","2026-09-16"
+"asset-base:base_comfort","en","asset-base","base_comfort","Comfort","Consumable.
+Remove 1 Distress or spend an action and remove Effect +1 Distress.","/assets/base/comfort.png","2026-09-16"
+"asset-base:base_surge","en","asset-base","base_surge","Surge","Consumable.
+Receive 2x Boost.","/assets/base/surge.png","2026-09-16"
 "asset-base:base_tools","en","asset-base","base_tools","Tools","+1 Effect on an action while using a tool to work.","/assets/base/tools.png","2026-09-16"
 "asset-base:base_light","en","asset-base","base_light","Light","Lights up current zone.","/assets/base/light.png","2026-09-16"
 "asset-base:base_vehicle","en","asset-base","base_vehicle","Vehicle","On Move, you can move +1 zone further.","/assets/base/vehicle.png","2026-09-16"
