@@ -28,6 +28,15 @@ export default [
   { ignores: ["assets/**", "dist/**", "distribution/**", "generated/**", "node_modules/**", "output/**", "tests/consumer/**", "**/*.json"] },
   js.configs.recommended,
   {
+    files: ["**/*.{js,mjs}"],
+    languageOptions: {
+      globals: {
+        Buffer: "readonly", ResizeObserver: "readonly", URLSearchParams: "readonly",
+        console: "readonly", document: "readonly", fetch: "readonly", process: "readonly", window: "readonly",
+      },
+    },
+  },
+  {
     files: ["**/*.mjs", "eslint.config.mjs"],
     languageOptions: { globals: { console: "readonly", fetch: "readonly", process: "readonly" } },
   },
