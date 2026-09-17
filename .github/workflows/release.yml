@@ -30,6 +30,7 @@ jobs:
           corepack prepare pnpm@10.0.0 --activate
           npm install --global npm@11.19.1
       - run: pnpm install --frozen-lockfile --prod=false
+      - run: pnpm exec playwright install --with-deps chromium
       - run: pnpm check
       - name: Download the locally verified release candidate
         env:
