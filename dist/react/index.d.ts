@@ -21,12 +21,14 @@ export interface LayeredCardProps {
     transparent?: boolean;
     showHeader?: boolean;
     footerHeight?: number;
+    actorBase?: boolean;
+    actorOverlay?: boolean;
 }
 export declare const CardStyleBoundary: ({ children }: {
     children: ReactNode;
 }) => JSX.Element;
 export declare const resolveAssetUrl: (assetBaseUrl: string, path: string) => string;
-export declare const LayeredCard: ({ className, style, assetBaseUrl, backgroundUri, imageUri, imageOverlayUri, noun, nounDeck, nounCornerIcon, adjective, adjectiveDeck, adjectiveCornerIcon, nounEffect, adjectiveEffect, titleColor, layout, transparent, showHeader, footerHeight }: LayeredCardProps) => JSX.Element;
+export declare const LayeredCard: ({ className, style, assetBaseUrl, backgroundUri, imageUri, imageOverlayUri, noun, nounDeck, nounCornerIcon, adjective, adjectiveDeck, adjectiveCornerIcon, nounEffect, adjectiveEffect, titleColor, layout, transparent, showHeader, footerHeight, actorBase, actorOverlay }: LayeredCardProps) => JSX.Element;
 export interface GameCardProps {
     type: CardFamily;
     slug: string;
@@ -67,8 +69,9 @@ export interface CounterCardProps extends Omit<LayeredCardProps, "noun" | "adjec
 }
 export declare const CounterCard: ({ iconSlug, title, currentValue, maxValue, ...props }: CounterCardProps) => JSX.Element;
 export declare const CompactCard: (props: LayeredCardProps) => JSX.Element;
-export declare const ActorCardTextWithIcons: ({ text }: {
+export declare const ActorCardTextWithIcons: ({ text, assetBaseUrl }: {
     text: string;
+    assetBaseUrl?: string;
 }) => JSX.Element;
 export interface SceneCardProps {
     title: string;

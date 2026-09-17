@@ -1,7 +1,8 @@
 import { validateCardExportInput, type CardExportInput, type CardFamily as ContractCardFamily } from "./contracts/cardExport.js";
+import type { ActorPresentation } from "./contracts/actorPresentation.js";
 export declare const contentVersion: string;
 export declare const supportedLocale: "en";
-export type CardFamily = Exclude<ContractCardFamily, "location" | "encounter" | "quest">;
+export type CardFamily = Exclude<ContractCardFamily, "encounter" | "quest">;
 export interface CatalogCard {
     id: string;
     family: CardFamily;
@@ -13,6 +14,7 @@ export interface CatalogCard {
     footer?: string;
     deck?: string;
     artworkPath?: string;
+    actorPresentation?: ActorPresentation;
 }
 export declare const cardCatalog: CatalogCard[];
 export declare const getCard: (family: CardFamily, slug: string) => CatalogCard | undefined;
