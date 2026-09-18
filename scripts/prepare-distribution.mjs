@@ -88,7 +88,8 @@ try {
   await normalizeText(staging);
 
   const catalog = JSON.parse(await readFile(resolve(source, "src/data/catalog.en.json"), "utf8"));
-  const decks = new Map(catalog.cards.map((card) => [`${card.family}:${card.slug}`, card.deck && card.deck !== "base" ? card.deck : "core"]));
+  const cards = [...catalog.cards, ...catalog.medievalCards];
+  const decks = new Map(cards.map((card) => [`${card.family}:${card.slug}`, card.deck && card.deck !== "base" ? card.deck : "core"]));
   const pngManifest = JSON.parse(await readFile(resolve(source, "generated/png-manifest.json"), "utf8"));
   const groups = {};
   for (const entry of pngManifest.entries) {

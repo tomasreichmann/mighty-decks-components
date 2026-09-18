@@ -4,6 +4,9 @@ assets/THIRD-PARTY-NOTICES.md and assets/fonts/.
 
 Runtime artwork provenance and the release-rights gates are documented in
 docs/migration-baseline.md when the public release inventory is approved.
+The medieval portrait and Location artwork import is pinned to board-game-prototypes
+revision cefe6918d34fc302a31fcb7676d97a43d7e1f15b; its source attribution and scope
+are recorded in docs/migration-baseline.md and tests/fixtures/medieval-card-inventory.json.
 
 The package software is licensed under MIT. Original card content, artwork,
 and documentation are licensed under Creative Commons Attribution 4.0

@@ -175,3 +175,31 @@ test("keeps every checked-in distribution path out of generated-output ignores",
   const ignore = await readFile(join(packageRoot, ".gitignore"), "utf8");
   assert.match(ignore, /^!distribution\/\*\*$/m);
 });
+
+test("groups medieval Actor and Location PNGs from the complete source catalogue", async () => {
+  const source = await mkdtemp(join(tmpdir(), "mighty-decks-distribution-source-"));
+  const output = await mkdtemp(join(tmpdir(), "mighty-decks-distribution-output-"));
+  try {
+    await copyFixtureSources(source);
+    const manifestPath = join(source, "generated", "png-manifest.json");
+    const pngManifest = JSON.parse(await readFile(manifestPath, "utf8")) as { entries: Array<{ family: string; slug: string; layout: string; width: number; height: number; path: string; checksum: string }> };
+    const medievalPaths: string[] = [];
+    for (const [family, slug] of [["actor-base", "medieval_villager"], ["location", "medieval_dungeon"]]) {
+      const path = `png/en/${family}/${slug}/full/1024.png`;
+      await mkdir(join(source, "generated", "png", "en", family, slug, "full"), { recursive: true });
+      await writeFile(join(source, "generated", path), "fixture-png");
+      pngManifest.entries.push({ family, slug, layout: "full", width: 629, height: 1024, path, checksum: "fixture" });
+      medievalPaths.push(`public/mighty-decks/generated/${path}`);
+    }
+    await writeFile(manifestPath, JSON.stringify(pngManifest));
+    const prepared = await runPrepare(source, output);
+    assert.equal(prepared.code, 0, prepared.output);
+    const manifest = JSON.parse(await readFile(join(output, "manifest.json"), "utf8")) as { groups: Record<string, { png: string[] }> };
+    assert.deepEqual(manifest.groups.medieval.png, medievalPaths.sort());
+    assert.deepEqual(manifest.groups.core.png, ["public/mighty-decks/generated/png/en/outcome/success/full/1024.png"]);
+    const verified = await runVerifier(output, source);
+    assert.equal(verified.code, 0, verified.output);
+  } finally {
+    await Promise.all([rm(source, { recursive: true, force: true }), rm(output, { recursive: true, force: true })]);
+  }
+});

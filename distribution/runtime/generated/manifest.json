@@ -1,5 +1,5 @@
 {
-  "contentVersion": "2026-09-16",
+  "contentVersion": "2026-09-18",
   "locale": "en",
   "cards": [
     {
@@ -2702,6 +2702,798 @@
       "slug": "wealth",
       "title": "Wealth",
       "artworkPath": "/counters/wealth.png",
+      "locale": "en"
+    },
+    {
+      "id": "actor-base:medieval_villager",
+      "family": "actor-base",
+      "slug": "medieval_villager",
+      "title": "Villager",
+      "deck": "medieval",
+      "artworkPath": "/actors/medieval/villager.png",
+      "locale": "en"
+    },
+    {
+      "id": "actor-base:medieval_alchemist",
+      "family": "actor-base",
+      "slug": "medieval_alchemist",
+      "title": "Alchemist",
+      "deck": "medieval",
+      "artworkPath": "/actors/medieval/alchemist.png",
+      "locale": "en"
+    },
+    {
+      "id": "actor-base:medieval_aristocrat",
+      "family": "actor-base",
+      "slug": "medieval_aristocrat",
+      "title": "Aristocrat",
+      "deck": "medieval",
+      "artworkPath": "/actors/medieval/aristocrat.png",
+      "locale": "en"
+    },
+    {
+      "id": "actor-base:medieval_bandit",
+      "family": "actor-base",
+      "slug": "medieval_bandit",
+      "title": "Bandit",
+      "deck": "medieval",
+      "artworkPath": "/actors/medieval/bandit.png",
+      "locale": "en"
+    },
+    {
+      "id": "actor-base:medieval_beggar",
+      "family": "actor-base",
+      "slug": "medieval_beggar",
+      "title": "Beggar",
+      "deck": "medieval",
+      "artworkPath": "/actors/medieval/beggar.png",
+      "locale": "en"
+    },
+    {
+      "id": "actor-base:medieval_child",
+      "family": "actor-base",
+      "slug": "medieval_child",
+      "title": "Child",
+      "deck": "medieval",
+      "artworkPath": "/actors/medieval/child.png",
+      "locale": "en"
+    },
+    {
+      "id": "actor-base:medieval_craftsman",
+      "family": "actor-base",
+      "slug": "medieval_craftsman",
+      "title": "Craftsman",
+      "deck": "medieval",
+      "artworkPath": "/actors/medieval/craftsman.png",
+      "locale": "en"
+    },
+    {
+      "id": "actor-base:medieval_elder",
+      "family": "actor-base",
+      "slug": "medieval_elder",
+      "title": "Elder",
+      "deck": "medieval",
+      "artworkPath": "/actors/medieval/elder.png",
+      "locale": "en"
+    },
+    {
+      "id": "actor-base:medieval_farmer",
+      "family": "actor-base",
+      "slug": "medieval_farmer",
+      "title": "Farmer",
+      "deck": "medieval",
+      "artworkPath": "/actors/medieval/farmer.png",
+      "locale": "en"
+    },
+    {
+      "id": "actor-base:medieval_hunter",
+      "family": "actor-base",
+      "slug": "medieval_hunter",
+      "title": "Hunter",
+      "deck": "medieval",
+      "artworkPath": "/actors/medieval/hunter.png",
+      "locale": "en"
+    },
+    {
+      "id": "actor-base:medieval_idiot",
+      "family": "actor-base",
+      "slug": "medieval_idiot",
+      "title": "Idiot",
+      "deck": "medieval",
+      "artworkPath": "/actors/medieval/idiot.png",
+      "locale": "en"
+    },
+    {
+      "id": "actor-base:medieval_knight",
+      "family": "actor-base",
+      "slug": "medieval_knight",
+      "title": "Knight",
+      "deck": "medieval",
+      "artworkPath": "/actors/medieval/knight.png",
+      "locale": "en"
+    },
+    {
+      "id": "actor-base:medieval_marksman",
+      "family": "actor-base",
+      "slug": "medieval_marksman",
+      "title": "Marksman",
+      "deck": "medieval",
+      "artworkPath": "/actors/medieval/marksman.png",
+      "locale": "en"
+    },
+    {
+      "id": "actor-base:medieval_merchant",
+      "family": "actor-base",
+      "slug": "medieval_merchant",
+      "title": "Merchant",
+      "deck": "medieval",
+      "artworkPath": "/actors/medieval/merchant.png",
+      "locale": "en"
+    },
+    {
+      "id": "actor-base:medieval_militia",
+      "family": "actor-base",
+      "slug": "medieval_militia",
+      "title": "Militia",
+      "deck": "medieval",
+      "artworkPath": "/actors/medieval/militia.png",
+      "locale": "en"
+    },
+    {
+      "id": "actor-base:medieval_pikeman",
+      "family": "actor-base",
+      "slug": "medieval_pikeman",
+      "title": "Pikeman",
+      "deck": "medieval",
+      "artworkPath": "/actors/medieval/pikeman.png",
+      "locale": "en"
+    },
+    {
+      "id": "actor-base:medieval_priest",
+      "family": "actor-base",
+      "slug": "medieval_priest",
+      "title": "Priest",
+      "deck": "medieval",
+      "artworkPath": "/actors/medieval/priest.png",
+      "locale": "en"
+    },
+    {
+      "id": "actor-base:medieval_rogue",
+      "family": "actor-base",
+      "slug": "medieval_rogue",
+      "title": "Rogue",
+      "deck": "medieval",
+      "artworkPath": "/actors/medieval/rogue.png",
+      "locale": "en"
+    },
+    {
+      "id": "actor-base:medieval_scholar",
+      "family": "actor-base",
+      "slug": "medieval_scholar",
+      "title": "Scholar",
+      "deck": "medieval",
+      "artworkPath": "/actors/medieval/scholar.png",
+      "locale": "en"
+    },
+    {
+      "id": "actor-base:medieval_shopkeeper",
+      "family": "actor-base",
+      "slug": "medieval_shopkeeper",
+      "title": "Shopkeeper",
+      "deck": "medieval",
+      "artworkPath": "/actors/medieval/shopkeeper.png",
+      "locale": "en"
+    },
+    {
+      "id": "actor-base:medieval_female_villager",
+      "family": "actor-base",
+      "slug": "medieval_female_villager",
+      "title": "Villager",
+      "deck": "medieval",
+      "artworkPath": "/actors/medieval/female/villager.png",
+      "locale": "en"
+    },
+    {
+      "id": "actor-base:medieval_female_alchemist",
+      "family": "actor-base",
+      "slug": "medieval_female_alchemist",
+      "title": "Alchemist",
+      "deck": "medieval",
+      "artworkPath": "/actors/medieval/female/alchemist.png",
+      "locale": "en"
+    },
+    {
+      "id": "actor-base:medieval_female_aristocrat",
+      "family": "actor-base",
+      "slug": "medieval_female_aristocrat",
+      "title": "Aristocrat",
+      "deck": "medieval",
+      "artworkPath": "/actors/medieval/female/aristocrat.png",
+      "locale": "en"
+    },
+    {
+      "id": "actor-base:medieval_female_bandit",
+      "family": "actor-base",
+      "slug": "medieval_female_bandit",
+      "title": "Bandit",
+      "deck": "medieval",
+      "artworkPath": "/actors/medieval/female/bandit.png",
+      "locale": "en"
+    },
+    {
+      "id": "actor-base:medieval_female_beggar",
+      "family": "actor-base",
+      "slug": "medieval_female_beggar",
+      "title": "Beggar",
+      "deck": "medieval",
+      "artworkPath": "/actors/medieval/female/beggar.png",
+      "locale": "en"
+    },
+    {
+      "id": "actor-base:medieval_female_child",
+      "family": "actor-base",
+      "slug": "medieval_female_child",
+      "title": "Child",
+      "deck": "medieval",
+      "artworkPath": "/actors/medieval/female/child.png",
+      "locale": "en"
+    },
+    {
+      "id": "actor-base:medieval_female_craftsman",
+      "family": "actor-base",
+      "slug": "medieval_female_craftsman",
+      "title": "Craftsman",
+      "deck": "medieval",
+      "artworkPath": "/actors/medieval/female/craftsman.png",
+      "locale": "en"
+    },
+    {
+      "id": "actor-base:medieval_female_elder",
+      "family": "actor-base",
+      "slug": "medieval_female_elder",
+      "title": "Elder",
+      "deck": "medieval",
+      "artworkPath": "/actors/medieval/female/elder.png",
+      "locale": "en"
+    },
+    {
+      "id": "actor-base:medieval_female_farmer",
+      "family": "actor-base",
+      "slug": "medieval_female_farmer",
+      "title": "Farmer",
+      "deck": "medieval",
+      "artworkPath": "/actors/medieval/female/farmer.png",
+      "locale": "en"
+    },
+    {
+      "id": "actor-base:medieval_female_hunter",
+      "family": "actor-base",
+      "slug": "medieval_female_hunter",
+      "title": "Hunter",
+      "deck": "medieval",
+      "artworkPath": "/actors/medieval/female/hunter.png",
+      "locale": "en"
+    },
+    {
+      "id": "actor-base:medieval_female_crazy-cat-lady",
+      "family": "actor-base",
+      "slug": "medieval_female_crazy-cat-lady",
+      "title": "Crazy Cat Lady",
+      "deck": "medieval",
+      "artworkPath": "/actors/medieval/female/crazy-cat-lady.png",
+      "locale": "en"
+    },
+    {
+      "id": "actor-base:medieval_female_knight",
+      "family": "actor-base",
+      "slug": "medieval_female_knight",
+      "title": "Knight",
+      "deck": "medieval",
+      "artworkPath": "/actors/medieval/female/knight.png",
+      "locale": "en"
+    },
+    {
+      "id": "actor-base:medieval_female_marksman",
+      "family": "actor-base",
+      "slug": "medieval_female_marksman",
+      "title": "Marksman",
+      "deck": "medieval",
+      "artworkPath": "/actors/medieval/female/marksman.png",
+      "locale": "en"
+    },
+    {
+      "id": "actor-base:medieval_female_merchant",
+      "family": "actor-base",
+      "slug": "medieval_female_merchant",
+      "title": "Merchant",
+      "deck": "medieval",
+      "artworkPath": "/actors/medieval/female/merchant.png",
+      "locale": "en"
+    },
+    {
+      "id": "actor-base:medieval_female_militia",
+      "family": "actor-base",
+      "slug": "medieval_female_militia",
+      "title": "Militia",
+      "deck": "medieval",
+      "artworkPath": "/actors/medieval/female/militia.png",
+      "locale": "en"
+    },
+    {
+      "id": "actor-base:medieval_female_pikeman",
+      "family": "actor-base",
+      "slug": "medieval_female_pikeman",
+      "title": "Pikeman",
+      "deck": "medieval",
+      "artworkPath": "/actors/medieval/female/pikeman.png",
+      "locale": "en"
+    },
+    {
+      "id": "actor-base:medieval_female_nun",
+      "family": "actor-base",
+      "slug": "medieval_female_nun",
+      "title": "Nun",
+      "deck": "medieval",
+      "artworkPath": "/actors/medieval/female/nun.png",
+      "locale": "en"
+    },
+    {
+      "id": "actor-base:medieval_female_rogue",
+      "family": "actor-base",
+      "slug": "medieval_female_rogue",
+      "title": "Rogue",
+      "deck": "medieval",
+      "artworkPath": "/actors/medieval/female/rogue.png",
+      "locale": "en"
+    },
+    {
+      "id": "actor-base:medieval_female_scribe",
+      "family": "actor-base",
+      "slug": "medieval_female_scribe",
+      "title": "Scribe",
+      "deck": "medieval",
+      "artworkPath": "/actors/medieval/female/scribe.png",
+      "locale": "en"
+    },
+    {
+      "id": "actor-base:medieval_female_shopkeeper",
+      "family": "actor-base",
+      "slug": "medieval_female_shopkeeper",
+      "title": "Shopkeeper",
+      "deck": "medieval",
+      "artworkPath": "/actors/medieval/female/shopkeeper.png",
+      "locale": "en"
+    },
+    {
+      "id": "location:medieval_dungeon",
+      "family": "location",
+      "slug": "medieval_dungeon",
+      "title": "Dungeon",
+      "deck": "medieval",
+      "artworkPath": "/locations/medieval/dungeon.jpg",
+      "locale": "en"
+    },
+    {
+      "id": "location:medieval_forrest",
+      "family": "location",
+      "slug": "medieval_forrest",
+      "title": "Forrest",
+      "deck": "medieval",
+      "artworkPath": "/locations/medieval/forrest.jpg",
+      "locale": "en"
+    },
+    {
+      "id": "location:medieval_garden",
+      "family": "location",
+      "slug": "medieval_garden",
+      "title": "Garden",
+      "deck": "medieval",
+      "artworkPath": "/locations/medieval/garden.jpg",
+      "locale": "en"
+    },
+    {
+      "id": "location:medieval_graveyard",
+      "family": "location",
+      "slug": "medieval_graveyard",
+      "title": "Graveyard",
+      "deck": "medieval",
+      "artworkPath": "/locations/medieval/graveyard.jpg",
+      "locale": "en"
+    },
+    {
+      "id": "location:medieval_harbor",
+      "family": "location",
+      "slug": "medieval_harbor",
+      "title": "Harbor",
+      "deck": "medieval",
+      "artworkPath": "/locations/medieval/harbor.jpg",
+      "locale": "en"
+    },
+    {
+      "id": "location:medieval_lake",
+      "family": "location",
+      "slug": "medieval_lake",
+      "title": "Lake",
+      "deck": "medieval",
+      "artworkPath": "/locations/medieval/lake.jpg",
+      "locale": "en"
+    },
+    {
+      "id": "location:medieval_market",
+      "family": "location",
+      "slug": "medieval_market",
+      "title": "Market",
+      "deck": "medieval",
+      "artworkPath": "/locations/medieval/market.jpg",
+      "locale": "en"
+    },
+    {
+      "id": "location:medieval_mine_shaft",
+      "family": "location",
+      "slug": "medieval_mine_shaft",
+      "title": "Mine Shaft",
+      "deck": "medieval",
+      "artworkPath": "/locations/medieval/mine_shaft.jpg",
+      "locale": "en"
+    },
+    {
+      "id": "location:medieval_pantry",
+      "family": "location",
+      "slug": "medieval_pantry",
+      "title": "Pantry",
+      "deck": "medieval",
+      "artworkPath": "/locations/medieval/pantry.jpg",
+      "locale": "en"
+    },
+    {
+      "id": "location:medieval_pasture",
+      "family": "location",
+      "slug": "medieval_pasture",
+      "title": "Pasture",
+      "deck": "medieval",
+      "artworkPath": "/locations/medieval/pasture.jpg",
+      "locale": "en"
+    },
+    {
+      "id": "location:medieval_quarry",
+      "family": "location",
+      "slug": "medieval_quarry",
+      "title": "Quarry",
+      "deck": "medieval",
+      "artworkPath": "/locations/medieval/quarry.jpg",
+      "locale": "en"
+    },
+    {
+      "id": "location:medieval_road",
+      "family": "location",
+      "slug": "medieval_road",
+      "title": "Road",
+      "deck": "medieval",
+      "artworkPath": "/locations/medieval/road.jpg",
+      "locale": "en"
+    },
+    {
+      "id": "location:medieval_servants_quarters",
+      "family": "location",
+      "slug": "medieval_servants_quarters",
+      "title": "Servants Room",
+      "deck": "medieval",
+      "artworkPath": "/locations/medieval/servants_quarters.jpg",
+      "locale": "en"
+    },
+    {
+      "id": "location:medieval_sewer",
+      "family": "location",
+      "slug": "medieval_sewer",
+      "title": "Sewer",
+      "deck": "medieval",
+      "artworkPath": "/locations/medieval/sewer.jpg",
+      "locale": "en"
+    },
+    {
+      "id": "location:medieval_swamp",
+      "family": "location",
+      "slug": "medieval_swamp",
+      "title": "Swamp",
+      "deck": "medieval",
+      "artworkPath": "/locations/medieval/swamp.jpg",
+      "locale": "en"
+    },
+    {
+      "id": "location:medieval_tavern",
+      "family": "location",
+      "slug": "medieval_tavern",
+      "title": "Tavern",
+      "deck": "medieval",
+      "artworkPath": "/locations/medieval/tavern.jpg",
+      "locale": "en"
+    },
+    {
+      "id": "location:medieval_town_square",
+      "family": "location",
+      "slug": "medieval_town_square",
+      "title": "Town Square",
+      "deck": "medieval",
+      "artworkPath": "/locations/medieval/town_square.jpg",
+      "locale": "en"
+    },
+    {
+      "id": "location:medieval_townhouse_bath_room",
+      "family": "location",
+      "slug": "medieval_townhouse_bath_room",
+      "title": "Townhouse Bath Room",
+      "deck": "medieval",
+      "artworkPath": "/locations/medieval/townhouse_bath_room.jpg",
+      "locale": "en"
+    },
+    {
+      "id": "location:medieval_townhouse_bedchamber",
+      "family": "location",
+      "slug": "medieval_townhouse_bedchamber",
+      "title": "Townhouse Bedchamber",
+      "deck": "medieval",
+      "artworkPath": "/locations/medieval/townhouse_bedchamber.jpg",
+      "locale": "en"
+    },
+    {
+      "id": "location:medieval_townhouse_corridor",
+      "family": "location",
+      "slug": "medieval_townhouse_corridor",
+      "title": "Townhouse Corridor",
+      "deck": "medieval",
+      "artworkPath": "/locations/medieval/townhouse_corridor.jpg",
+      "locale": "en"
+    },
+    {
+      "id": "location:medieval_townhouse_dining_room",
+      "family": "location",
+      "slug": "medieval_townhouse_dining_room",
+      "title": "Townhouse Dining Room",
+      "deck": "medieval",
+      "artworkPath": "/locations/medieval/townhouse_dining_room.jpg",
+      "locale": "en"
+    },
+    {
+      "id": "location:medieval_townhouse_nursery",
+      "family": "location",
+      "slug": "medieval_townhouse_nursery",
+      "title": "Townhouse Nursery",
+      "deck": "medieval",
+      "artworkPath": "/locations/medieval/townhouse_nursery.jpg",
+      "locale": "en"
+    },
+    {
+      "id": "location:medieval_townhouse_study",
+      "family": "location",
+      "slug": "medieval_townhouse_study",
+      "title": "Townhouse Study",
+      "deck": "medieval",
+      "artworkPath": "/locations/medieval/townhouse_study.jpg",
+      "locale": "en"
+    },
+    {
+      "id": "location:medieval_village",
+      "family": "location",
+      "slug": "medieval_village",
+      "title": "Village",
+      "deck": "medieval",
+      "artworkPath": "/locations/medieval/village.jpg",
+      "locale": "en"
+    },
+    {
+      "id": "location:medieval_vine_cellar",
+      "family": "location",
+      "slug": "medieval_vine_cellar",
+      "title": "Vine Cellar",
+      "deck": "medieval",
+      "artworkPath": "/locations/medieval/vine_cellar.jpg",
+      "locale": "en"
+    },
+    {
+      "id": "location:medieval_warehouse",
+      "family": "location",
+      "slug": "medieval_warehouse",
+      "title": "Warehouse",
+      "deck": "medieval",
+      "artworkPath": "/locations/medieval/warehouse.jpg",
+      "locale": "en"
+    },
+    {
+      "id": "location:medieval_weapons_shop",
+      "family": "location",
+      "slug": "medieval_weapons_shop",
+      "title": "Weapons Shop",
+      "deck": "medieval",
+      "artworkPath": "/locations/medieval/weapons_shop.jpg",
+      "locale": "en"
+    },
+    {
+      "id": "location:medieval_workshop",
+      "family": "location",
+      "slug": "medieval_workshop",
+      "title": "Workshop",
+      "deck": "medieval",
+      "artworkPath": "/locations/medieval/workshop.jpg",
+      "locale": "en"
+    },
+    {
+      "id": "location:medieval_armory",
+      "family": "location",
+      "slug": "medieval_armory",
+      "title": "Armory",
+      "deck": "medieval",
+      "artworkPath": "/locations/medieval/armory.jpg",
+      "locale": "en"
+    },
+    {
+      "id": "location:medieval_bakery",
+      "family": "location",
+      "slug": "medieval_bakery",
+      "title": "Bakery",
+      "deck": "medieval",
+      "artworkPath": "/locations/medieval/bakery.jpg",
+      "locale": "en"
+    },
+    {
+      "id": "location:medieval_barracks",
+      "family": "location",
+      "slug": "medieval_barracks",
+      "title": "Barracks",
+      "deck": "medieval",
+      "artworkPath": "/locations/medieval/barracks.jpg",
+      "locale": "en"
+    },
+    {
+      "id": "location:medieval_bathhouse",
+      "family": "location",
+      "slug": "medieval_bathhouse",
+      "title": "Bathhouse",
+      "deck": "medieval",
+      "artworkPath": "/locations/medieval/bathhouse.jpg",
+      "locale": "en"
+    },
+    {
+      "id": "location:medieval_butchery",
+      "family": "location",
+      "slug": "medieval_butchery",
+      "title": "Butchery",
+      "deck": "medieval",
+      "artworkPath": "/locations/medieval/butchery.jpg",
+      "locale": "en"
+    },
+    {
+      "id": "location:medieval_camp",
+      "family": "location",
+      "slug": "medieval_camp",
+      "title": "Camp",
+      "deck": "medieval",
+      "artworkPath": "/locations/medieval/camp.jpg",
+      "locale": "en"
+    },
+    {
+      "id": "location:medieval_castle_bastion",
+      "family": "location",
+      "slug": "medieval_castle_bastion",
+      "title": "Castle Bastion",
+      "deck": "medieval",
+      "artworkPath": "/locations/medieval/castle_bastion.jpg",
+      "locale": "en"
+    },
+    {
+      "id": "location:medieval_castle_bailey",
+      "family": "location",
+      "slug": "medieval_castle_bailey",
+      "title": "Castle Bailey",
+      "deck": "medieval",
+      "artworkPath": "/locations/medieval/castle_bailey.jpg",
+      "locale": "en"
+    },
+    {
+      "id": "location:medieval_castle_corridor",
+      "family": "location",
+      "slug": "medieval_castle_corridor",
+      "title": "Castle Corridor",
+      "deck": "medieval",
+      "artworkPath": "/locations/medieval/castle_corridor.jpg",
+      "locale": "en"
+    },
+    {
+      "id": "location:medieval_castle_dining_room",
+      "family": "location",
+      "slug": "medieval_castle_dining_room",
+      "title": "Castle Dining Room",
+      "deck": "medieval",
+      "artworkPath": "/locations/medieval/castle_dining_room.jpg",
+      "locale": "en"
+    },
+    {
+      "id": "location:medieval_castle_gate",
+      "family": "location",
+      "slug": "medieval_castle_gate",
+      "title": "Castle Gate",
+      "deck": "medieval",
+      "artworkPath": "/locations/medieval/castle_gate.jpg",
+      "locale": "en"
+    },
+    {
+      "id": "location:medieval_cave",
+      "family": "location",
+      "slug": "medieval_cave",
+      "title": "Cave",
+      "deck": "medieval",
+      "artworkPath": "/locations/medieval/cave.jpg",
+      "locale": "en"
+    },
+    {
+      "id": "location:medieval_church",
+      "family": "location",
+      "slug": "medieval_church",
+      "title": "Church",
+      "deck": "medieval",
+      "artworkPath": "/locations/medieval/church.jpg",
+      "locale": "en"
+    },
+    {
+      "id": "location:medieval_clearing",
+      "family": "location",
+      "slug": "medieval_clearing",
+      "title": "Clearing",
+      "deck": "medieval",
+      "artworkPath": "/locations/medieval/clearing.jpg",
+      "locale": "en"
+    },
+    {
+      "id": "location:medieval_mountain_trail",
+      "family": "location",
+      "slug": "medieval_mountain_trail",
+      "title": "Mountain Trail",
+      "deck": "medieval",
+      "artworkPath": "/locations/medieval/mountain_trail.jpg",
+      "locale": "en"
+    },
+    {
+      "id": "location:medieval_prison_cell",
+      "family": "location",
+      "slug": "medieval_prison_cell",
+      "title": "Prison Cell",
+      "deck": "medieval",
+      "artworkPath": "/locations/medieval/prison_cell.jpg",
+      "locale": "en"
+    },
+    {
+      "id": "location:medieval_dark_alley",
+      "family": "location",
+      "slug": "medieval_dark_alley",
+      "title": "Dark Alley",
+      "deck": "medieval",
+      "artworkPath": "/locations/medieval/dark_alley.jpg",
+      "locale": "en"
+    },
+    {
+      "id": "location:medieval_library",
+      "family": "location",
+      "slug": "medieval_library",
+      "title": "Library",
+      "deck": "medieval",
+      "artworkPath": "/locations/medieval/library.jpg",
+      "locale": "en"
+    },
+    {
+      "id": "location:medieval_apothecary",
+      "family": "location",
+      "slug": "medieval_apothecary",
+      "title": "Apothecary",
+      "deck": "medieval",
+      "artworkPath": "/locations/medieval/apothecary.jpg",
+      "locale": "en"
+    },
+    {
+      "id": "location:medieval_winery",
+      "family": "location",
+      "slug": "medieval_winery",
+      "title": "Winery",
+      "deck": "medieval",
+      "artworkPath": "/locations/medieval/winery.jpg",
       "locale": "en"
     }
   ],

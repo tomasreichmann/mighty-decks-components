@@ -61,3 +61,26 @@ test("does not reference Storyteller-private source or compiler aliases", async 
 
   assert.deepEqual(violations, []);
 });
+
+test("keeps Actor presentations isolated from Stunt and Effect cards with matching slugs", async () => {
+  const { createServer } = await import("vite");
+  const { createElement } = await import("react");
+  const { renderToStaticMarkup } = await import("react-dom/server");
+  const server = await createServer({ root: packageRoot, server: { middlewareMode: true, hmr: false }, optimizeDeps: { noDiscovery: true, include: [] } });
+  try {
+    const { GameCard } = await server.ssrLoadModule("/src/react/index.tsx");
+    for (const [family, slug] of [["stunt", "marksman"], ["effect", "burning"], ["effect", "freezing"]] as const) {
+      const markup = renderToStaticMarkup(createElement(GameCard, { type: family, slug }));
+      const card = cardCatalog.find((entry) => entry.family === family && entry.slug === slug)!;
+      const rules = card.body ?? card.description;
+      assert.ok(rules);
+      assert.ok(markup.includes(rules), `${family}:${slug} keeps its catalog rules`);
+      assert.equal(markup.includes("/textIcons/"), false, `${family}:${slug} must not borrow Actor stats`);
+    }
+    const actor = renderToStaticMarkup(createElement(GameCard, { type: "actor-role", slug: "marksman" }));
+    assert.ok(actor.includes("/textIcons/toughness.png"));
+    assert.ok(actor.includes("/textIcons/range.png"));
+  } finally {
+    await server.close();
+  }
+});

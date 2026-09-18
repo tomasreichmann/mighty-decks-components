@@ -11,10 +11,9 @@
   "bugs": {
     "url": "https://github.com/tomasreichmann/mighty-decks-components/issues"
   },
-  "private": true,
   "type": "module",
   "engines": {
-    "node": "22.14.0"
+    "node": ">=22.14.0 <23"
   },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -32,7 +31,14 @@
       "types": "./dist/export.d.ts",
       "import": "./dist/export.js"
     },
-    "./csv/*": "./generated/csv/*"
+    "./csv/*": "./generated/csv/*",
+    "./package.json": "./package.json",
+    "./assets/*": "./assets/*",
+    "./generated/*": "./generated/*",
+    "./docs/*": "./docs/*",
+    "./NOTICE": "./NOTICE",
+    "./LICENSE": "./LICENSE",
+    "./LICENSES/*": "./LICENSES/*"
   },
   "bin": {
     "mighty-decks-components": "./dist/cli.js"
@@ -43,5 +49,6 @@
   },
   "dependencies": {
     "zod": "^3.24.1"
-  }
+  },
+  "private": true
 }

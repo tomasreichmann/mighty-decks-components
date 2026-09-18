@@ -1,23 +1,23 @@
 id,locale,family,slug,title,description,artwork_path,content_version
 "effect:injury","en","effect","injury","Injury","4x Injury ➜ Taken Out.
-Use an action or an Asset to heal and discard.","/effects/injury.png","2026-09-16"
+Use an action or an Asset to heal and discard.","/effects/injury.png","2026-09-18"
 "effect:distress","en","effect","distress","Distress","3x Distress ➜ Panic.
 4x Distress ➜ Hopeless.
-Use an action or an Asset to recover and discard.","/effects/distress.png","2026-09-16"
+Use an action or an Asset to recover and discard.","/effects/distress.png","2026-09-18"
 "effect:taken-out","en","effect","taken-out","Taken Out","4x Injury: You are Taken Out. You cannot act until the fiction and recovery rules allow it.
-Heal your Injuries to discard.","/art/effects/taken-out.png","2026-09-16"
+Heal your Injuries to discard.","/art/effects/taken-out.png","2026-09-18"
 "effect:panicked","en","effect","panicked","Panicked","3x Distress: You can only play the top card of your Outcome deck.
-Recover from your Distress to discard.","/effects/panicked.png","2026-09-16"
+Recover from your Distress to discard.","/effects/panicked.png","2026-09-18"
 "effect:hopeless","en","effect","hopeless","Hopeless","4x Distress: You can only flee or give up.
-Recover from your Distress to discard.","/effects/hopeless.png","2026-09-16"
+Recover from your Distress to discard.","/effects/hopeless.png","2026-09-18"
 "effect:stuck","en","effect","stuck","Stuck","You cannot move, but you can still take other actions.
-Use an action to free yourself and discard.","/effects/stuck.png","2026-09-16"
+Use an action to free yourself and discard.","/effects/stuck.png","2026-09-18"
 "effect:hindered","en","effect","hindered","Hindered","You can only move or take actions, but not both.
-Use an action to free yourself and discard.","/effects/hindered.png","2026-09-16"
-"effect:boost","en","effect","boost","Boost","Your next action or defense has +1 Effect or +1 Move.","/effects/boost.png","2026-09-16"
+Use an action to free yourself and discard.","/effects/hindered.png","2026-09-18"
+"effect:boost","en","effect","boost","Boost","Your next action or defense has +1 Effect or +1 Move.","/effects/boost.png","2026-09-18"
 "effect:complication","en","effect","complication","Complication","A Complication makes your life harder.
-Usually −1 Effect the next time it applies, then discard. The Storyteller may define another fitting effect or removal condition.","/effects/complication.png","2026-09-16"
+Usually −1 Effect the next time it applies, then discard. The Storyteller may define another fitting effect or removal condition.","/effects/complication.png","2026-09-18"
 "effect:freezing","en","effect","freezing","Freezing","Every turn you end with 2x Freezing or more, you receive a Distress. Cancelled by Burning.
-Use an action or an Asset to discard.","/effects/freezing.png","2026-09-16"
+Use an action or an Asset to discard.","/effects/freezing.png","2026-09-18"
 "effect:burning","en","effect","burning","Burning","Every turn you end with 2x Burning or more, you receive an Injury. Cancelled by Freezing.
-Use an action or an Asset to discard.","/effects/burning.png","2026-09-16"
+Use an action or an Asset to discard.","/effects/burning.png","2026-09-18"

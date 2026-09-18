@@ -23,12 +23,13 @@ export interface LayeredCardProps {
     footerHeight?: number;
     actorBase?: boolean;
     actorOverlay?: boolean;
+    actorLayout?: boolean;
 }
 export declare const CardStyleBoundary: ({ children }: {
     children: ReactNode;
 }) => JSX.Element;
 export declare const resolveAssetUrl: (assetBaseUrl: string, path: string) => string;
-export declare const LayeredCard: ({ className, style, assetBaseUrl, backgroundUri, imageUri, imageOverlayUri, noun, nounDeck, nounCornerIcon, adjective, adjectiveDeck, adjectiveCornerIcon, nounEffect, adjectiveEffect, titleColor, layout, transparent, showHeader, footerHeight, actorBase, actorOverlay }: LayeredCardProps) => JSX.Element;
+export declare const LayeredCard: ({ className, style, assetBaseUrl, backgroundUri, imageUri, imageOverlayUri, noun, nounDeck, nounCornerIcon, adjective, adjectiveDeck, adjectiveCornerIcon, nounEffect, adjectiveEffect, titleColor, layout, transparent, showHeader, footerHeight, actorBase, actorOverlay, actorLayout }: LayeredCardProps) => JSX.Element;
 export interface GameCardProps {
     type: CardFamily;
     slug: string;
