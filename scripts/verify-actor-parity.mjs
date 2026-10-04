@@ -1,7 +1,7 @@
 import { chromium } from "playwright";
 import { createServer } from "vite";
 import { resolve } from "node:path";
-import { mkdir, writeFile } from "node:fs/promises";
+import { mkdir, writeFile, readFile } from "node:fs/promises";
 import assert from "node:assert/strict";
 
 const root = resolve(import.meta.dirname, "..");
@@ -10,7 +10,7 @@ await mkdir(output, { recursive: true });
 const fixtureModule = `
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import { GameCard, ActorCard, AssetCard } from '/src/react/index.tsx';
+import { GameCard, ActorCard, AssetCard, LayeredCard } from '/src/react/index.tsx';
 const e = React.createElement;
 const fixtures = [];
 function add(id, Component, props) {
@@ -38,6 +38,11 @@ for (const modifier of ['base_empowered', 'base_fast']) {
   });
 }
 add('tools', AssetCard, { baseAssetSlug: 'base_tools' });
+add('outcome-success', GameCard, { type: 'outcome', slug: 'success' });
+add('effect-burning', GameCard, { type: 'effect', slug: 'burning' });
+add('compact-success', GameCard, { type: 'outcome', slug: 'success', layout: 'compact' });
+add('empty-art', LayeredCard, { noun: 'Empty art' });
+add('opaque-art', LayeredCard, { noun: 'Opaque art', imageUri: '/opaque-art.svg' });
 createRoot(document.getElementById('root')).render(e('main', null, ...fixtures));
 `;
 const server = await createServer({
@@ -74,6 +79,7 @@ try {
     if (response.status() >= 400)
       errors.push(response.url() + ":" + response.status());
   });
+  await page.route("**/opaque-art.svg", (route) => route.fulfill({ contentType: "image/svg+xml", body: '<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><rect width="200" height="200" fill="#e30000"/></svg>' }));
   await page.route("**/parity", async (route) =>
     route.fulfill({
       contentType: "text/html",
@@ -126,6 +132,10 @@ try {
               height: b.height,
               color: s.color,
               font: s.fontSize,
+              family: s.fontFamily,
+              weight: s.fontWeight,
+              style: s.fontStyle,
+              lineHeight: s.lineHeight,
               text: element.getAttribute("aria-label") ?? element.textContent,
               icons: [...element.querySelectorAll("img")].map(rect),
             };
@@ -153,6 +163,9 @@ try {
                 opacity: window.getComputedStyle(image).opacity,
               })),
               paper: card.querySelectorAll("svg > rect").length,
+              miniature: [...card.querySelectorAll("[data-card-miniature]")].map(image => ({ ...rect(image), href: image.getAttribute("href") })),
+              mainArt: card.querySelector("g > image")?.getAttribute("href"),
+              miniatureAfterArt: !card.querySelector("[data-card-miniature]") || Boolean(card.querySelector("g > image")?.parentElement.compareDocumentPosition(card.querySelector("[data-card-miniature]")) & window.Node.DOCUMENT_POSITION_FOLLOWING),
               overflow: regions.some((region) => {
                 const outer = region.firstElementChild,
                   inner = outer.firstElementChild;
@@ -174,6 +187,7 @@ try {
         );
       assert.equal(a.color, b.color, label + " color");
       assert.equal(a.font, b.font, label + " font");
+      for (const key of ["family", "weight", "style", "lineHeight"]) assert.equal(a[key], b[key], label + " " + key);
       assert.equal(a.text, b.text, label + " content");
       assert.equal(a.icons.length, b.icons.length, label + " icon count");
       a.icons.forEach((icon, index) =>
@@ -232,12 +246,38 @@ try {
     );
     for (const [id, sample] of Object.entries(samples)) {
       assert.equal(sample.overflow, false, id + " overflow");
+      if (!id.startsWith("compact-")) {
+        for (const title of sample.regions.slice(0, 2)) {
+          assert.equal(title.color, "rgb(18, 27, 35)", id + " black title");
+          assert.equal(title.style, "italic", id + " italic title");
+          assert.equal(title.family, "MightyDecksKalam", id + " bundled title font");
+        }
+        const footer = sample.regions[3];
+        assert.equal(footer.family, "MightyDecksShantell", id + " footer font");
+        assert.equal(footer.weight, "700", id + " footer weight");
+        assert.ok(Math.abs(parseFloat(footer.lineHeight) / parseFloat(footer.font) - 1.08) < 0.001, id + " footer line height");
+      }
+      const miniatureExpected = sample.paper > 0 && sample.mainArt && !id.startsWith("compact-");
+      assert.equal(sample.miniature.length, miniatureExpected ? 1 : 0, id + " miniature inventory");
+      assert.ok(sample.miniatureAfterArt, id + " miniature paint order");
+      if (miniatureExpected) {
+        const miniature = sample.miniature[0];
+        assert.equal(miniature.href, sample.mainArt, id + " miniature source");
+        for (const [key, logical] of Object.entries({ x: 29, y: 48, width: 20, height: 20 })) {
+          assert.ok(Math.abs(miniature[key] - logical * width / 204) < 1, id + " miniature " + key);
+        }
+      }
       for (const icon of sample.icons)
         assert.ok(
           Math.abs(icon.width - (16 * width) / 204) < 1,
           id + " icon size",
         );
     }
+    assert.equal(samples.minion.rows[0][0].icons.length, 2, "Minion toughness icons");
+    assert.equal(samples.minion.rows[1][0].icons.length, 2, "Minion melee icons");
+    assert.equal(samples.minion.rows[2][0].icons.length, 3, "Minion ranged icons");
+    assert.ok(samples.minion.rows[2][0].text.includes("1-2"), "Minion range");
+    assert.ok(await page.evaluate(() => document.fonts.check('italic 700 20px MightyDecksKalam') && document.fonts.check('700 11px MightyDecksShantell')), "Bundled fonts loaded");
     reports.push({ width, samples });
     for (const surface of ["checker", "light", "dark"]) {
       await page
@@ -255,6 +295,10 @@ try {
             ),
           surface,
         );
+      await mkdir(resolve(output, String(width), surface), { recursive: true });
+      for (const id of Object.keys(samples)) {
+        await page.locator(`[data-fixture="${id}"] article`).screenshot({ path: resolve(output, String(width), surface, id + ".png"), omitBackground: true });
+      }
       await page.screenshot({
         path: resolve(output, `${width}-${surface}.png`),
         fullPage: true,
@@ -264,6 +308,13 @@ try {
   // Preserve the original print/export geometry regression coverage.
   for (const [family, slug] of [
     ["actor-base", "animal_blue"],
+    ["actor-base", "civilian"],
+    ["asset-base", "base_tools"],
+    ["asset-modifier", "base_empowered"],
+    ["stunt", "marksman"],
+    ["outcome", "success"],
+    ["effect", "burning"],
+    ["actor-special", "charging"],
     ["actor-role", "minion"],
     ["actor-role", "tank"],
     ["actor-role", "artillery"],
@@ -317,16 +368,40 @@ try {
       [],
       `${family}:${slug} image decoding`,
     );
+    if (process.argv.includes("--exports")) {
+      const directory = resolve(output, "exports");
+      await mkdir(directory, { recursive: true });
+      const live = await page.locator("[data-card-export] article").screenshot({ omitBackground: true });
+      const png = await readFile(resolve(root, "generated/png/en", family, slug, "full/1024.png"));
+      const comparison = await page.evaluate(async ({ live, png }) => {
+        const load = async (data) => { const image = new window.Image(); image.src = "data:image/png;base64," + data; await image.decode(); return image; };
+        const images = await Promise.all([load(live), load(png)]);
+        const pixels = images.map(image => { const canvas = document.createElement("canvas"); canvas.width = 629; canvas.height = 1024; const context = canvas.getContext("2d"); context.drawImage(image, 0, 0, 629, 1024); return context.getImageData(0, 0, 629, 1024).data; });
+        let changed = 0, delta = 0, transparent = 0;
+        for (let i = 0; i < pixels[0].length; i += 4) {
+          if (pixels[1][i + 3] === 0) transparent++;
+          const difference = Math.max(...[0, 1, 2, 3].map(channel => Math.abs(pixels[0][i + channel] - pixels[1][i + channel])));
+          if (difference > 16) changed++;
+          delta += difference;
+        }
+        return { changedFraction: changed / (629 * 1024), meanDelta: delta / (629 * 1024), transparentFraction: transparent / (629 * 1024) };
+      }, { live: live.toString("base64"), png: png.toString("base64") });
+      assert.ok(comparison.changedFraction < 0.01 && comparison.meanDelta < 1, `${family}:${slug} exported PNG drift: ${JSON.stringify(comparison)}`);
+      if (["actor-role", "actor-special", "asset-modifier"].includes(family)) assert.ok(comparison.transparentFraction > 0.7, `${family}:${slug} exported alpha`);
+      await writeFile(resolve(directory, `${family}-${slug}-react.png`), live);
+      await writeFile(resolve(directory, `${family}-${slug}-inventory.png`), png);
+      reports.push({ family, slug, exportComparison: comparison });
+    }
   }
   assert.deepEqual(errors, []);
   await writeFile(
     resolve(output, "measurements.json"),
-    JSON.stringify(reports, null, 2),
+    JSON.stringify({ chromium: browser.version(), viewport: { width: 1400, height: 1200 }, deviceScaleFactor: 1, fontReady: true, reports }, null, 2),
   );
 } finally {
   await browser.close();
   await server.close();
 }
 console.log(
-  `Verified Actor layers, Stunt family isolation, and Asset modifiers at 204px/176px. Evidence: ${output}`,
+  `Verified five card families, titles, miniatures, Actor icons and footer typography at 204px/176px. Evidence: ${output}`,
 );

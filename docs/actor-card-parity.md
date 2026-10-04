@@ -57,3 +57,31 @@ also contains older emitted `.js` siblings, which an extensionless import can
 select and combine with current CSS. Keep that explicit source import when
 changing the exporter. Typechecking permits TypeScript import extensions; the
 library build emits declarations only through TypeScript.
+
+## Full-card parity contract (2026-10-04)
+
+All five layered card families use black (`#121b23`) full-front noun and adjective
+slots in bold bundled Kalam with Chromium's synthetic italic. The bundled font has
+normal 400/700 faces; synthesis is deliberate and uses the same Chromium in React
+and exports. Compact titles retain their existing style and Outcome color.
+Every opaque full card with base art has exactly one 20×20 copy of that art at
+logical `(29, 48)`, painted after the main art. Transparent layers and compact cards
+have none. This position preserves the measured Actor baseline and now covers
+Assets, Stunts, Outcomes, and Effects, including opaque artwork.
+
+The shared footer uses bundled Shantell 700 at 11px, line height 1.08, fitted in
+0.5px steps down to 8px inside the 172×38 region at `(16, 280)`. Longer catalog
+footers may borrow main-region space; Fast and Charging exercise the fixed Actor
+region with plain and tokenized wrapping. Mechanics and accessible copy are unchanged.
+
+`pnpm verify:actor-parity` checks all five families at 204px and 176px, including
+opaque/empty artwork, compact exclusions, typography, miniature geometry/paint
+order, Minion icon counts/range, loaded bundled fonts, and individual light/dark/
+checkerboard clips. After regenerating the full inventory, run
+`pnpm verify:actor-parity -- --exports` to compare live 629×1024 exporter clips with
+checked-in PNGs and verify overlay alpha. The pixel gate permits fewer than 1% of
+pixels to differ by over 16 channel levels and mean maximum-channel delta below 1;
+this accommodates clipping/antialiasing only, not changed content or geometry.
+Before evidence is retained under `.agent-logs/card-visual-parity/before/`; current
+verification output is under `.agent-logs/actor-parity/`. Never update reference
+PNGs by hand or use the browser check to rewrite them.

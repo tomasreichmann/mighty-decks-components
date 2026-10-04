@@ -22,7 +22,7 @@ transparent, composable rule layers: roles contain the main mechanical rules and
 specials contain the footer rule. Compact Actor images are reduced-detail thumbnails;
 they retain a meaningful title but intentionally omit rule descriptions.
 Run `pnpm verify:actor-parity` after changing Actor geometry, mechanics, or artwork;
-it checks the representative full-size browser rendering described in
+it checks all five layered card families, titles, miniatures, and footer typography described in
 [`actor-card-parity.md`](./actor-card-parity.md).
 
 Medieval portrait and Location art is owned under `resources/originals/` and listed
@@ -38,3 +38,5 @@ Run `pnpm generate:png` for the first complete baseline, then
 `pnpm release:prepare` and `pnpm release:check`. Commit source and the resulting
 `dist/`, `assets/`, and `generated/` outputs together. Consumers install a pinned
 Git revision and read those resources from the package.
+
+After a card renderer change and full PNG regeneration, also run `pnpm verify:actor-parity -- --exports` to check the inventory against live export rendering and preserve transparent overlay alpha.
